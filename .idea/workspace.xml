@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ebfb2f29-dd9f-438a-9bb5-297642e66439" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d2461ba0.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d2468901.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d287c653.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d29f0def.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d2a073aa.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d2a12f2c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d3da5f36.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d44071a9.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d4a2efc1.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d4e2b9f5.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d67a5ce0.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d6a8d6e6.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d6cc9086.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d6ddcd2c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d6ef30e2.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d701a84a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732d7139c8a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732dc52ad7c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732dc8a7674.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732dc9c9d7e.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732e53de14f.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732e97f0dad.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732e9eec505.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732ee13db3c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732ef548f7e.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732ef83c507.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732ef987c5a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732ef9908fc.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732ef99a53e.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732f490970c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732f5fcb1e4.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732f83ce8d0.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57732f91c577e.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577330a3b3cf2.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57733292565fc.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57733d4b83c9c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57733d55b4453.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577368ca050b4.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577368d50cc43.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/5773696d05daf.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736980be751.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736afd9d339.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736b1addd1b.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736b3f6d4ad.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736b4094207.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736b499e81d.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736b5279087.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736b61be569.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736bbbd3dc2.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736bbe2a36d.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736ca4645c6.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736ca591c9a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cb08250c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cb453bce.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cb7cba8d.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cbc6accd.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cc090f1a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cfc8d631.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736cff10e90.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57736d0481c78.data" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/main.php" afterPath="$PROJECT_DIR$/backend/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/main.php" afterPath="$PROJECT_DIR$/frontend/config/main.php" />
+    </list>
+    <ignored path="SimpleBlog.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="SimpleBlog" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="params.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/config/params.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="params-local.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/config/params-local.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.821428">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-local.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/config/main-local.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="params.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/config/params.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.76124567">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/frontend/config/main.php" />
+        <option value="$PROJECT_DIR$/backend/config/main.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\SimpleBlog" />
+    </key>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebfb2f29-dd9f-438a-9bb5-297642e66439" name="Default" comment="" />
+      <created>1467346336940</created>
+      <option name="number" value="Default" />
+      <updated>1467346336940</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25267094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/params-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.821428">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76124567">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

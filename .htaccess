@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+#不显示index.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/back/index.php
+RewriteCond %{REQUEST_URI} ^/back/
+RewriteRule ^back/(.+)$ back/index.php?r=$1 [QSA,PT,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !^/back
+RewriteCond %{REQUEST_FILENAME} !^/index.php
+RewriteRule ^(.*)$ index.php?r=$1 [QSA,PT,L]
+
+</IfModule>
