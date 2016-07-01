@@ -53,7 +53,7 @@ use yii\helpers\Url;
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>永远年轻 永远热泪盈眶</h1>
+            <h1>愿你做的所有事情 都是因为喜欢</h1>
         </div>
     </div>
 </div>
@@ -134,7 +134,8 @@ NavBar::end();
                         <a href="http://www.caijiruanjian.com" title="熊猫采集" target="_blank">熊猫采集</a>
 
                     </div>
-                </div></div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

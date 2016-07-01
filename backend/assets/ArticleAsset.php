@@ -21,8 +21,7 @@ class ArticleAsset extends AssetBundle{
         'umeditor/umeditor.config.js',
         'umeditor/umeditor.min.js',
         'umeditor/lang/zh-cn/zh-cn.js',
-        'js/jquery.uploadify.min.js',
-        'js/init.js'
+        'js/jquery.uploadify.min.js'
     ];
 
     public $depends = [
