@@ -79,8 +79,8 @@ ArticleAsset::register($this);
         });
 
         $('#article-thumbnail').uploadify({
-            width           : 40,
-            heigth          : 40,
+            width           : 30,
+            heigth          : 30,
             fileSizeLimit   : '2048KB',
             buttonText      : '',
             buttonImage     : '/back/images/attachment.png',
@@ -105,7 +105,7 @@ ArticleAsset::register($this);
 
 
         $('#article-thumb').uploadify({
-            width           : 40,
+            width           : 30,
             height          : 30,
             fileSizeLimit   : '2048KB',
             buttonText      : '',
@@ -122,14 +122,17 @@ ArticleAsset::register($this);
                     } else {
                         var data = rs.data;
                         var html = '<div class="form-group">';
-                        html += '<div class="col-md-2">';
-                        html += '<img src="' + data.url + '" class="img-responsive">';
+                        html += '<div class="col-md-1 col-xs-2">';
+                        html += '<img src="' + data.url + '" height="38">';
                         html += '</div>';
-                        html += '<label class="control-label col-md-2 text-center">图片描述</label>';
-                        html += '<div class="col-md-8">';
-                        html += '<input class="form-control" type="text" name="thumb-tip[]">';
+                        html += '<label class="control-label col-md-2 col-xs-3">图片描述</label>';
+                        html += '<div class="col-md-8 col-xs-6">';
+                        html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
                         html += '</div>';
-                        html += '<input type="hidden" name="thumb[]" value="' + data.url + '">';
+                        html += '<div class="col-md-1 col-xs-1">';
+                        html += '<i class="fa fa-trash-o"></i>';
+                        html += '</div>';
+                        html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
                         html += '</div>';
 
                         $(html).appendTo('#thumbs');
