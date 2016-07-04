@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebfb2f29-dd9f-438a-9bb5-297642e66439" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/16/zyee570f5a5f64e097.03645872.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/16/zyee570f5b27987fa4.37367589.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/16/zyee570f5bebc75414.71301343.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f604270aff8.46714073.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f62ceaac8f6.73541185.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f64b3c5cf52.45618452.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f651f3f0d86.39345234.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f65c1774968.73916396.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f669f6a45c4.23690846.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/17/zyee570f691d102753.11432302.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/18/zyee570f6a264b93c0.82953393.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/18/zyee570f6b14bcacf1.33973948.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/18/zyee570f6b4686f0f7.92450397.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/18/zyee570f6b5f4ad764.28421827.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160414/18/zyee570f6b7237dd41.40347232.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/11/zyee57105ca5ed2038.76822196.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/14/zyee57108d4d2c2541.43329845.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/14/zyee57108e90479c16.73321952.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/14/zyee57108ed4ef3173.52020300.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/14/zyee57108f8bea9c63.56154968.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/15/zyee571094b53e5af8.64355045.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/17/zyee5710b0bd1d2551.09218541.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/17/zyee5710b220273830.02600576.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/17/zyee5710b2c1b73ce3.32672117.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160415/17/zyee5710b345cf5d59.03203674.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160418/18/zyee5714b4f8f37752.22256006.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160419/14/91155715d2e97bb2f.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160419/14/zyee5715d2667b27c8.92257708.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160419/15/41555715d9c016826.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160419/15/41945715d97eba118.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160503/18/10495728783f26f2c.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160624/17/3787576d03a51a3bf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160629/14/294557736b516c346.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160701/18/1827577642491ff54.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/20160701/18/30355776429dcc938.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/upload.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/5776208bbfd87.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/5776208bc68f7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/5776208bcda43.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/5776208bd47a6.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/5776208bdb8f2.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577622060f18a.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/57762206c34b8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577622e749594.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577622e993268.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577622efa0859.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577622f23c042.data" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis/index.html" afterPath="$PROJECT_DIR$/apis/index.html" />
     </list>
     <ignored path="SimpleBlog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37988827">
+            <state vertical-scroll-proportion="0.0">
               <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <marker date="1467598713557" expanded="true" signature="0:480" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/swagger-php/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1845444">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -175,6 +140,7 @@
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseHtml.php" />
         <option value="$PROJECT_DIR$/backend/modules/article/views/article/_form.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/apis/index.html" />
       </list>
     </option>
   </component>
@@ -290,10 +256,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15491453" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15491453" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -332,7 +298,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1467598713557" expanded="true" signature="0:480" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -540,8 +508,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37988827">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <marker date="1467598713557" expanded="true" signature="0:480" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8154556">
+          <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swagger-php/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1845444">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding />
         </state>
       </provider>
