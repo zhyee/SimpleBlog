@@ -3,12 +3,17 @@ RewriteEngine on
 
 #不显示index.php
 
+#RewriteCond %{HTTP_HOST} !^img.zyee.org$
+#RewriteRule ^(.*)$ http://www.goodid.com?r=%{HTTP_HOST} [R=301,QSA,L]
+
+RewriteCond %{HTTP_HOST} !^img.zyee.org$
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/back/index.php
 RewriteCond %{REQUEST_URI} ^/back/
 RewriteRule ^back/(.+)$ back/index.php?r=$1 [QSA,PT,L]
 
+RewriteCond %{HTTP_HOST} !^img.zyee.org$
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !^/back

@@ -33,16 +33,6 @@ ArticleAsset::register($this);
     </div>
 
     <div id="thumbs">
-        <div class="form-group">
-            <div class="col-md-2">
-                <img src="http://img.zyee.org/20160629/14/294557736b516c346.jpg" class="img-responsive">
-            </div>
-            <label class="control-label col-md-2 text-center">图片描述</label>
-            <div class=" col-md-8">
-                <input class="form-control" type="text" name="thumb-tip[]" >
-            </div>
-            <input type="hidden" name="thumb[]" value="http://img.zyee.org/20160629/14/294557736b516c346.jpg">
-        </div>
     </div>
 
     <?= $form->field($model, 'content')->textarea(['rows' => 20, 'id' => 'ueditor']) ?>
@@ -57,12 +47,26 @@ ArticleAsset::register($this);
 
 <style>
     .uploadify-button{
-        background-color: transparent;
+        background-color: #fff;
+        background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, #dedede),
+            color-stop(1, #fff)
+        );
         border: none;
         padding: 0;
     }
     .uploadify:hover .uploadify-button{
-        background-color: transparent;
+        background-color: #fff;
+        background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, #c3c3c3),
+            color-stop(1, #fff)
+        );
     }
 </style>
 
@@ -79,11 +83,10 @@ ArticleAsset::register($this);
         });
 
         $('#article-thumbnail').uploadify({
-            width           : 40,
-            heigth          : 40,
+            width           : 30,
+            heigth          : 30,
             fileSizeLimit   : '2048KB',
-            buttonText      : '',
-            buttonImage     : '/back/images/attachment.png',
+            buttonText      : '<i style="line-height: 30px" class="fa fa-plus fa-2x text-success"></i>',
             swf             : '/back/css/uploadify.swf',
             uploader        : uploadUrl,
             formData        : {_csrf : _csrf},
@@ -105,11 +108,10 @@ ArticleAsset::register($this);
 
 
         $('#article-thumb').uploadify({
-            width           : 40,
+            width           : 30,
             height          : 30,
             fileSizeLimit   : '2048KB',
-            buttonText      : '',
-            buttonImage     : '/back/images/attachment.png',
+            buttonText      : '<i style="line-height: 30px" class="fa fa-plus fa-2x text-success"></i>',
             swf             : '/back/css/uploadify.swf',
             uploader        : uploadUrl,
             formData        : {_csrf : _csrf},
@@ -122,20 +124,21 @@ ArticleAsset::register($this);
                     } else {
                         var data = rs.data;
                         var html = '<div class="form-group">';
-                        html += '<div class="col-md-2">';
-                        html += '<img src="' + data.url + '" class="img-responsive">';
+                        html += '<div class="col-md-1 col-xs-2">';
+                        html += '<img src="' + data.url + '" height="38">';
                         html += '</div>';
-                        html += '<label class="control-label col-md-2 text-center">图片描述</label>';
-                        html += '<div class="col-md-8">';
+                        html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
+                        html += '<div class="col-md-8 col-xs-6">';
                         html += '<input class="form-control" type="text" name="thumb-tip[]">';
                         html += '</div>';
-                        html += '<input type="hidden" name="thumb[]" value="' + data.url + '">';
+                        html += '<div class="col-md-1 col-xs-1">';
+                        html += '<i class="fa fa-trash-o"></i>'
+                        html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
                         html += '</div>';
 
                         $(html).appendTo('#thumbs');
                     }
                 }
-
             }
         });
 

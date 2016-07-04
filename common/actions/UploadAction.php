@@ -29,7 +29,7 @@ class UploadAction extends Action
             if(!is_dir($runtimeDir)){
                 throw new Exception( $runtimeDir . ' 目录不存在');
             }
-            $fileName = $runtimeDir . '/' . uniqid(mt_rand(10000, 99999)) . '.' . $thumbnail->extension;
+            $fileName = $runtimeDir . '/' . uniqid(mt_rand(111, 999)) . '.' . $thumbnail->extension;
             $isUeditor =  Yii::$app->request->get('editorid') ? true : false;    //是否是通过ueditor上传的
 
             if($thumbnail->saveAs($fileName)){
@@ -37,7 +37,6 @@ class UploadAction extends Action
                 $uploadServer = Yii::$app->params['uploadServer'];
                 $url = Yii::uploadFile($fileName, $uploadServer);
                 unlink($fileName);  //删除临时存储文件
-
 
                 if($isUeditor) {
 
@@ -61,14 +60,14 @@ class UploadAction extends Action
                     ];
                 }
 
-            }else{
+            } else {
                 return [
                     'err_code' => 1,
                     'msg' => '图片上传失败'
                 ];
             }
 
-        }else{
+        } else {
             return [
                 'err_code' => 2,
                 'msg' => '访问异常'

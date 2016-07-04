@@ -107,7 +107,11 @@ $i = 1;
  *
  * @global string $cfg['Servers'][$i]['host']
  */
-$cfg['Servers'][$i]['host'] = 'qdm111422236.my3w.com';
+$cfg['Servers'][$i]['host'] = '';
+
+if(strpos($_SERVER['HTTP_HOST'], 'zyee.org') !== FALSE) {
+    $cfg['Servers'][$i]['host'] = 'qdm111422236.my3w.com';
+}
 
 /**
  * MySQL port - leave blank for default port
@@ -255,7 +259,7 @@ $cfg['Servers'][$i]['nopassword'] = false;
  *
  * @global string $cfg['Servers'][$i]['only_db']
  */
-$cfg['Servers'][$i]['only_db'] = 'qdm111422236_db';
+$cfg['Servers'][$i]['only_db'] = '';
 
 /**
  * Database name to be hidden from listings

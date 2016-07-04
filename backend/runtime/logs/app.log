@@ -14844,3 +14844,669 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1467367844.3707
     'REQUEST_TIME' => 1467367844
 ]
+2016-07-04 11:54:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "img/uploadify-cancel.png".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('img/uploadify-c...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-07-04 11:54:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'img/uploadify-cancel.png'
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    'PHPSESSID' => 'j0k4btg73vre01uo1b0qtl6hi7'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '464'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/img/uploadify-cancel.png'
+    'QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/img/uploadify-cancel.png'
+    'REDIRECT_QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REMOTE_PORT' => '62208'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; PHPSESSID=j0k4btg73vre01uo1b0qtl6hi7; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/css/uploadify.css'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467604458.8106
+    'REQUEST_TIME' => 1467604458
+]
+2016-07-04 11:54:22 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php:66
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php(66): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\project\\Simp...', 66, Array)
+#1 E:\project\SimpleBlog\common\actions\UploadAction.php(38): Yii::uploadFile('E:\\project\\Simp...', 'http://img.zyee...')
+#2 [internal function]: common\actions\UploadAction->run()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#9 {main}
+2016-07-04 11:54:19 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    'Filename' => '鱼钩.jpg'
+    '_csrf' => 'Zjc2QjczVGMHR3IBe30RNQEOaSZvayIKM2BiHVZ0AgIHdH4lQHlgCQ=='
+    'Upload' => 'Submit Query'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '鱼钩.jpg'
+        'type' => 'application/octet-stream'
+        'tmp_name' => 'C:\\Windows\\phpA9F7.tmp'
+        'error' => 0
+        'size' => 59025
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    'PHPSESSID' => 'j0k4btg73vre01uo1b0qtl6hi7'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '464'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REMOTE_PORT' => '62209'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; PHPSESSID=j0k4btg73vre01uo1b0qtl6hi7; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----------gL6KM7cH2GI3Ij5ae0ae0Ef1ei4GI3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/22.0.0.192'
+    'HTTP_ORIGIN' => 'http://simpleblog.com:9999'
+    'CONTENT_LENGTH' => '59591'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467604459.8687
+    'REQUEST_TIME' => 1467604459
+]
+2016-07-04 11:57:23 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php:66
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php(66): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\project\\Simp...', 66, Array)
+#1 E:\project\SimpleBlog\common\actions\UploadAction.php(38): Yii::uploadFile('E:\\project\\Simp...', 'http://img.zyee...')
+#2 [internal function]: common\actions\UploadAction->run()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#9 {main}
+2016-07-04 11:57:21 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    'Filename' => '鱼钩.jpg'
+    '_csrf' => 'Zjc2QjczVGMHR3IBe30RNQEOaSZvayIKM2BiHVZ0AgIHdH4lQHlgCQ=='
+    'Upload' => 'Submit Query'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '鱼钩.jpg'
+        'type' => 'application/octet-stream'
+        'tmp_name' => 'C:\\Windows\\php7063.tmp'
+        'error' => 0
+        'size' => 59025
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    'PHPSESSID' => 'j0k4btg73vre01uo1b0qtl6hi7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '464'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REMOTE_PORT' => '62295'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; PHPSESSID=j0k4btg73vre01uo1b0qtl6hi7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----------Ij5cH2KM7KM7KM7cH2Ij5KM7gL6ei4'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/22.0.0.192'
+    'HTTP_ORIGIN' => 'http://simpleblog.com:9999'
+    'CONTENT_LENGTH' => '59591'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467604641.7501
+    'REQUEST_TIME' => 1467604641
+]
+2016-07-04 12:02:07 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php:66
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php(66): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\project\\Simp...', 66, Array)
+#1 E:\project\SimpleBlog\common\actions\UploadAction.php(38): Yii::uploadFile('E:\\project\\Simp...', 'http://img.zyee...')
+#2 [internal function]: common\actions\UploadAction->run()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#9 {main}
+2016-07-04 12:02:05 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    'Filename' => '鱼钩.jpg'
+    '_csrf' => 'Yzk1TnA0N20CSXENPHpyOwQAaioobEEENm5hERFzYQwCen0pB34DBw=='
+    'Upload' => 'Submit Query'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '鱼钩.jpg'
+        'type' => 'application/octet-stream'
+        'tmp_name' => 'C:\\Windows\\phpC2F4.tmp'
+        'error' => 0
+        'size' => 59025
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    'PHPSESSID' => 'j0k4btg73vre01uo1b0qtl6hi7'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2004'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REMOTE_PORT' => '62457'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; PHPSESSID=j0k4btg73vre01uo1b0qtl6hi7; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----------KM7ae0ae0cH2KM7gL6Ij5ei4KM7GI3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/22.0.0.192'
+    'HTTP_ORIGIN' => 'http://simpleblog.com:9999'
+    'CONTENT_LENGTH' => '59591'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467604925.0213
+    'REQUEST_TIME' => 1467604925
+]
+2016-07-04 12:03:30 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php:66
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php(66): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\project\\Simp...', 66, Array)
+#1 E:\project\SimpleBlog\common\actions\UploadAction.php(38): Yii::uploadFile('E:\\project\\Simp...', 'http://img.zyee...')
+#2 [internal function]: common\actions\UploadAction->run()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#9 {main}
+2016-07-04 12:03:28 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    'Filename' => '鱼钩.jpg'
+    '_csrf' => 'ejlyMHUyaEMbSTZzOXwtFR0ALVQtah4qL24mbxR1PiIbejpXAnhcKQ=='
+    'Upload' => 'Submit Query'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '鱼钩.jpg'
+        'type' => 'application/octet-stream'
+        'tmp_name' => 'C:\\Windows\\phpA61.tmp'
+        'error' => 0
+        'size' => 59025
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    'PHPSESSID' => 'j0k4btg73vre01uo1b0qtl6hi7'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2004'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REMOTE_PORT' => '62507'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; PHPSESSID=j0k4btg73vre01uo1b0qtl6hi7; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----------GI3cH2gL6Ij5Ef1GI3cH2KM7KM7ei4'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/22.0.0.192'
+    'HTTP_ORIGIN' => 'http://simpleblog.com:9999'
+    'CONTENT_LENGTH' => '59591'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467605008.8501
+    'REQUEST_TIME' => 1467605008
+]
+2016-07-04 12:10:58 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Array to string conversion' in E:\project\SimpleBlog\common\actions\UploadAction.php:40
+Stack trace:
+#0 E:\project\SimpleBlog\common\actions\UploadAction.php(40): yii\base\ErrorHandler->handleError(8, 'Array to string...', 'E:\\project\\Simp...', 40, Array)
+#1 [internal function]: common\actions\UploadAction->run()
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#8 {main}
+2016-07-04 12:10:56 [127.0.0.1][11][j0k4btg73vre01uo1b0qtl6hi7][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    'Filename' => '鱼钩.jpg'
+    '_csrf' => 'TXFyV2p5NW0sATYUJjdwOypILTMyIUMEGCYmCAs.YwwsMjowHTMBBw=='
+    'Upload' => 'Submit Query'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '鱼钩.jpg'
+        'type' => 'application/octet-stream'
+        'tmp_name' => 'C:\\Windows\\phpDEAE.tmp'
+        'error' => 0
+        'size' => 59025
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    'PHPSESSID' => 'j0k4btg73vre01uo1b0qtl6hi7'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '540'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REMOTE_PORT' => '62755'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; PHPSESSID=j0k4btg73vre01uo1b0qtl6hi7; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----------KM7ei4GI3GI3Ef1cH2KM7Ij5GI3gL6'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/22.0.0.192'
+    'HTTP_ORIGIN' => 'http://simpleblog.com:9999'
+    'CONTENT_LENGTH' => '59591'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467605456.4117
+    'REQUEST_TIME' => 1467605456
+]
+2016-07-04 14:46:28 [127.0.0.1][11][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: article/article/[object Object]' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('[object Object]', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-07-04 14:46:27 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/[object Object]'
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    'PHPSESSID' => 'mc7acoagq6cbn5ld5ldemskkk1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2032'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/[object%20Object]'
+    'QUERY_STRING' => 'r=article/article/[object Object]'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/article/article/[object Object]'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/[object Object]'
+    'REMOTE_PORT' => '50620'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; PHPSESSID=mc7acoagq6cbn5ld5ldemskkk1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/article/article/create'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467614787.4605
+    'REQUEST_TIME' => 1467614787
+]
+2016-07-04 15:49:31 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "img/uploadify-cancel.png".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('img/uploadify-c...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-07-04 15:49:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'img/uploadify-cancel.png'
+]
+
+$_COOKIE = [
+    '_csrf' => '1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j\";}'
+    'PHPSESSID' => 'mc7acoagq6cbn5ld5ldemskkk1'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '472'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/img/uploadify-cancel.png'
+    'QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/img/uploadify-cancel.png'
+    'REDIRECT_QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REMOTE_PORT' => '54354'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=1a1c189ef0bfb52b9dd0a280bcc7eaf8bbd5c444fbc4b51be79d688764c14c26a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22apDCLNEVg9_dXXviUWT_aGVaaCHgwJ4j%22%3B%7D; PHPSESSID=mc7acoagq6cbn5ld5ldemskkk1; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/css/uploadify.css'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467618571.4969
+    'REQUEST_TIME' => 1467618571
+]

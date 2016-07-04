@@ -59,6 +59,7 @@ class Yii extends \yii\BaseYii
         $response = curl_exec($ch);
         curl_close($ch);
         $response = json_decode($response, true);
+
         if($response['err_code']){
             throw new Exception($response['msg']);
         }

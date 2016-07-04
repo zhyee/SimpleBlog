@@ -15,5 +15,5 @@ return [
         'huaxin' => '花心',
         'jiyan' => '挤眼',
     ],
-    'uploadServer' => 'http://img.zyee.org/upload.php'
+    'uploadServer' => 'http://img.zyee.org/uploads/upload.php'
 ];

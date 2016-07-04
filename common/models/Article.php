@@ -70,6 +70,16 @@ class Article extends BaseActiveRecord implements \SplSubject
     }
 
     /**
+     * 关联文章和图集
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function getThumbs() {
+        return $this->hasMany(Thumb::className(), ['aid' => 'id'])
+            ->asArray()
+            ->all();
+    }
+
+    /**
      * 生成时间字符串 格式：2016年1月8日星期五上午10点33分
      */
     public function getTimeStr(){

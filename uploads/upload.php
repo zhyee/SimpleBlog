@@ -6,6 +6,7 @@ class ExceptionCode{
 	const CODE_FILE_TOO_LARGE = 103;
 	const CODE_COPY_ERROR = 104;
 	const CODE_ACCESS_REFUSE = 105;
+    const CODE_DIR_NOT_FOUND = 106;
 }
 
 
@@ -98,7 +99,8 @@ class FileUploader
                 throw new Exception(getcwd() . '无可写权限', ExceptionCode::CODE_NOT_WRITABLE);
             }
         }
-        return $this->path = ltrim(str_replace($_SERVER['DOCUMENT_ROOT'], '', $path), '/');
+
+        return $this->path = $path;
     }
 
     /**
@@ -107,7 +109,7 @@ class FileUploader
      * @throws Exception
      */
     public function upload(){
-        return $this->protocol . $this->domain . '/' . ltrim($this->fileObj->save($this->getPath()), '/');
+        return $this->protocol . $this->domain . '/' . ltrim(str_replace(str_replace($_SERVER['REQUEST_URI'], '', __FILE__), '', $this->fileObj->save($this->getPath())), '/');
     }
 }
 
@@ -248,7 +250,7 @@ class FileObj
      */
     public function save($path){
         if(!is_dir($path)){
-            throw new Exception('文件夹' . $path . '不存在');
+            throw new Exception('文件夹' . $path . '不存在', ExceptionCode::CODE_DIR_NOT_FOUND);
         }
         if(move_uploaded_file($this->tempFile, rtrim($path, '/') . '/' . $this->getSaveName())){
             return rtrim($path, '/') . '/' . $this->getSaveName();
