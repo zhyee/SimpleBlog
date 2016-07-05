@@ -18,6 +18,16 @@ class Thumb {
         return 'thumb';
     }
 
-    public
+    public function add($thumbs) {
+
+        foreach($thumbs as $thumb) {
+            $model = new self();
+            $model->aid = $thumb['aid'];
+            $model->url = $thumb['url'];
+            $model->description = $thumb['description'];
+            $model->is_del = 0;
+            $model->save();
+        }
+    }
 
 }
