@@ -2,28 +2,32 @@
 /**
  * Created by PhpStorm.
  * User: Administrator
- * Date: 2016/7/4 0004
- * Time: 16:15
+
+ * Date: 2016/7/4
+ * Time: 23:58
  */
 
-namespace common\models;
+namespace commmon\models;
 
-class Thumb extends BaseActiveRecord {
+class Thumb {
 
-    public static function tableName()
-    {
+    /**
+     * 返回模型对应的表名
+     * @return string
+     */
+    public static function tableName() {
         return 'thumb';
     }
 
+    public function add($thumbs) {
 
-    public function add(array $thumbs) {
         foreach($thumbs as $thumb) {
-            $thumb = new static();
-            $thumb->aid = $thumb['aid'];
-            $thumb->title = $thumb['title'];
-            $thumb->url = $thumb['url'];
-            $thumb->description = $thumb['description'];
-            $thumb->save();
+            $model = new self();
+            $model->aid = $thumb['aid'];
+            $model->url = $thumb['url'];
+            $model->description = $thumb['description'];
+            $model->is_del = 0;
+            $model->save();
         }
     }
 

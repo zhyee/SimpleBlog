@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use commmon\models\Thumb;
 use SplObserver;
 use Yii;
 use yii\base\InvalidParamException;
@@ -65,6 +66,18 @@ class Article extends BaseActiveRecord implements \SplSubject
     public function getTags(){
         return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
             ->viaTable(TagIndex::tableName(), ['article_id' => 'id'])
+            ->asArray()
+            ->all();
+    }
+
+
+    /**
+     * 关联文章和图集
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function getThumbs() {
+        return $this
+            ->hasMany(Thumb::tableName(), ['aid' => 'id'])
             ->asArray()
             ->all();
     }
