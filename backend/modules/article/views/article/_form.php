@@ -129,10 +129,10 @@ ArticleAsset::register($this);
                         html += '</div>';
                         html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
                         html += '<div class="col-md-8 col-xs-6">';
-                        html += '<input class="form-control" type="text" name="thumb-tip[]">';
+                        html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
                         html += '</div>';
                         html += '<div class="col-md-1 col-xs-1">';
-                        html += '<i class="fa fa-trash-o"></i>'
+                        html += '<i class="fa fa-trash-o"></i>';
                         html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
                         html += '</div>';
 

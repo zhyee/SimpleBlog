@@ -70,18 +70,6 @@ class Article extends BaseActiveRecord implements \SplSubject
             ->all();
     }
 
-
-    /**
-     * 关联文章和图集
-     * @return array|\yii\db\ActiveRecord[]
-     */
-    public function getThumbs() {
-        return $this
-            ->hasMany(Thumb::tableName(), ['aid' => 'id'])
-            ->asArray()
-            ->all();
-    }
-
     /**
      * 关联文章和图集
      * @return array|\yii\db\ActiveRecord[]
