@@ -44,17 +44,40 @@ h6 {
   font-size: 0.75em;
 }
 a {
-  color: #f4645f;
+  color: #656565;
   outline: none;
 }
 a:hover {
   color: #f4645f;
+  text-decoration: none;
 }
 a:active,
 a:focus,
 a img {
   outline: none;
 }
+
+.fa {
+  color: #959595;
+}
+
+.separator{
+  display: inline-block;
+  width: 1rem;
+}
+
+.separator-2x{
+  width: 2rem;
+}
+
+.separator-3x{
+  width: 3rem;
+}
+
+.separator-4x{
+  width: 4rem;
+}
+
 .btn {
   padding: 7px 14px;
   border-radius: 2px;
@@ -359,6 +382,7 @@ pre {
 }
 .post .post-footer .edit a:hover {
   color: #f4645f;
+  text-decoration: none;
 }
 /* post content */
 /*====================================================

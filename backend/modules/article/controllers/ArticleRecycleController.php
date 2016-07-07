@@ -65,7 +65,7 @@ class ArticleRecycleController extends ArticleBaseController
         $article->updateTagCount(1);
 
         if(Article::updateAll(['is_del' => 0, 'del_time' => 0], ['id' => $id])){
-            $this->redirect(['/article/index']);
+            $this->redirect(['article/index']);
         }else{
             $this->error('恢复文章失败');
         }
@@ -82,7 +82,7 @@ class ArticleRecycleController extends ArticleBaseController
         }
         if(Article::deleteAll(['id' => $id])){
             TagIndex::deleteAll(['article_id' => $id]);//删除标签对应关系
-            $this->redirect(['index']);
+            $this->redirect(['article/index']);
         }else{
             $this->error('删除文章失败');
         }

@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <?php endforeach ?>
             </div>
             <div class="pull-right edit">
-                <i class="fa fa-pencil"></i>
+                <i class="fa fa-pencil-square-o"></i>
                 <a href="<?= Url::to(['article/update', 'id' => $arc['id']]) ?>">编辑</a>
 
                 <i class="fa fa-trash-o"></i>

@@ -12,7 +12,8 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
 ?>
 <div class="article-index">
 
-        <table class="table table-striped table-bordered"><thead>
+        <?php if(!empty($articles)): ?>
+        <table class="table"><thead>
             <tr><th>编号</th><th>文章标题</th><th>作者</th><th>发布时间</th><th class="action-column">操作</th></tr>
             </thead>
             <tbody>
@@ -24,11 +25,11 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <td><?= Html::encode($arc['author']) ?></td>
                 <td><?= date('Y-m-d H:i', $arc['publish_time']) ?></td>
                 <td>
-                    <a class="btn-xs btn-default" href="<?= Url::toRoute(['recovery', 'id' => $arc['id']]) ?>" title="恢复" aria-label="Recovery">
-                        <i class="fa fa-recycle"></i>
+                    <span class="separator"></span>
+                    <i class="fa fa-recycle"></i><a href="<?= Url::to(['article-recycle/recovery', 'id' => $arc['id']]) ?>" aria-label="Recovery">恢复
                     </a>
-                    <a class="btn-xs btn-default" action="delete" rel="<?= Url::toRoute(['delete', 'id' => $arc['id']]) ?>" href="javascript:;" title="彻底删除" aria-label="Delete" >
-                        <i class="fa fa-trash"></i>
+                    <span class="separator"></span>
+                    <i class="fa fa-trash"></i><a action="delete" rel="<?= Url::to(['article-recycle/delete', 'id' => $arc['id']]) ?>" href="javascript:;" aria-label="Delete">彻底删除
                     </a>
                 </td>
             </tr>
@@ -36,12 +37,17 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
 
             </tbody>
         </table>
+        <?php else:?>
+            <div class="no-data">
+                <p class="text-center">暂无数据</p>
+            </div>
+        <?php endif; ?>
 
     <?= SimplePagerWidget::widget(['pagination' => $pagination]) ?>
 
 </div>
 
-<div id="confirm" class="sr-only">
+<div id="confirm" class="hidden">
     <p>确认要删除吗，删除后无法恢复？</p>
 </div>
 
