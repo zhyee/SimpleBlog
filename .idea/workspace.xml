@@ -2,197 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebfb2f29-dd9f-438a-9bb5-297642e66439" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/28a0a1c6/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/3f5b8a1e/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/3f5b8a1e/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/3f5b8a1e/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/5ad0451f/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/5ad0451f/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/5ad0451f/toolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/5ad0451f/toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/66afdf4b/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/66afdf4b/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/66afdf4b/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/6c90f519/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/6c90f519/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/6c90f519/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/7b6bdec1/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/b0cf2359/yii.activeForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/b0cf2359/yii.captcha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/b0cf2359/yii.gridView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/b0cf2359/yii.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/b0cf2359/yii.validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/c173f1d9/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/c173f1d9/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/c173f1d9/toolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/c173f1d9/toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/ddc233f2/yii.activeForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/ddc233f2/yii.captcha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/ddc233f2/yii.gridView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/ddc233f2/yii.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/ddc233f2/yii.validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/e184b6a9/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/e184b6a9/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/e184b6a9/toolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/e184b6a9/toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f3dbc091/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f99280b7/yii.activeForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f99280b7/yii.captcha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f99280b7/yii.gridView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f99280b7/yii.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/back/assets/f99280b7/yii.validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/HTML/4.6.0,bd08c5afbc77123dbd4e9e026a723c450e9f844b,1.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/URI/4.6.0,8d03c8ec0e84e7feb92afd4c0f1735841b5fdacf,1.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/cache/96/963454f612a8b5fb4a63ba1e97f028a1.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a06bdcb7b9.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a06c71210a.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a06d763590.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a06f92e5a4.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a06fe6a3d8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a06ff8fdab.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a072c7949b.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a07fe74a6d.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0861cb7d0.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a092cad5cc.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a09fc1e81b.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0b3638dd9.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0bfc5f857.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0c0d154aa.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0c11d9e45.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0c2dd17e5.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0c819dedd.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0d5eb96e4.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0dccadc85.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0dd26ea15.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0dd396af8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a0dda11b81.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a102e62ccd.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a10bc1b4af.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a10c8a1fd5.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a11f5acc8f.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a12800c9b8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a129bd4f27.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a12b018c0c.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a12c51235c.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a12f9ecf75.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a131041289.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a13218f097.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a1336a1a45.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a13f314796.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a1413726ea.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a142c075a7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a144653e48.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a1450878c8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a145eb007a.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a14f4ed744.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a150b7d386.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a150c877d1.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a1527becce.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a1531900ff.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a158799cf1.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a16c079118.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a16deaeb68.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a16e9a131a.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a16f5a8ee2.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a174eda840.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a177f988bc.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a74046f9be.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7405e2d07.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7409cc9dd.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a741e367cb.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a744e670ab.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a744fbef78.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a794664fd7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a797bda7c7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a797e36f11.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a798315f21.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a79853c768.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a798823351.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a798a66bab.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7a954c7ad.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7b16b72ad.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7b18e4fe8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7b3712d91.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7b47759d9.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7d8c1efe7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7d99ab8c9.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7dd0989e9.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7ddc9bb9a.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7df5431b2.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7e01d8ac6.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7eb6875cb.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7edd39605.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7ee242af5.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7eef67e40.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7ef1cd3d7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7f28e43cf.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7f3b5acbb.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7f6e7a55c.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7fe04673f.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a7fee1d0e7.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a8031cb5a2.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a803c7ff25.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a807a0fd8c.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a808514c03.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a809f36b51.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a80b1c8c8b.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a80b8dfc19.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a80c3ecb82.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a80caf3fdf.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a81e778d70.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a8243eeefa.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a82451ff7e.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a8256b758f.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a8257e4be8.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a83cf374ef.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a83d050401.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a83d27c016.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a83e1a67e0.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/577a83e2d059f.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/phpMyAdmin/config.inc.php" afterPath="$PROJECT_DIR$/back/phpMyAdmin/config.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/css/uploadify.css" afterPath="$PROJECT_DIR$/back/css/uploadify.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/modules/article/views/article/_form.php" afterPath="$PROJECT_DIR$/backend/modules/article/views/article/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/Article.php" afterPath="$PROJECT_DIR$/common/models/Article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" />
     </list>
     <ignored path="SimpleBlog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -214,18 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UploadAction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/actions/UploadAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.857143">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="e#142#150#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main-local.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -261,13 +63,13 @@
       <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/modules/article/views/article/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06920415">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.061130334">
+              <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
-                <marker date="1467876015486" expanded="true" signature="2143:3202" placeholder="..." />
-                <marker date="1467876015486" expanded="true" signature="2336:2353" placeholder="..." />
-                <marker date="1467876015486" expanded="true" signature="3394:3411" placeholder="..." />
+                <marker date="1467881178498" expanded="true" signature="2124:3183" placeholder="..." />
+                <marker date="1467881178498" expanded="true" signature="2317:2334" placeholder="..." />
+                <marker date="1467881178498" expanded="true" signature="3375:3392" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -303,16 +105,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tag.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/Tag.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.857142">
-              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -328,6 +120,7 @@
         <option value="$PROJECT_DIR$/back/index.php" />
         <option value="$PROJECT_DIR$/backend/modules/article/views/article/create.php" />
         <option value="$PROJECT_DIR$/backend/assets/ArticleAsset.php" />
+        <option value="$PROJECT_DIR$/back/css/uploadify.css" />
         <option value="$PROJECT_DIR$/backend/modules/article/views/article/_form.php" />
       </list>
     </option>
@@ -606,6 +399,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -654,7 +483,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2013889" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -686,32 +515,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/models/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Tag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Thumb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -760,9 +563,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
-            <marker date="1467876015486" expanded="true" signature="2143:3202" placeholder="..." />
-            <marker date="1467876015486" expanded="true" signature="2336:2353" placeholder="..." />
-            <marker date="1467876015486" expanded="true" signature="3394:3411" placeholder="..." />
+            <marker date="1467881178498" expanded="true" signature="2124:3183" placeholder="..." />
+            <marker date="1467881178498" expanded="true" signature="2317:2334" placeholder="..." />
+            <marker date="1467881178498" expanded="true" signature="3375:3392" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1065,15 +868,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/back/images/uploadify-cancel.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/css/uploadify.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40262842">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/js/jquery.uploadify.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.393064">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/modules/article/views/article/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06920415">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.061130334">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
-            <marker date="1467876015486" expanded="true" signature="2143:3202" placeholder="..." />
-            <marker date="1467876015486" expanded="true" signature="2336:2353" placeholder="..." />
-            <marker date="1467876015486" expanded="true" signature="3394:3411" placeholder="..." />
+            <marker date="1467881178498" expanded="true" signature="2124:3183" placeholder="..." />
+            <marker date="1467881178498" expanded="true" signature="2317:2334" placeholder="..." />
+            <marker date="1467881178498" expanded="true" signature="3375:3392" placeholder="..." />
           </folding>
         </state>
       </provider>

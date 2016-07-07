@@ -21,8 +21,6 @@ ArticleAsset::register($this);
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'inputTags')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
 
     <?= $form->field($model, 'thumbnail')->fileInput() ?>
@@ -68,6 +66,12 @@ ArticleAsset::register($this);
             color-stop(1, #fff)
         );
     }
+
+    .fa-trash-o.delete{
+        cursor: pointer;
+    }
+
+
 </style>
 
 <script>
@@ -132,7 +136,7 @@ ArticleAsset::register($this);
                         html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
                         html += '</div>';
                         html += '<div class="col-md-1 col-xs-1">';
-                        html += '<i class="fa fa-trash-o"></i>';
+                        html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
                         html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
                         html += '</div>';
 
@@ -140,6 +144,18 @@ ArticleAsset::register($this);
                     }
                 }
             }
+        });
+
+        $(document).on('mouseover', '.fa-trash-o', function () {
+            $(this).removeClass('text-success').addClass('text-info');
+        });
+
+        $(document).on('mouseout', '.fa-trash-o', function () {
+            $(this).removeClass('text-info').addClass('text-success');
+        });
+
+        $(document).on('click', '.fa-trash-o', function() {
+            $(this).closest('.form-group').remove();
         });
 
     }

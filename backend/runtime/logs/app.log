@@ -313,3 +313,137 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1467876086.4367
     'REQUEST_TIME' => 1467876086
 ]
+2016-07-07 16:21:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "img/uploadify-cancel.png".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('img/uploadify-c...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-07-07 16:21:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'img/uploadify-cancel.png'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'h115d1uffc2fkfaqvop2u34cn2'
+    '_csrf' => '3ccb67d39fb576bec7f5c66cdd2865a3c3e14b10e017c176889f190c45bee968a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"g7Dng8z9ACqhOv4hCuMJEaIP5MopEAR1\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1996'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/img/uploadify-cancel.png'
+    'QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/img/uploadify-cancel.png'
+    'REDIRECT_QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REMOTE_PORT' => '58143'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'PHPSESSID=h115d1uffc2fkfaqvop2u34cn2; _csrf=3ccb67d39fb576bec7f5c66cdd2865a3c3e14b10e017c176889f190c45bee968a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22g7Dng8z9ACqhOv4hCuMJEaIP5MopEAR1%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com:9999/back/css/uploadify.css'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467879678.8369
+    'REQUEST_TIME' => 1467879678
+]
+2016-07-07 16:29:14 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "img/uploadify-cancel.png".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('img/uploadify-c...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-07-07 16:29:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'img/uploadify-cancel.png'
+]
+
+$_COOKIE = [
+    '_csrf' => '3ccb67d39fb576bec7f5c66cdd2865a3c3e14b10e017c176889f190c45bee968a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"g7Dng8z9ACqhOv4hCuMJEaIP5MopEAR1\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    'PHPSESSID' => 'h115d1uffc2fkfaqvop2u34cn2'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\phpStudy\\php56n;D:\\curl\\bin;D:\\Java\\jdk1.8.0_92\\bin;C:\\cygwin64\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\PostgreSQL\\9.4\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'E:/phpStudy/php54n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2024'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/img/uploadify-cancel.png'
+    'QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/back/img/uploadify-cancel.png'
+    'REDIRECT_QUERY_STRING' => 'r=img/uploadify-cancel.png'
+    'REMOTE_PORT' => '58497'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '9999'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/0.9.8zb mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=3ccb67d39fb576bec7f5c66cdd2865a3c3e14b10e017c176889f190c45bee968a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22g7Dng8z9ACqhOv4hCuMJEaIP5MopEAR1%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; PHPSESSID=h115d1uffc2fkfaqvop2u34cn2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com:9999'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1467880154.3443
+    'REQUEST_TIME' => 1467880154
+]
