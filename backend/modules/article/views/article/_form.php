@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use backend\assets\ArticleAsset;
+use backend\assets\FormAsset;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
-ArticleAsset::register($this);
+
+FormAsset::register($this);
 ?>
 
 <script>
@@ -74,9 +75,11 @@ ArticleAsset::register($this);
 
 </style>
 
-<script>
 
-    window.onload = function() {
+<?php
+
+
+$script = <<<EOT
 
         var um = UM.getEditor('ueditor', {
             autoHeightEnabled: true,
@@ -96,18 +99,18 @@ ArticleAsset::register($this);
             formData        : {_csrf : _csrf},
             fileObjName     : 'upfile',
             onUploadSuccess : function(file, data, response){
-                if(response){
-                    var rs = $.parseJSON(data);
-                    if(rs.err_code > 0){
-                        alert(rs.msg);
-                    }else{
-                        var data = rs.data;
-                        $('input[name="Article[thumbnail]"]').val(data.url);
-                        $('.field-article-thumbnail').find('img').remove();
-                        $('<img>').attr({src : data.url, width:80}).appendTo($('.field-article-thumbnail'))
+    if(response){
+        var rs = $.parseJSON(data);
+        if(rs.err_code > 0){
+            alert(rs.msg);
+        }else{
+            var data = rs.data;
+            $('input[name="Article[thumbnail]"]').val(data.url);
+            $('.field-article-thumbnail').find('img').remove();
+            $('<img>').attr({src : data.url, width:80}).appendTo($('.field-article-thumbnail'))
                     }
-                }
-            }
+    }
+}
         });
 
 
@@ -121,29 +124,29 @@ ArticleAsset::register($this);
             formData        : {_csrf : _csrf},
             fileObjName     : 'upfile',
             onUploadSuccess : function (file, data, response) {
-                if(response) {
-                    var rs = $.parseJSON(data);
-                    if(rs.err_code > 0) {
-                        alert(rs.msg);
-                    } else {
-                        var data = rs.data;
-                        var html = '<div class="form-group">';
-                        html += '<div class="col-md-1 col-xs-2">';
-                        html += '<img src="' + data.url + '" height="38">';
-                        html += '</div>';
-                        html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
-                        html += '<div class="col-md-8 col-xs-6">';
-                        html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
-                        html += '</div>';
-                        html += '<div class="col-md-1 col-xs-1">';
-                        html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
-                        html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
-                        html += '</div>';
+    if(response) {
+        var rs = $.parseJSON(data);
+        if(rs.err_code > 0) {
+            alert(rs.msg);
+        } else {
+            var data = rs.data;
+            var html = '<div class="form-group">';
+            html += '<div class="col-md-1 col-xs-2">';
+            html += '<img src="' + data.url + '" height="38">';
+            html += '</div>';
+            html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
+            html += '<div class="col-md-8 col-xs-6">';
+            html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
+            html += '</div>';
+            html += '<div class="col-md-1 col-xs-1">';
+            html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
+            html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
+            html += '</div>';
 
-                        $(html).appendTo('#thumbs');
-                    }
-                }
-            }
+            $(html).appendTo('#thumbs');
+        }
+    }
+}
         });
 
         $(document).on('mouseover', '.fa-trash-o', function () {
@@ -158,7 +161,7 @@ ArticleAsset::register($this);
             $(this).closest('.form-group').remove();
         });
 
-    }
+EOT;
 
-
-</script>
+    $this->registerJs($script);
+?>

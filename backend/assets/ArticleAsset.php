@@ -12,10 +12,6 @@ use yii\web\AssetBundle;
 class ArticleAsset extends AssetBundle{
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $css = [
-        'css/uploadify.css',
-        'umeditor/themes/default/css/umeditor.css'
-    ];
 
     public $js = [
         'umeditor/umeditor.config.js',

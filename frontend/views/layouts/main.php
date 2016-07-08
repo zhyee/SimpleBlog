@@ -162,9 +162,7 @@ NavBar::end();
 
 <script>
     $(function(){
-        $("img.lazyload").lazyload({
-            effect : "fadeIn"
-        });
+
     });
 </script>
 </body>
