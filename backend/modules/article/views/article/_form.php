@@ -28,7 +28,7 @@ FormAsset::register($this);
 
     <div class="form-group">
         <label class="control-label" for="article-thumb">图集</label>
-        <input type="file" id="article-thumb" name="Article[thumb]">
+        <input type="file" id="article-thumb">
     </div>
 
     <div id="thumbs">
@@ -140,7 +140,7 @@ $script = <<<EOT
             html += '</div>';
             html += '<div class="col-md-1 col-xs-1">';
             html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
-            html += '<input type="hidden" name="Article[thumb][]" value="' + data.url + '">';
+            html += '<input type="hidden" name="Article[thumb-url][]" value="' + data.url + '">';
             html += '</div>';
 
             $(html).appendTo('#thumbs');

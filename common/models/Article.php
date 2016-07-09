@@ -187,7 +187,8 @@ class Article extends BaseActiveRecord implements \SplSubject
         }
 
         if(!$this->save()){
-            $trans_flag = false;
+            $trans_flag = FALSE;
+            goto trans_end;
         }
 
         if($isUpdate){
@@ -196,6 +197,7 @@ class Article extends BaseActiveRecord implements \SplSubject
         }
 
         $tags = preg_replace('/ {2,}/', ' ', trim($data['inputTags']));    //多个连续空格替换成一个
+
         if($tags){
             $tags = explode(' ', $tags);
             $tags = array_unique(array_filter($tags));
@@ -210,10 +212,41 @@ class Article extends BaseActiveRecord implements \SplSubject
             }
             $db = self::getDb();
             if(!$db->createCommand()->batchInsert('tagindex', ['article_id', 'tag_id'], $dataArray)->execute()){
-                $trans_flag = false;
+                $trans_flag = FALSE;
+                goto trans_end;
             }
         }
 
+        //  图集信息
+        $thumbDecriptions = $data['thumb-description'];
+        $thumbUrls = $data['thumb-url'];
+
+        $thumbData = [];
+        $index = 0;
+        if ($thumbUrls)
+        {
+            foreach ($thumbUrls as $k => $url)
+            {
+                $thumbData[$index]['aid'] = $this->getAttribute('id');
+                $thumbData[$index]['url'] = $url;
+                $thumbData[$index]['description'] = $thumbDecriptions[$k] ?: '';
+                $thumbData[$index]['addtime'] = time();
+                $thumbData[$index]['is_del'] = 0;
+                $index++;
+            }
+            $db = self::getDb();
+
+            if(!$db->createCommand()->batchInsert('thumb',
+                ['aid', 'url', 'description', 'addtime', 'is_del'],
+                $thumbData)
+            ->execute())
+            {
+                $trans_flag = FALSE;
+                goto trans_end;
+            }
+        }
+
+        trans_end:
         if($trans_flag){
             $trans->commit();
         }else{

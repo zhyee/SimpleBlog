@@ -9,7 +9,9 @@
 
 namespace commmon\models;
 
-class Thumb {
+use common\models\BaseActiveRecord;
+
+class Thumb extends BaseActiveRecord {
 
     /**
      * 返回模型对应的表名
@@ -26,6 +28,7 @@ class Thumb {
             $model->aid = $thumb['aid'];
             $model->url = $thumb['url'];
             $model->description = $thumb['description'];
+            $model->addtime = time();
             $model->is_del = 0;
             $model->save();
         }

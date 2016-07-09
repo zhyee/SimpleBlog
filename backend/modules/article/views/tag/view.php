@@ -34,9 +34,11 @@ use common\helpers\CoreHelper;
     </div>
     <?php if($article['thumbnail']): ?>
     <div class="featured-media">
-        <a href="<?= Url::to(['article/view', 'id' => $article['id']]) ?>"><img src="<?= $article['thumbnail'] ?>" alt="<?= Html::encode($article['title']) ?>"></a>
+        <a href="<?= Url::to(['article/view', 'id' => $article['id']]) ?>">
+            <img class="lazyload" data-original="<?= $article['thumbnail'] ?>" alt="<?= Html::encode($article['title']) ?>">
+        </a>
     </div>
-    <?php endif ?>
+    <?php endif; ?>
     <div class="post-content">
         <p><?= $article['description'] ?></p>
     </div>
@@ -61,4 +63,20 @@ use common\helpers\CoreHelper;
 
 
 <?= SimplePagerWidget::widget(['pagination' => $pagination]) ?>
+
+<?php
+
+    $this->registerJsFile('@web/js/jquery.lazyload.min.js', ['depends' => 'yii\web\JqueryAsset']);
+
+$script = <<<EOT
+
+            $("img.lazyload").lazyload({
+                effect : "fadeIn"
+            });
+
+EOT;
+
+$this->registerJs($script);
+
+?>
 

@@ -25,14 +25,18 @@ use yii\helpers\Url;
     <div class="post-head">
         <h1 class="post-title"><a href="<?= Url::to(['article/view', 'id' => $article['id']]) ?>"><?= Html::encode($article['title']) ?></a></h1>
         <div class="post-meta">
-            <span class="author">作者：<a href="/author/wangsai/"><?= Html::encode($article['author']) ?></a></span>
+            <span class="author">作者：<a href=""><?= Html::encode($article['author']) ?></a></span>
             &nbsp;&bull;&nbsp;
             <time class="post-date" datetime="2016年1月8日星期五上午10点33分" title="<?= date('Y年m月d日H点i分', $article['publish_time']) ?>"><?= date('Y年m月d日', $article['publish_time']) ?></time>
         </div>
     </div>
+    <?php if($article['thumbnail']):?>
     <div class="featured-media">
-        <a href="/post/lumen-5-2-is-released/"><img src="http://image.golaravel.com/e/d5/0dd5c3a731c98638a076afe8ce6de.png" alt="Lumen 5.2 正式发布"></a>
+        <a href="<?= Url::to(['article/view', 'id' => $article['id']]) ?>">
+            <img class="lazyload" data-original="<?= $article['thumbnail'] ?>" alt="<?= Html::encode($article['title'])?>">
+        </a>
     </div>
+    <?php endif ?>
     <div class="post-content">
         <p><?= $article['description'] ?></p>
     </div>
@@ -57,3 +61,18 @@ use yii\helpers\Url;
 <nav class="pagination" role="navigation">
     <span class="page-number">第 1 页 &frasl; 共 1 页</span>
 </nav>
+
+<?php
+    $this->registerJsFile('@web/js/jquery.lazyload.min.js', ['depends' => 'yii\web\JqueryAsset']);
+
+    $script = <<<EOT
+
+            $("img.lazyload").lazyload({
+                effect : "fadeIn"
+            });
+
+EOT;
+
+    $this->registerJs($script);
+
+?>

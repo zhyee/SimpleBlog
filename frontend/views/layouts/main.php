@@ -158,13 +158,7 @@ NavBar::end();
 <script src="/js/jquery.fitvids.min.js"></script>
 <script src="/js/highlight.min.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/jquery.lazyload.min.js"></script>
 
-<script>
-    $(function(){
-
-    });
-</script>
 </body>
 </html>
 <?php $this->endPage() ?>
