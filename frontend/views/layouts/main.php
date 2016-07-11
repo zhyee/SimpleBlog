@@ -143,7 +143,11 @@ NavBar::end();
 <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="hidden-sm hidden-md hidden-lg col-sm-12 col-xs-12">
+                <span>本站由Yii2 framework，BootStrap强力驱动</span>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+                <span class="hidden-xs">本站由Yii2 framework，BootStrap强力驱动</span>
                 <span>Copyright &copy; <a href="http://zyee.org">zyee.org</a></span> |
                 <span><a href="http://www.miibeian.gov.cn/" target="_blank">皖ICP备14016681号-2</a></span>
             </div>

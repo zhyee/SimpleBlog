@@ -236,7 +236,7 @@ class Article extends BaseActiveRecord implements \SplSubject
             }
             $db = self::getDb();
 
-            if(!$db->createCommand()->batchInsert('thumb',
+            if (!$db->createCommand()->batchInsert('thumb',
                 ['aid', 'url', 'description', 'addtime', 'is_del'],
                 $thumbData)
             ->execute())
