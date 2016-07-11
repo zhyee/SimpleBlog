@@ -143,7 +143,7 @@ NavBar::end();
 <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="hidden-sm hidden-md hidden-lg col-sm-12 col-xs-12">
+            <div class="hidden-sm hidden-md hidden-lg col-xs-12">
                 <span>本站由Yii2 framework，BootStrap强力驱动</span>
             </div>
             <div class="col-sm-12 col-xs-12">
