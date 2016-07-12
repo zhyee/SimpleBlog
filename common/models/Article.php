@@ -131,7 +131,7 @@ class Article extends BaseActiveRecord implements \SplSubject
      */
     public function setDescription($description = NULL){
         $description = $description === NULL ? $this->content : $description;
-        $this->description = mb_substr(strip_tags($description), 0, self::DESCRIPTION_LENGTH, Yii::$app->charset);
+        $this->description = mb_substr(html_entity_decode(strip_tags($description), ENT_QUOTES|ENT_HTML5), 0, self::DESCRIPTION_LENGTH, Yii::$app->charset);
     }
 
     /**
@@ -218,8 +218,8 @@ class Article extends BaseActiveRecord implements \SplSubject
         }
 
         //  图集信息
-        $thumbDecriptions = $data['thumb-description'];
-        $thumbUrls = $data['thumb-url'];
+        $thumbDecriptions = isset($data['thumb-description']) ? $data['thumb-description'] : [];
+        $thumbUrls = isset($data['thumb-url']) ? $data['thumb-url'] : [];
 
         $thumbData = [];
         $index = 0;

@@ -37,8 +37,7 @@ class ArticleController extends ArticleBaseController
      */
     public function actionIndex()
     {
-        $article = new Article();
-        $query = $article::find();
+        $query = Article::find();
 
         $pagination = new Pagination([
             'defaultPageSize' => static::ARTICLE_PAGESIZE,
