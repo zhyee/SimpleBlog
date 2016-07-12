@@ -140,6 +140,7 @@ NavBar::end();
     </div>
 </footer>
 
+
 <div class="copyright">
     <div class="container">
         <div class="row">
@@ -151,7 +152,36 @@ NavBar::end();
     </div>
 </div>
 
-<a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+<aside>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <dl>
+                    <dt><i class="fa fa-lg fa-home"></i></dt>
+                    <dd>首页</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><i class="fa fa-lg fa-flag"></i></dt>
+                    <dd>关于</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><i class="fa fa-lg fa-tags"></i></dt>
+                    <dd>标签</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><i class="fa fa-lg fa-angle-up"></i></dt>
+                    <dd>顶部</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</aside>
 
 <?php $this->endBody() ?>
 
