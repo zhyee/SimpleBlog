@@ -29,7 +29,6 @@ use yii\helpers\Url;
     <link rel="stylesheet" href="/back/css/font-awesome.min.css">
     <link rel="stylesheet" href="/back/css/vs.min.css">
     <link rel="stylesheet" href="/back/css/screen.css" />
-    <link rel="stylesheet" href="/back/css/jquery-ui.css">
 
     <script>
         var _hmt = _hmt || [];
@@ -157,16 +156,6 @@ NavBar::end();
 <script src="/back/js/jquery.fitvids.min.js"></script>
 <script src="/back/js/highlight.min.js"></script>
 <script src="/back/js/main.js"></script>
-<script src="/back/js/jquery-ui.min.js"></script>
-<script src="/back/js/jquery.lazyload.min.js"></script>
-
-<script>
-    $(function(){
-        $("img.lazyload").lazyload({
-            effect : "fadeIn"
-        });
-    });
-</script>
 
 </body>
 </html>

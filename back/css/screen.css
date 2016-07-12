@@ -223,7 +223,7 @@ pre {
   visibility: hidden;
   background: #ffffff;
   text-align: left;
-  padding: 7px 0px;
+  padding: 7px 0;
   margin: 0;
   position: absolute;
   left: 0;
@@ -266,7 +266,7 @@ pre {
   }
   .main-navigation .menu li ul {
     visibility: visible;
-    padding: 0px 0px 0px 20px;
+    padding: 0 0 0 20px;
     margin: 0;
     position: relative;
     top: 0;
@@ -339,10 +339,10 @@ pre {
 }
 .post .post-head .post-meta {
   color: #959595;
-  margin: 14px 0 0px;
+  margin: 14px 0 0;
 }
 .post .post-head .post-meta span {
-  margin: 0px 7px;
+  margin: 0 7px;
   white-space: nowrap;
 }
 .post .featured-media {
@@ -378,7 +378,7 @@ pre {
 }
 
 .post .post-footer .edit a:last-child{
-  margin-right: 0px;
+  margin-right: 0;
 }
 .post .post-footer .edit a:hover {
   color: #f4645f;
@@ -732,7 +732,7 @@ pre {
   padding: 21px 30px;
 }
 .main-footer .widget {
-  padding: 0px 30px;
+  padding: 0 30px;
 }
 .widget {
   margin-bottom: 35px;
@@ -820,7 +820,7 @@ pre {
   display: block;
 }
 .widget .newsletter .input-group .email,
-.widget .newsletter .input-group btn {
+.widget .newsletter .input-group .btn {
   width: 100%;
 }
 .widget .ad {

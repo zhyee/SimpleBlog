@@ -62,4 +62,20 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
 
     <?= SimplePagerWidget::widget(['pagination' => $pagination]) ?>
 
+<?php
+
+$this->registerJsFile('@web/js/jquery.lazyload.min.js', ['depends' => 'yii\web\JqueryAsset']);
+
+$script = <<<EOT
+
+    $("img.lazyload").lazyload({
+        effect : "fadeIn"
+    });
+
+EOT;
+
+$this->registerJs($script);
+
+?>
+
 
