@@ -799,6 +799,10 @@ pre {
   max-width: 100%;
 }
 
+/* 侧边栏工具条 */
+/*===============================================
+
+===================================================*/
 .sidebar{
     width: 45px;
     position: fixed;
@@ -832,6 +836,10 @@ pre {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+.sidebar ul li a{
+  color: #fcfcfc;
 }
 
 /* cover*/

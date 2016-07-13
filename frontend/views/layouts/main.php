@@ -156,29 +156,35 @@ NavBar::end();
     </div>
 </div>
 
-<aside>
+<aside class="hidden-xs">
     <div class="sidebar">
         <ul>
             <li>
-                <dl>
-                    <dt><i class="fa fa-lg fa-home"></i></dt>
-                    <dd>首页</dd>
-                </dl>
+                <a href="<?= Url::home() ?>">
+                    <dl>
+                        <dt><i class="fa fa-lg fa-home"></i></dt>
+                        <dd>首页</dd>
+                    </dl>
+                </a>
             </li>
             <li>
-                <dl>
-                    <dt><i class="fa fa-lg fa-flag"></i></dt>
-                    <dd>关于</dd>
-                </dl>
+                <a href="<?= Url::to(['/site/about']) ?>">
+                    <dl>
+                        <dt><i class="fa fa-lg fa-flag"></i></dt>
+                        <dd>关于</dd>
+                    </dl>
+                </a>
             </li>
             <li>
-                <dl>
-                    <dt><i class="fa fa-lg fa-tags"></i></dt>
-                    <dd>标签</dd>
-                </dl>
+                <a href="<?= Url::to(['tag/index']) ?>">
+                    <dl>
+                        <dt><i class="fa fa-lg fa-tags"></i></dt>
+                        <dd>标签</dd>
+                    </dl>
+                </a>
             </li>
             <li>
-                <dl>
+                <dl id="back-top">
                     <dt><i class="fa fa-lg fa-angle-up"></i></dt>
                     <dd>顶部</dd>
                 </dl>

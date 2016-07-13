@@ -79,6 +79,11 @@ var themeApp = {
 			return false;
 		});
 	},
+	backTop: function() {
+		$('#back-top').on('click', function () {
+			$('html,body').animate({scrollTop : 0}, 1000);
+		});
+	},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.responsiveIframe();
@@ -86,6 +91,7 @@ var themeApp = {
 		// themeApp.recentPost();
 		themeApp.highlighter();
 		themeApp.backToTop();
+		themeApp.backTop();
 	}
 }
 

@@ -149,7 +149,34 @@ NavBar::end();
     </div>
 </div>
 
-<a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+<aside class="hidden-xs">
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="<?= Url::home() ?>">
+                    <dl>
+                        <dt><i class="fa fa-lg fa-home"></i></dt>
+                        <dd>首页</dd>
+                    </dl>
+                </a>
+            </li>
+            <li>
+                <a href="<?= Url::to(['tag/index']) ?>">
+                    <dl>
+                        <dt><i class="fa fa-lg fa-tags"></i></dt>
+                        <dd>标签</dd>
+                    </dl>
+                </a>
+            </li>
+            <li>
+                <dl id="back-top">
+                    <dt><i class="fa fa-lg fa-angle-up"></i></dt>
+                    <dd>顶部</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</aside>
 
 <?php $this->endBody() ?>
 
