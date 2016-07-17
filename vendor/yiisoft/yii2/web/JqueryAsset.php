@@ -19,4 +19,7 @@ class JqueryAsset extends AssetBundle
     public $js = [
         'jquery.min.js',
     ];
+    public $jsOptions = [
+        'position' => \yii\web\View::POS_HEAD
+    ];
 }

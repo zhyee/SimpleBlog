@@ -24,7 +24,15 @@ FormAsset::register($this);
 
     <?= $form->field($model, 'inputTags')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
 
-    <?= $form->field($model, 'thumbnail')->fileInput() ?>
+    <div class="form-group field-article-thumbnail">
+        <label class="control-label" for="article-thumbnail">缩略图</label>
+        <a class="btn btn-default btn-uploader">
+            <i class="fa fa-plus fa-2x"></i>
+            <input type="file" class="simple-uploader-file" id="article-thumbnail">
+        </a>
+        <input type="hidden" name="Article[thumbnail]">
+        <div class="help-block"></div>
+    </div>
 
     <div class="form-group">
         <label class="control-label" for="article-thumb">图集</label>
@@ -89,29 +97,29 @@ $script = <<<EOT
             imageUrl : 'index.php?r=article/upload'
         });
 
-        $('#article-thumbnail').uploadify({
-            width           : 30,
-            heigth          : 30,
-            fileSizeLimit   : '2048KB',
-            buttonText      : '<i style="line-height: 30px" class="fa fa-plus fa-2x text-success"></i>',
-            swf             : '/back/css/uploadify.swf',
-            uploader        : uploadUrl,
-            formData        : {_csrf : _csrf},
-            fileObjName     : 'upfile',
-            onUploadSuccess : function(file, data, response){
-    if(response){
-        var rs = $.parseJSON(data);
-        if(rs.err_code > 0){
-            alert(rs.msg);
-        }else{
-            var data = rs.data;
-            $('input[name="Article[thumbnail]"]').val(data.url);
-            $('.field-article-thumbnail').find('img').remove();
-            $('<img>').attr({src : data.url, width:80}).appendTo($('.field-article-thumbnail'))
-                    }
-    }
-}
-        });
+//        $('#article-thumbnail').uploadify({
+//            width           : 30,
+//            heigth          : 30,
+//            fileSizeLimit   : '2048KB',
+//            buttonText      : '<i style="line-height: 30px" class="fa fa-plus fa-2x text-success"></i>',
+//            swf             : '/back/css/uploadify.swf',
+//            uploader        : uploadUrl,
+//            formData        : {_csrf : _csrf},
+//            fileObjName     : 'upfile',
+//            onUploadSuccess : function(file, data, response){
+//    if(response){
+//        var rs = $.parseJSON(data);
+//        if(rs.err_code > 0){
+//            alert(rs.msg);
+//        }else{
+//            var data = rs.data;
+//            $('input[name="Article[thumbnail]"]').val(data.url);
+//            $('.field-article-thumbnail').find('img').remove();
+//            $('<img>').attr({src : data.url, width:80}).appendTo($('.field-article-thumbnail'))
+//                    }
+//    }
+//}
+//        });
 
 
         $('#article-thumb').uploadify({
@@ -165,3 +173,22 @@ EOT;
 
     $this->registerJs($script);
 ?>
+
+<script>
+$('#article-thumbnail').change(function(){
+    var file = this.files[0];
+    if(file){
+        var form = new FormData();
+        form.append('upfile', file);
+        form.append('_csrf', _csrf);
+        xhr = new XMLHttpRequest();
+        xhr.open('post', uploadUrl, true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+});
+</script>

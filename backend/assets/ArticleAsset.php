@@ -21,6 +21,5 @@ class ArticleAsset extends AssetBundle{
     ];
 
     public $depends = [
-        'yii\web\JqueryAsset'
     ];
 }

@@ -16,7 +16,8 @@ class FormAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'umeditor/themes/default/css/umeditor.css',
-        'css/uploadify.css'
+        'css/uploadify.css',
+        'css/simple-uploader.css'
     ];
 
     public $js = [
@@ -27,7 +28,6 @@ class FormAsset extends AssetBundle
     ];
 
     public $depends = [
-        'yii\web\JqueryAsset'
     ];
 }
 

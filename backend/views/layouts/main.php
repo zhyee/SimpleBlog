@@ -8,6 +8,9 @@ use yii\bootstrap\NavBar;
 use common\widgets\LatestArticleWidget;
 use common\widgets\TagCloudWidget;
 use yii\helpers\Url;
+use yii\web\JqueryAsset;
+
+JqueryAsset::register($this);
 
 ?>
 
