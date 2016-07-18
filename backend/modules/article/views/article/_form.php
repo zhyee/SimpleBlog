@@ -24,7 +24,7 @@ FormAsset::register($this);
 
     <?= $form->field($model, 'inputTags')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
 
-    <div class="form-group field-article-thumbnail">
+    <div class="form-group field-article-thumbnail" id="field-article-thumbbail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
         <a class="btn btn-default btn-uploader">
             <i class="fa fa-plus fa-2x"></i>
@@ -34,7 +34,7 @@ FormAsset::register($this);
         <div class="help-block"></div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group field-article-thumb">
         <label class="control-label" for="article-thumb">图集</label>
         <input type="file" id="article-thumb">
     </div>
@@ -177,18 +177,32 @@ EOT;
 <script>
 $('#article-thumbnail').change(function(){
     var file = this.files[0];
+    var xhr;
     if(file){
         var form = new FormData();
         form.append('upfile', file);
         form.append('_csrf', _csrf);
-        xhr = new XMLHttpRequest();
-        xhr.open('post', uploadUrl, true);
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState == 4){
-                console.log(xhr.responseText);
-            }
-        };
-        xhr.send();
+        try{
+            xhr = new XMLHttpRequest();
+            xhr.open('post', uploadUrl, true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4){
+                    var rs = $.parseJSON(xhr.responseText);
+                    console.log(rs);
+                    if(rs.err_code > 0){
+                        alert(rs.msg);
+                    }else{
+                        var data = rs.data;
+                        $('input[name="Article[thumbnail]"]').val(data.url);
+                        $('#field-article-thumbnail').find('img').remove();
+                        $('<img>').attr({src : data.url, width:80}).appendTo($('#field-article-thumbnail'));
+                    }
+                }
+            };
+            xhr.send(form);
+        }catch (e){
+            alert(e.message);
+        }
     }
 });
 </script>
