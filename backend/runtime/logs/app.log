@@ -1882,3 +1882,91 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1468856824.6167
     'REQUEST_TIME' => 1468856824
 ]
+2016-07-19 01:09:42 [127.0.0.1][11][gdpd2jtlpvvf61u842b0pj3b55][error][Exception] exception 'Exception' with message '文件大小超过限制' in E:\project\SimpleBlog\vendor\yiisoft\yii2\Yii.php:65
+Stack trace:
+#0 E:\project\SimpleBlog\common\actions\UploadAction.php(38): Yii::uploadFile('E:\\project\\Simp...', 'http://img.zyee...')
+#1 [internal function]: common\actions\UploadAction->run()
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Action.php(92): call_user_func_array(Array, Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\Action->runWithParams(Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#8 {main}
+2016-07-19 01:09:38 [127.0.0.1][11][gdpd2jtlpvvf61u842b0pj3b55][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => 'NXlEWnhwYS1UKCkdCC9UYEMYCwwnHiVBdBN0GBoIJ09xMxIVNT80fA=='
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => 'IMG_20160320_094542.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => 'C:\\Windows\\php4280.tmp'
+        'error' => 0
+        'size' => 4537286
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '43b634bce1d4ae7d9d6345563d0a76232cfe965e40efbbfc2dc2f138307f5de0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"aQmGp_5MvaOV_nDlAj0BbxFbDJVOMOUQ\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    'PHPSESSID' => 'gdpd2jtlpvvf61u842b0pj3b55'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2168'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '53126'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=43b634bce1d4ae7d9d6345563d0a76232cfe965e40efbbfc2dc2f138307f5de0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22aQmGp_5MvaOV_nDlAj0BbxFbDJVOMOUQ%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; PHPSESSID=gdpd2jtlpvvf61u842b0pj3b55'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryvHCjpdvYpMFH7xlp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '4537633'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1468861777.9573
+    'REQUEST_TIME' => 1468861777
+]
