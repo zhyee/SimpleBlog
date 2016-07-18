@@ -43,8 +43,9 @@ class Yii extends \yii\BaseYii
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_POST, TRUE);
+        $curlFile = new CURLFile(realpath($file));
         $postFields = [
-            'upfile' => '@' . realpath($file)
+            'upfile' => $curlFile
         ];
         $timeStamp = time();
         $postFields['timestamp'] = $timeStamp;
