@@ -1,14 +1,38 @@
 .btn-uploader{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #fff;
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, #dedede),
+            color-stop(1, #fff)
+    );
     position: relative;
     overflow: hidden;
-    border-radius: 30px !important;
+    border-radius: 30px;
 }
+
+.btn-uploader:hover {
+    background-color: #fff;
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, #c3c3c3),
+            color-stop(1, #fff)
+    );
+    cursor: pointer;
+}
+
 .simple-uploader-file{
     opacity: 0;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
     height: 100%;
     z-index: 9999;
 }

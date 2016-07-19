@@ -26,12 +26,14 @@ FormAsset::register($this);
 
     <div class="form-group field-article-thumbnail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
-        <a class="btn btn-default btn-uploader">
-            <i class="fa fa-plus fa-2x"></i>
-            <input type="file" class="simple-uploader-file" id="article-thumbnail">
-        </a>
-        <input type="hidden" name="Article[thumbnail]">
-        <div class="help-block"></div>
+        <div>
+            <button class="btn-uploader">
+                <i class="fa fa-plus fa-lg"></i>
+                <input type="file" class="simple-uploader-file" id="article-thumbnail">
+            </button>
+            <input type="hidden" name="Article[thumbnail]">
+            <div class="help-block"></div>
+        </div>
     </div>
 
     <div class="form-group field-article-thumb">
