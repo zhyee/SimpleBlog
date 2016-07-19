@@ -24,7 +24,7 @@ FormAsset::register($this);
 
     <?= $form->field($model, 'inputTags')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
 
-    <div class="form-group field-article-thumbnail" id="field-article-thumbbail">
+    <div class="form-group field-article-thumbnail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
         <a class="btn btn-default btn-uploader">
             <i class="fa fa-plus fa-2x"></i>
@@ -97,30 +97,6 @@ $script = <<<EOT
             imageUrl : 'index.php?r=article/upload'
         });
 
-//        $('#article-thumbnail').uploadify({
-//            width           : 30,
-//            heigth          : 30,
-//            fileSizeLimit   : '2048KB',
-//            buttonText      : '<i style="line-height: 30px" class="fa fa-plus fa-2x text-success"></i>',
-//            swf             : '/back/css/uploadify.swf',
-//            uploader        : uploadUrl,
-//            formData        : {_csrf : _csrf},
-//            fileObjName     : 'upfile',
-//            onUploadSuccess : function(file, data, response){
-//    if(response){
-//        var rs = $.parseJSON(data);
-//        if(rs.err_code > 0){
-//            alert(rs.msg);
-//        }else{
-//            var data = rs.data;
-//            $('input[name="Article[thumbnail]"]').val(data.url);
-//            $('.field-article-thumbnail').find('img').remove();
-//            $('<img>').attr({src : data.url, width:80}).appendTo($('.field-article-thumbnail'))
-//                    }
-//    }
-//}
-//        });
-
 
         $('#article-thumb').uploadify({
             width           : 30,
@@ -187,20 +163,21 @@ $('#article-thumbnail').change(function(){
             xhr.open('post', uploadUrl, true);
             xhr.onreadystatechange = function(){
                 if(xhr.readyState == 4){
-                    var rs = $.parseJSON(xhr.responseText);
-                    console.log(rs);
-                    if(rs.err_code > 0){
-                        alert(rs.msg);
+                    var result = $.parseJSON(xhr.responseText);
+                    console.log(result);
+                    if(result.err_code > 0){
+                        alert(result.msg);
                     }else{
-                        var data = rs.data;
+                        var data = result.data;
                         $('input[name="Article[thumbnail]"]').val(data.url);
-                        $('#field-article-thumbnail').find('img').remove();
-                        $('<img>').attr({src : data.url, width:80}).appendTo($('#field-article-thumbnail'));
+                        var o = $('.field-article-thumbnail');
+                        o.find('img').remove();
+                        $('<img>').attr({src : data.url, width:80}).appendTo(o);
                     }
                 }
             };
             xhr.send(form);
-        }catch (e){
+        } catch(e) {
             alert(e.message);
         }
     }

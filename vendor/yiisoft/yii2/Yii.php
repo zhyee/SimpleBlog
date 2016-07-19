@@ -43,8 +43,9 @@ class Yii extends \yii\BaseYii
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_POST, TRUE);
+        $curlFile = new CURLFile(realpath($file));
         $postFields = [
-            'upfile' => '@' . realpath($file)
+            'upfile' => $curlFile
         ];
         $timeStamp = time();
         $postFields['timestamp'] = $timeStamp;
@@ -55,7 +56,7 @@ class Yii extends \yii\BaseYii
         if($height !== NULL){
             $postFields['height'] = $height;
         }
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+        @curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
         $response = curl_exec($ch);
         curl_close($ch);
         $response = json_decode($response, true);
