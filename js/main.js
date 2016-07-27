@@ -84,6 +84,26 @@ var themeApp = {
 			$('html,body').animate({scrollTop : 0}, 1000);
 		});
 	},
+    hideBackTop: function() {
+
+        if ($('body').scrollTop() > $(window).height()) {
+            $('#back-top').parent().show();
+        }
+        else
+        {
+            $('#back-top').parent().hide();
+        }
+
+        $(window).on('scroll', function() {
+            if ($('body').scrollTop() > $(window).height()) {
+                $('#back-top').parent().fadeIn(1000);
+            }
+            else
+            {
+                $('#back-top').parent().fadeOut(1000);
+            }
+        });
+    },
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.responsiveIframe();
@@ -92,6 +112,7 @@ var themeApp = {
 		themeApp.highlighter();
 		themeApp.backToTop();
 		themeApp.backTop();
+        themeApp.hideBackTop();
 	}
 }
 

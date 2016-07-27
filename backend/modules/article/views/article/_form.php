@@ -157,10 +157,10 @@ $('#article-thumbnail').change(function(){
     var file = this.files[0];
     var xhr;
     if(file){
-        var form = new FormData();
-        form.append('upfile', file);
-        form.append('_csrf', _csrf);
         try{
+            var form = new FormData();
+            form.append('upfile', file);
+            form.append('_csrf', _csrf);
             xhr = new XMLHttpRequest();
             xhr.open('post', uploadUrl, true);
             xhr.onreadystatechange = function(){
@@ -179,7 +179,9 @@ $('#article-thumbnail').change(function(){
                 }
             };
             xhr.send(form);
-        } catch(e) {
+        }
+        catch(e)
+        {
             alert(e.message);
         }
     }

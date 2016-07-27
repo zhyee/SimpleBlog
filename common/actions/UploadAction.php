@@ -13,6 +13,7 @@ use Yii;
 use yii\base\Action;
 use yii\base\Exception;
 use yii\web\UploadedFile;
+use yii\web\Response;
 use yii\imagine\Image;
 
 class UploadAction extends Action
@@ -22,34 +23,24 @@ class UploadAction extends Action
     public function run()
     {
 
-        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        Yii::$app->response->format = Response::FORMAT_JSON;
         if(Yii::$app->request->isPost){
-            $thumbnail = UploadedFile::getInstanceByName('upfile');
-            $runtimeDir = Yii::getAlias('@frontend') . '/runtime';
-            if(!is_dir($runtimeDir)){
-                throw new Exception( $runtimeDir . ' 目录不存在');
-            }
-            $fileName = $runtimeDir . '/' . uniqid(mt_rand(111, 999)) . '.' . $thumbnail->extension;
-            $isUeditor =  Yii::$app->request->get('editorid') ? true : false;    //是否是通过ueditor上传的
+            try
+            {
+                $thumbnail = UploadedFile::getInstanceByName('upfile');
+                $runtimeDir = Yii::getAlias('@frontend') . '/runtime';
+                if(!is_dir($runtimeDir)){
+                    throw new Exception( $runtimeDir . ' 目录不存在');
+                }
+                $fileName = $runtimeDir . '/' . uniqid(mt_rand(111, 999)) . '.' . $thumbnail->extension;
 
-            if($thumbnail->saveAs($fileName)){
 
-                $uploadServer = Yii::$app->params['uploadServer'];
-                $url = Yii::uploadFile($fileName, $uploadServer);
-                unlink($fileName);  //删除临时存储文件
+                if($thumbnail->saveAs($fileName)){
 
-                if($isUeditor) {
+                    $uploadServer = Yii::$app->params['uploadServer'];
+                    $url = Yii::uploadFile($fileName, $uploadServer);
+                    unlink($fileName);  //删除临时存储文件
 
-                    return [
-                        'originalName' => $thumbnail->name,
-                        'name' => ltrim(strrchr($url, '/'), '/'),
-                        'url' => $url,
-                        'size' => $thumbnail->size,
-                        'type' => strrchr($thumbnail->name, '.'),
-                        'state' => 'SUCCESS'
-                    ];
-
-                } else {
                     return [
                         'err_code' => 0,
                         'data' => [
@@ -58,12 +49,19 @@ class UploadAction extends Action
                             'size'  => $thumbnail->size
                         ]
                     ];
-                }
 
-            } else {
+                } else {
+                    return [
+                        'err_code' => 1,
+                        'msg' => '图片上传失败'
+                    ];
+                }
+            }
+            catch (\Exception $e)
+            {
                 return [
-                    'err_code' => 1,
-                    'msg' => '图片上传失败'
+                    'err_code' => 2,
+                    'msg' => $e->getMessage()
                 ];
             }
 

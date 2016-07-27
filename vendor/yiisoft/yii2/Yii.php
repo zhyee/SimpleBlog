@@ -27,11 +27,16 @@ class Yii extends \yii\BaseYii
 
     /**
      * 利用curl上传文件到独立服务器
-     * @param $file     文件路径
-     * @param $apiServer        远程接口
-     * @param null $width       生成图片的宽度
-     * @param null $height      生成图片的高度
-     * @return mixed            返回图片的url
+     * @param $file
+     * 文件路径
+     * @param $uploadServer
+     * 远程接口
+     * @param null $width
+     * 生成图片的宽度
+     * @param null $height
+     * 生成图片的高度
+     * @return mixed
+     * 返回图片的url
      * @throws Exception
      */
     public static function uploadFile($file, $uploadServer, $width = NULL, $height = NULL){
@@ -43,7 +48,14 @@ class Yii extends \yii\BaseYii
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_POST, TRUE);
-        $curlFile = new CURLFile(realpath($file));
+        if (class_exists('CURLFile'))
+        {
+            $curlFile = new CURLFile(realpath($file));
+        }
+        else
+        {
+            $curlFile = '@' . realpath($file);
+        }
         $postFields = [
             'upfile' => $curlFile
         ];
