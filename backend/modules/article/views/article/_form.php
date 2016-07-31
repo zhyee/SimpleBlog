@@ -31,6 +31,11 @@ FormAsset::register($this);
                 <i class="fa fa-plus fa-lg"></i>
                 <input type="file" class="simple-uploader-file" id="article-thumbnail">
             </button>
+            <div class="progress" style="display: none;" id="uploader-progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0">
+                    <span class="sr-only">60%</span>
+                </div>
+            </div>
             <input type="hidden" name="Article[thumbnail]">
             <div class="help-block"></div>
         </div>
@@ -38,7 +43,13 @@ FormAsset::register($this);
 
     <div class="form-group field-article-thumb">
         <label class="control-label" for="article-thumb">图集</label>
-        <input type="file" id="article-thumb">
+        <div>
+            <button class="btn-uploader">
+                <i class="fa fa-plus fa-lg"></i>
+                <input type="file" class="simple-uploader-file" id="article-thumb">
+            </button>
+        </div>
+        <div class="help-block"></div>
     </div>
 
     <div id="thumbs">
@@ -55,28 +66,6 @@ FormAsset::register($this);
 </div>
 
 <style>
-    .uploadify-button{
-        background-color: #fff;
-        background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(0, #dedede),
-            color-stop(1, #fff)
-        );
-        border: none;
-        padding: 0;
-    }
-    .uploadify:hover .uploadify-button{
-        background-color: #fff;
-        background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(0, #c3c3c3),
-            color-stop(1, #fff)
-        );
-    }
 
     .fa-trash-o.delete{
         cursor: pointer;
@@ -100,7 +89,7 @@ $script = <<<EOT
         });
 
 
-        $('#article-thumb').uploadify({
+        $('').uploadify({
             width           : 30,
             height          : 30,
             fileSizeLimit   : '2048KB',
@@ -178,6 +167,20 @@ $('#article-thumbnail').change(function(){
                     }
                 }
             };
+
+            // 监听进度
+            xhr.upload.addEventListener('progress', function(event){
+                $('#uploader-progress').show();
+                $('#uploader-progress .progress-bar').attr({
+                    'aria-valuenow' : event.loaded,
+                    'aria-valuemax' : event.total
+                }).css({'width' : Math.round(event.loaded / event.total * 100) + '%'})
+                if(event.loaded == event.total)
+                {
+                    $('#uploader-progress').delay(1000).fadeOut(1000);
+                }
+            });
+
             xhr.send(form);
         }
         catch(e)
