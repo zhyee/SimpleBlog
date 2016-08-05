@@ -53,11 +53,16 @@ $baseUrl = Yii::$app->urlManager->baseUrl;
 
 </nav>
 
-<div class="container">
+<main class="main-content">
 
-    <?= $content ?>
+    <div class="container">
 
-</div>
+        <?= $content ?>
+
+    </div>
+
+</main>
+
 
 <footer>
     <div class="copyright">

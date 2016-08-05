@@ -166,7 +166,7 @@ JqueryAsset::register($this);
             <p class="nav">
                 <a href="<?= Url::to(['article/article/index']) ?>">Blog<span class="ml-3">&#187;</span></a>
                 <span class="separator"> | </span>
-                <a href="">About<span class="ml-3">&#187;</span></a>
+                <a href="<?= Url::to(['/site/about']) ?>">About<span class="ml-3">&#187;</span></a>
                 <span class="separator"> | </span>
                 <a href="<?= Url::to(['/simple-uploader/simple-uploader']) ?>">SimpleUploader<span class="ml-3">&#187;</span></a>
             </p>
