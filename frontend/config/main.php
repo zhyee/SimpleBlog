@@ -10,7 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'article/article/index',
+    'defaultRoute' => 'site/index',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'user' => [
@@ -32,13 +32,13 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => ['' => '/article/article/index'],
+            'rules' => ['' => '/site/index'],
         ],
 
     ],
     'modules' => [
         'article' => 'frontend\modules\article\ArticleModule',
-        'api' => 'frontend\modules\api\ApiModule'
+        'simple-uploader' => 'frontend\modules\simpleUploader\SimpleUploaderModule'
     ],
     'params' => $params,
 ];

@@ -1970,3 +1970,968 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1468861777.9573
     'REQUEST_TIME' => 1468861777
 ]
+2016-08-01 14:27:11 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/simpleuploader.js".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/simpleupload...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-08-01 14:27:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'js/simpleuploader.js'
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2088'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/js/simpleuploader.js'
+    'QUERY_STRING' => 'r=js/simpleuploader.js'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=js/simpleuploader.js'
+    'REDIRECT_URL' => '/back/js/simpleuploader.js'
+    'REMOTE_PORT' => '59075'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470032831.4726
+    'REQUEST_TIME' => 1470032831
+]
+2016-08-01 14:29:53 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/simpleuploader.js".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/simpleupload...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-08-01 14:29:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'js/simpleuploader.js'
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2088'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/js/simpleuploader.js'
+    'QUERY_STRING' => 'r=js/simpleuploader.js'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=js/simpleuploader.js'
+    'REDIRECT_URL' => '/back/js/simpleuploader.js'
+    'REMOTE_PORT' => '59208'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470032993.1453
+    'REQUEST_TIME' => 1470032993
+]
+2016-08-01 14:30:04 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/simpleuploader.js".' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/simpleupload...', Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#2 {main}
+2016-08-01 14:30:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'js/simpleuploader.js'
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2088'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/js/simpleuploader.js'
+    'QUERY_STRING' => 'r=js/simpleuploader.js'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=js/simpleuploader.js'
+    'REDIRECT_URL' => '/back/js/simpleuploader.js'
+    'REMOTE_PORT' => '59218'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470033004.2711
+    'REQUEST_TIME' => 1470033004
+]
+2016-08-01 14:41:08 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 14:41:07 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '头像.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => 'C:\\Windows\\php7FAD.tmp'
+        'error' => 0
+        'size' => 1116546
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2180'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '59565'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryqEPv3JbThdQAZBGD'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '1116732'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470033666.9571
+    'REQUEST_TIME' => 1470033666
+]
+2016-08-01 14:43:10 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 14:43:09 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '头像.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => 'C:\\Windows\\php5E90.tmp'
+        'error' => 0
+        'size' => 1116546
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2180'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '59641'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarylGQrJm2d2oDCdQjS'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '1116839'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470033789.607
+    'REQUEST_TIME' => 1470033789
+]
+2016-08-01 14:43:43 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 14:43:42 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => 'loading.gif'
+        'type' => 'image/gif'
+        'tmp_name' => 'C:\\Windows\\phpDE10.tmp'
+        'error' => 0
+        'size' => 7473
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2508'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '59677'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryjQOSIgvyaZJC32p8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '7766'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470033822.2576
+    'REQUEST_TIME' => 1470033822
+]
+2016-08-01 14:45:59 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 14:45:57 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '头像.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => 'C:\\Windows\\phpEE05.tmp'
+        'error' => 0
+        'size' => 1116546
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2508'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '59738'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryFJOACUKLhVBaA1p8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '1116839'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470033957.4089
+    'REQUEST_TIME' => 1470033957
+]
+2016-08-01 15:53:03 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 15:53:02 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '头像.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => 'C:\\Windows\\php583F.tmp'
+        'error' => 0
+        'size' => 1116546
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2080'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '61431'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryqc5zyRmMtNMip3Ou'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '1116839'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470037982.2955
+    'REQUEST_TIME' => 1470037982
+]
+2016-08-01 15:58:01 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 15:58:00 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => 'logo.png'
+        'type' => 'image/png'
+        'tmp_name' => 'C:\\Windows\\phpE644.tmp'
+        'error' => 0
+        'size' => 27792
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2080'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '61557'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryqGC0qby6YLQKpVZn'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '28082'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470038280.7981
+    'REQUEST_TIME' => 1470038280
+]
+2016-08-01 15:58:45 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 15:58:44 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => 'loading.gif'
+        'type' => 'image/gif'
+        'tmp_name' => 'C:\\Windows\\php908E.tmp'
+        'error' => 0
+        'size' => 7473
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2080'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '61587'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryvRHrVhPJ0jjMGw91'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '7766'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470038324.3921
+    'REQUEST_TIME' => 1470038324
+]
+2016-08-01 16:00:03 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 16:00:02 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => '1641156132-0.jpg'
+        'type' => 'image/jpeg'
+        'tmp_name' => 'C:\\Windows\\phpC2F2.tmp'
+        'error' => 0
+        'size' => 211441
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2080'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '61620'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryBPSKL4A23TgiLBZh'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '211740'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470038402.8268
+    'REQUEST_TIME' => 1470038402
+]
+2016-08-01 16:02:16 [127.0.0.1][11][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(common\actions\UploadAction))
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('upload', Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#5 {main}
+2016-08-01 16:02:15 [127.0.0.1][11][-][info][application] $_GET = [
+    'r' => 'article/article/upload'
+]
+
+$_POST = [
+    '_csrf' => '[object Object]'
+]
+
+$_FILES = [
+    'upfile' => [
+        'name' => 'loading.gif'
+        'type' => 'image/gif'
+        'tmp_name' => 'C:\\Windows\\phpC858.tmp'
+        'error' => 0
+        'size' => 7473
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR\";}'
+    'PHPSESSID' => 'qvarv621bivg39m8ftaverml75'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2080'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/upload'
+    'QUERY_STRING' => 'r=article/article/upload'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/upload'
+    'REDIRECT_URL' => '/back/article/article/upload'
+    'REMOTE_PORT' => '61680'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf=69b7948bac36473e74b3e664a6e82cfac826ff4798b00f6debc25eabe503634ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sls_cHAUOQXOH5vdBTb2HEq2ubqDg4PR%22%3B%7D; PHPSESSID=qvarv621bivg39m8ftaverml75; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/article/article/create'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryu4P5Doq7IZzZW41n'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://simpleblog.com'
+    'CONTENT_LENGTH' => '7766'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470038535.2907
+    'REQUEST_TIME' => 1470038535
+]

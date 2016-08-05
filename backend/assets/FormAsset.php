@@ -24,7 +24,8 @@ class FormAsset extends AssetBundle
         'umeditor/umeditor.config.js',
         'umeditor/umeditor.min.js',
         'umeditor/lang/zh-cn/zh-cn.js',
-        'js/jquery.uploadify.min.js'
+        'js/jquery.uploadify.min.js',
+        'js/jquery.simpleuploader.js'
     ];
 
     public $depends = [

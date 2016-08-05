@@ -9,6 +9,7 @@ use common\widgets\LatestArticleWidget;
 use common\widgets\TagCloudWidget;
 use yii\helpers\Url;
 
+$baseUrl = Yii::$app->urlManager->baseUrl;
 ?>
 
 <?php $this->beginPage() ?>
@@ -25,22 +26,14 @@ use yii\helpers\Url;
     <?= Html::csrfMetaTags() ?>
 
     <?= $this->head() ?>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="<?= $baseUrl ?>/images/favicon.ico">
 
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/vs.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/vs.min.css">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/screen.css" />
 
     <script>
         var _hmt = _hmt || [];
-    </script>
-
-    <script type="text/javascript" src="/js/ghost-url.min.js"></script>
-    <script type="text/javascript">
-        ghost.init({
-            clientId: "ghost-frontend",
-            clientSecret: "26b0e31d612d"
-        });
     </script>
 
 </head>
@@ -145,10 +138,10 @@ NavBar::end();
     <div class="container">
         <div class="row">
             <div class="hidden-sm hidden-md hidden-lg col-xs-12">
-                <span>本站由Yii2 framework，BootStrap强力驱动</span>
+                <span>本站由Yii2 framework，BootStrap驱动</span>
             </div>
             <div class="col-sm-12 col-xs-12">
-                <span class="hidden-xs">本站由Yii2 framework，BootStrap强力驱动</span>
+                <span class="hidden-xs">本站由Yii2 framework，BootStrap驱动</span>
                 <span>Copyright &copy; <a href="http://zyee.org">zyee.org</a></span> |
                 <span><a href="http://www.miibeian.gov.cn/" target="_blank">皖ICP备14016681号-2</a></span>
             </div>
@@ -195,9 +188,9 @@ NavBar::end();
 
 <?php $this->endBody() ?>
 
-<script src="/js/jquery.fitvids.min.js"></script>
-<script src="/js/highlight.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="<?= $baseUrl ?>/js/jquery.fitvids.min.js"></script>
+<script src="<?= $baseUrl ?>/js/highlight.min.js"></script>
+<script src="<?= $baseUrl ?>/js/main.js"></script>
 
 </body>
 </html>

@@ -36,7 +36,6 @@ class UploadAction extends Action
 
 
                 if($thumbnail->saveAs($fileName)){
-
                     $uploadServer = Yii::$app->params['uploadServer'];
                     $url = Yii::uploadFile($fileName, $uploadServer);
                     unlink($fileName);  //删除临时存储文件

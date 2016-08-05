@@ -12,6 +12,4 @@ use frontend\controllers\FrontendBaseController;
 
 class ArticleBaseController extends FrontendBaseController {
 
-
-
 }

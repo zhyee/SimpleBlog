@@ -47,7 +47,7 @@ class SiteController extends FrontendBaseController
 
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->renderPartial('index');
     }
 
     public function actionContact()

@@ -27,15 +27,7 @@ FormAsset::register($this);
     <div class="form-group field-article-thumbnail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
         <div>
-            <button class="btn-uploader">
-                <i class="fa fa-plus fa-lg"></i>
-                <input type="file" class="simple-uploader-file" id="article-thumbnail">
-            </button>
-            <div class="progress" style="display: none;" id="uploader-progress">
-                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0">
-                    <span class="sr-only">60%</span>
-                </div>
-            </div>
+            <input type="file" class="simple-uploader-file" id="article-thumbnail">
             <input type="hidden" name="Article[thumbnail]">
             <div class="help-block"></div>
         </div>
@@ -43,12 +35,8 @@ FormAsset::register($this);
 
     <div class="form-group field-article-thumb">
         <label class="control-label" for="article-thumb">图集</label>
-        <div>
-            <button class="btn-uploader">
-                <i class="fa fa-plus fa-lg"></i>
-                <input type="file" class="simple-uploader-file" id="article-thumb">
-            </button>
-        </div>
+        <input type="file" class="simple-uploader-file" id="article-thumb">
+
         <div class="help-block"></div>
     </div>
 
@@ -74,11 +62,9 @@ FormAsset::register($this);
 
 </style>
 
+<script>
 
-<?php
-
-
-$script = <<<EOT
+    $(function () {
 
         var um = UM.getEditor('ueditor', {
             autoHeightEnabled: true,
@@ -86,42 +72,6 @@ $script = <<<EOT
             initialFrameWidth: 'auto',
             initialFrameHeight: 280,
             imageUrl : 'index.php?r=article/upload'
-        });
-
-
-        $('').uploadify({
-            width           : 30,
-            height          : 30,
-            fileSizeLimit   : '2048KB',
-            buttonText      : '<i style="line-height: 30px" class="fa fa-plus fa-2x text-success"></i>',
-            swf             : '/back/css/uploadify.swf',
-            uploader        : uploadUrl,
-            formData        : {_csrf : _csrf},
-            fileObjName     : 'upfile',
-            onUploadSuccess : function (file, data, response) {
-    if(response) {
-        var rs = $.parseJSON(data);
-        if(rs.err_code > 0) {
-            alert(rs.msg);
-        } else {
-            var data = rs.data;
-            var html = '<div class="form-group">';
-            html += '<div class="col-md-1 col-xs-2">';
-            html += '<img src="' + data.url + '" height="38">';
-            html += '</div>';
-            html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
-            html += '<div class="col-md-8 col-xs-6">';
-            html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
-            html += '</div>';
-            html += '<div class="col-md-1 col-xs-1">';
-            html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
-            html += '<input type="hidden" name="Article[thumb-url][]" value="' + data.url + '">';
-            html += '</div>';
-
-            $(html).appendTo('#thumbs');
-        }
-    }
-}
         });
 
         $(document).on('mouseover', '.fa-trash-o', function () {
@@ -136,57 +86,57 @@ $script = <<<EOT
             $(this).closest('.form-group').remove();
         });
 
-EOT;
 
-    $this->registerJs($script);
-?>
 
-<script>
-$('#article-thumbnail').change(function(){
-    var file = this.files[0];
-    var xhr;
-    if(file){
-        try{
-            var form = new FormData();
-            form.append('upfile', file);
-            form.append('_csrf', _csrf);
-            xhr = new XMLHttpRequest();
-            xhr.open('post', uploadUrl, true);
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState == 4){
-                    var result = $.parseJSON(xhr.responseText);
-                    console.log(result);
-                    if(result.err_code > 0){
-                        alert(result.msg);
-                    }else{
-                        var data = result.data;
-                        $('input[name="Article[thumbnail]"]').val(data.url);
-                        var o = $('.field-article-thumbnail');
-                        o.find('img').remove();
-                        $('<img>').attr({src : data.url, width:80}).appendTo(o);
-                    }
+        $('#article-thumbnail').simpleUploader({
+            debug : true,
+            url : uploadUrl,
+            buttonText : '<i class="fa fa-plus fa-lg"></i>',
+            filePostName : 'upfile',
+            extraFormData : {_csrf : _csrf},
+            onUploadSuccess : function (responseText) {
+                var result = $.parseJSON(responseText);
+                if(result.err_code > 0){
+                    alert(result.msg);
+                }else{
+                    var data = result.data;
+                    $('input[name="Article[thumbnail]"]').val(data.url);
+                    var o = $('.field-article-thumbnail');
+                    o.find('img').remove();
+                    $('<img>').attr({src : data.url, width:80}).appendTo(o);
                 }
-            };
+            }
+        });
 
-            // 监听进度
-            xhr.upload.addEventListener('progress', function(event){
-                $('#uploader-progress').show();
-                $('#uploader-progress .progress-bar').attr({
-                    'aria-valuenow' : event.loaded,
-                    'aria-valuemax' : event.total
-                }).css({'width' : Math.round(event.loaded / event.total * 100) + '%'})
-                if(event.loaded == event.total)
-                {
-                    $('#uploader-progress').delay(1000).fadeOut(1000);
+        $('#article-thumb').simpleUploader({
+            debug : true,
+            url : uploadUrl,
+            buttonText : '<i class="fa fa-plus fa-lg"></i>',
+            filePostName : 'upfile',
+            extraFormData : {_csrf : _csrf},
+            onUploadSuccess : function (responseText) {
+                var rs = $.parseJSON(responseText);
+                if(rs.err_code > 0) {
+                    alert(rs.msg);
+                } else {
+                    var data = rs.data;
+                    var html = '<div class="form-group">';
+                    html += '<div class="col-md-1 col-xs-2">';
+                    html += '<img src="' + data.url + '" height="38">';
+                    html += '</div>';
+                    html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
+                    html += '<div class="col-md-8 col-xs-6">';
+                    html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
+                    html += '</div>';
+                    html += '<div class="col-md-1 col-xs-1">';
+                    html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
+                    html += '<input type="hidden" name="Article[thumb-url][]" value="' + data.url + '">';
+                    html += '</div>';
+
+                    $(html).appendTo('#thumbs');
                 }
-            });
+            }
+        })
 
-            xhr.send(form);
-        }
-        catch(e)
-        {
-            alert(e.message);
-        }
-    }
-});
+    });
 </script>
