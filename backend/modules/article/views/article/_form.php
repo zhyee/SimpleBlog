@@ -24,6 +24,10 @@ FormAsset::register($this);
 
     <?= $form->field($model, 'inputTags')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
 
+    <div class="form-group field-type">
+
+    </div>
+
     <div class="form-group field-article-thumbnail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
         <div>
@@ -33,7 +37,7 @@ FormAsset::register($this);
         </div>
     </div>
 
-    <div class="form-group field-article-thumb">
+    <div class="form-group field-article-thumb hidden">
         <label class="control-label" for="article-thumb">图集</label>
         <input type="file" id="article-thumb">
 
@@ -102,35 +106,6 @@ FormAsset::register($this);
             um.execCommand('insertHtml', img);
         });
 
-
-        $('#content-thumb').simpleUploader({
-           debug : true,
-            url : uploadUrl,
-            buttonText : '<i class="fa fa-plus fa-lg"></i>',
-            filePostName : 'upfile',
-            extraFormData : {_csrf : _csrf},
-            onUploadSuccess : function (responseText) {
-                var result = $.parseJSON(responseText);
-                if (result.err_code > 0){
-                    alert(result.msg);
-                }
-                else {
-                    var data = result.data;
-                    var html = '<div class="row mt-2">';
-                    html += '<div class="col-md-8">';
-                    html += '<a href="' + data.url + '" target="_blank">';
-                    html += data.url;
-                    html += '</a></div>';
-                    html += '<div class="col-md-offset-1 col-md-3">';
-                    html += ' <a href="javascript:;" class="thumb-insert">插入</a>';
-                    html += '<a href="javascript:;" class="thumb-del ml-10">删除</a>';
-                    html += '</div></div>';
-
-                    $(html).appendTo('#thumb-list');
-                }
-            }
-        });
-
         $('#article-thumbnail').simpleUploader({
             debug : true,
             url : uploadUrl,
@@ -179,7 +154,35 @@ FormAsset::register($this);
                     $(html).appendTo('#thumbs');
                 }
             }
-        })
+        });
+
+        $('#content-thumb').simpleUploader({
+            debug : true,
+            url : uploadUrl,
+            buttonText : '<i class="fa fa-plus fa-lg"></i>',
+            filePostName : 'upfile',
+            extraFormData : {_csrf : _csrf},
+            onUploadSuccess : function (responseText) {
+                var result = $.parseJSON(responseText);
+                if (result.err_code > 0){
+                    alert(result.msg);
+                }
+                else {
+                    var data = result.data;
+                    var html = '<div class="row mt-2">';
+                    html += '<div class="col-md-8">';
+                    html += '<a href="' + data.url + '" target="_blank">';
+                    html += data.url;
+                    html += '</a></div>';
+                    html += '<div class="col-md-offset-1 col-md-3">';
+                    html += ' <a href="javascript:;" class="thumb-insert">插入</a>';
+                    html += '<a href="javascript:;" class="thumb-del ml-10">删除</a>';
+                    html += '</div></div>';
+
+                    $(html).appendTo('#thumb-list');
+                }
+            }
+        });
 
     });
 </script>

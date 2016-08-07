@@ -9,6 +9,8 @@ use common\widgets\LatestArticleWidget;
 use common\widgets\TagCloudWidget;
 use yii\helpers\Url;
 
+$baseUrl = Yii::$app->urlManager->baseUrl;
+$hostinfo =  Yii::$app->urlManager->hostInfo;
 ?>
 
 <?php $this->beginPage() ?>
@@ -24,11 +26,11 @@ use yii\helpers\Url;
     <?= Html::csrfMetaTags() ?>
 
     <?= $this->head() ?>
-    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" href="<?= $hostinfo ?>/images/favicon.ico">
 
-    <link rel="stylesheet" href="/back/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/back/css/vs.min.css">
-    <link rel="stylesheet" href="/back/css/screen.css" />
+    <link rel="stylesheet" href="<?= $hostinfo ?>/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= $hostinfo ?>/css/vs.min.css">
+    <link rel="stylesheet" href="<?= $hostinfo ?>/css/screen.css" />
 
     <script>
         var _hmt = _hmt || [];

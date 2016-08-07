@@ -146,7 +146,8 @@ class Article extends BaseActiveRecord implements \SplSubject
     /**
      * 删除与该篇文章相关联的标签
      */
-    public function removeTags(){
+    public function removeTags()
+    {
         $articleId = $this->getAttribute('id');
         if(!$articleId){
             throw new InvalidParamException('文章ID参数不正确');
@@ -178,7 +179,8 @@ class Article extends BaseActiveRecord implements \SplSubject
      * @return bool
      * @throws \yii\db\Exception
      */
-    public function add($data, $isUpdate = false){
+    public function add($data, $isUpdate = false)
+    {
         $trans_flag = true;
         $trans = self::getDb()->beginTransaction();    //开启事务
 
@@ -186,12 +188,15 @@ class Article extends BaseActiveRecord implements \SplSubject
             unset($this->thumbnail);
         }
 
-        if(!$this->save()){
+        if(!$this->save())
+        {
             $trans_flag = FALSE;
             goto trans_end;
         }
 
-        if($isUpdate){
+        if($isUpdate)
+        {
+            unset($this->publish_time);
             $this->removeTags();
             $this->updateTagCount(-1);
         }
@@ -247,9 +252,12 @@ class Article extends BaseActiveRecord implements \SplSubject
         }
 
         trans_end:
-        if($trans_flag){
+        if($trans_flag)
+        {
             $trans->commit();
-        }else{
+        }
+        else
+        {
             $trans->rollBack();
         }
         return $trans_flag;

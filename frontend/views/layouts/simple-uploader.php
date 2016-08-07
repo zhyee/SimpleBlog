@@ -39,7 +39,7 @@ $baseUrl = Yii::$app->urlManager->baseUrl;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?= Url::to(['/simple-uploader/simple-uploader']) ?>">Brand</a>
+            <a class="navbar-brand" href="<?= Url::to(['/simple-uploader/simple-uploader']) ?>">SimpleUploader</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
