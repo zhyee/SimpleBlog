@@ -27,7 +27,7 @@ FormAsset::register($this);
     <div class="form-group field-article-thumbnail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
         <div>
-            <input type="file" class="simple-uploader-file" id="article-thumbnail">
+            <input type="file" id="article-thumbnail">
             <input type="hidden" name="Article[thumbnail]">
             <div class="help-block"></div>
         </div>
@@ -35,15 +35,20 @@ FormAsset::register($this);
 
     <div class="form-group field-article-thumb">
         <label class="control-label" for="article-thumb">图集</label>
-        <input type="file" class="simple-uploader-file" id="article-thumb">
+        <input type="file" id="article-thumb">
 
         <div class="help-block"></div>
     </div>
 
-    <div id="thumbs">
-    </div>
+    <div id="thumbs"></div>
 
     <?= $form->field($model, 'content')->textarea(['rows' => 20, 'id' => 'ueditor']) ?>
+
+    <div class="form-group field-content-thumb">
+        <label class="control-label">插入正文图片</label>
+        <input type="file" id="content-thumb">
+        <div id="thumb-list" class="mt-10"></div>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton('提交', ['class' =>'btn btn-default']) ?>
@@ -70,8 +75,7 @@ FormAsset::register($this);
             autoHeightEnabled: true,
             autoFloatEnabled: true,
             initialFrameWidth: 'auto',
-            initialFrameHeight: 280,
-            imageUrl : 'index.php?r=article/upload'
+            initialFrameHeight: 280
         });
 
         $(document).on('mouseover', '.fa-trash-o', function () {
@@ -86,7 +90,46 @@ FormAsset::register($this);
             $(this).closest('.form-group').remove();
         });
 
+        //  删除图片
+        $(document).on('click', '.thumb-del', function () {
+           $(this).closest('.row').remove();
+        });
 
+        //  插入图片
+        $(document).on('click', '.thumb-insert', function () {
+            var href = $(this).parent().prev().find('a').prop('href');
+            var img = '<img src="' + href + '" class="img-responsive" >';
+            um.execCommand('insertHtml', img);
+        });
+
+
+        $('#content-thumb').simpleUploader({
+           debug : true,
+            url : uploadUrl,
+            buttonText : '<i class="fa fa-plus fa-lg"></i>',
+            filePostName : 'upfile',
+            extraFormData : {_csrf : _csrf},
+            onUploadSuccess : function (responseText) {
+                var result = $.parseJSON(responseText);
+                if (result.err_code > 0){
+                    alert(result.msg);
+                }
+                else {
+                    var data = result.data;
+                    var html = '<div class="row mt-2">';
+                    html += '<div class="col-md-8">';
+                    html += '<a href="' + data.url + '" target="_blank">';
+                    html += data.url;
+                    html += '</a></div>';
+                    html += '<div class="col-md-offset-1 col-md-3">';
+                    html += ' <a href="javascript:;" class="thumb-insert">插入</a>';
+                    html += '<a href="javascript:;" class="thumb-del ml-10">删除</a>';
+                    html += '</div></div>';
+
+                    $(html).appendTo('#thumb-list');
+                }
+            }
+        });
 
         $('#article-thumbnail').simpleUploader({
             debug : true,

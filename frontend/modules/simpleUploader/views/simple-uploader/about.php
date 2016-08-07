@@ -137,9 +137,4 @@ EOT;
         </blockquote>
 
     </div>
-
-
-
-
-
 </div>

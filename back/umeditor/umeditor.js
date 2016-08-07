@@ -1,5 +1,5 @@
 /*!
- * UEditor Mini版本
+ * UMditor Mini版本
  * version: 1.2.2
  * build: Wed Mar 19 2014 17:14:14 GMT+0800 (中国标准时间)
  */
@@ -22,14 +22,14 @@ var dom = UM.dom = {};
 /**
  * 浏览器判断模块
  * @file
- * @module UE.browser
+ * @module UM.browser
  * @since 1.2.6.1
  */
 
 /**
  * 提供浏览器检测的模块
  * @unfile
- * @module UE.browser
+ * @module UM.browser
  */
 var browser = UM.browser = function(){
     var agent = navigator.userAgent.toLowerCase(),
@@ -39,7 +39,7 @@ var browser = UM.browser = function(){
              * @property {boolean} ie 检测当前浏览器是否为IE
              * @example
              * ```javascript
-             * if ( UE.browser.ie ) {
+             * if ( UM.browser.ie ) {
          *     console.log( '当前浏览器是IE' );
          * }
              * ```
@@ -50,7 +50,7 @@ var browser = UM.browser = function(){
              * @property {boolean} opera 检测当前浏览器是否为Opera
              * @example
              * ```javascript
-             * if ( UE.browser.opera ) {
+             * if ( UM.browser.opera ) {
          *     console.log( '当前浏览器是Opera' );
          * }
              * ```
@@ -61,7 +61,7 @@ var browser = UM.browser = function(){
              * @property {boolean} webkit 检测当前浏览器是否是webkit内核的浏览器
              * @example
              * ```javascript
-             * if ( UE.browser.webkit ) {
+             * if ( UM.browser.webkit ) {
          *     console.log( '当前浏览器是webkit内核浏览器' );
          * }
              * ```
@@ -72,7 +72,7 @@ var browser = UM.browser = function(){
              * @property {boolean} mac 检测当前浏览器是否是运行在mac平台下
              * @example
              * ```javascript
-             * if ( UE.browser.mac ) {
+             * if ( UM.browser.mac ) {
          *     console.log( '当前浏览器运行在mac平台下' );
          * }
              * ```
@@ -83,7 +83,7 @@ var browser = UM.browser = function(){
              * @property {boolean} quirks 检测当前浏览器是否处于“怪异模式”下
              * @example
              * ```javascript
-             * if ( UE.browser.quirks ) {
+             * if ( UM.browser.quirks ) {
          *     console.log( '当前浏览器运行处于“怪异模式”' );
          * }
              * ```
@@ -95,7 +95,7 @@ var browser = UM.browser = function(){
      * @property {boolean} gecko 检测当前浏览器内核是否是gecko内核
      * @example
      * ```javascript
-     * if ( UE.browser.gecko ) {
+     * if ( UM.browser.gecko ) {
     *     console.log( '当前浏览器内核是gecko内核' );
     * }
      * ```
@@ -126,7 +126,7 @@ var browser = UM.browser = function(){
          * @warning 如果浏览器不是IE， 则该值为undefined
          * @example
          * ```javascript
-         * if ( UE.browser.ie9Compat ) {
+         * if ( UM.browser.ie9Compat ) {
          *     console.log( '当前浏览器运行在IE9兼容模式下' );
          * }
          * ```
@@ -138,7 +138,7 @@ var browser = UM.browser = function(){
          * @warning 如果浏览器不是IE， 则该值为undefined
          * @example
          * ```javascript
-         * if ( UE.browser.ie8 ) {
+         * if ( UM.browser.ie8 ) {
          *     console.log( '当前浏览器是IE8浏览器' );
          * }
          * ```
@@ -150,7 +150,7 @@ var browser = UM.browser = function(){
          * @warning 如果浏览器不是IE， 则该值为undefined
          * @example
          * ```javascript
-         * if ( UE.browser.ie8Compat ) {
+         * if ( UM.browser.ie8Compat ) {
          *     console.log( '当前浏览器运行在IE8兼容模式下' );
          * }
          * ```
@@ -162,7 +162,7 @@ var browser = UM.browser = function(){
          * @warning 如果浏览器不是IE， 则该值为undefined
          * @example
          * ```javascript
-         * if ( UE.browser.ie7Compat ) {
+         * if ( UM.browser.ie7Compat ) {
          *     console.log( '当前浏览器运行在IE7兼容模式下' );
          * }
          * ```
@@ -175,7 +175,7 @@ var browser = UM.browser = function(){
          * @warning 如果浏览器不是IE， 则该值为undefined
          * @example
          * ```javascript
-         * if ( UE.browser.ie6Compat ) {
+         * if ( UM.browser.ie6Compat ) {
          *     console.log( '当前浏览器运行在IE6模式或者怪异模式下' );
          * }
          * ```
@@ -203,7 +203,7 @@ var browser = UM.browser = function(){
      * @warning 如果浏览器不是chrome， 则该值为undefined
      * @example
      * ```javascript
-     * if ( UE.browser.chrome ) {
+     * if ( UM.browser.chrome ) {
      *     console.log( '当前浏览器是Chrome' );
      * }
      * ```
@@ -217,7 +217,7 @@ var browser = UM.browser = function(){
      * @warning 如果浏览器不是safari， 则该值为undefined
      * @example
      * ```javascript
-     * if ( UE.browser.safari ) {
+     * if ( UM.browser.safari ) {
      *     console.log( '当前浏览器是Safari' );
      * }
      * ```
@@ -245,17 +245,17 @@ var browser = UM.browser = function(){
      * </ul>
      * @example
      * ```javascript
-     * console.log( '当前浏览器版本号是： ' + UE.browser.version );
+     * console.log( '当前浏览器版本号是： ' + UM.browser.version );
      * ```
      */
     browser.version = version;
 
     /**
-     * @property { boolean } isCompatible 检测当前浏览器是否能够与UEditor良好兼容
+     * @property { boolean } isCompatible 检测当前浏览器是否能够与UMditor良好兼容
      * @example
      * ```javascript
-     * if ( UE.browser.isCompatible ) {
-     *     console.log( '浏览器与UEditor能够良好兼容' );
+     * if ( UM.browser.isCompatible ) {
+     *     console.log( '浏览器与UMditor能够良好兼容' );
      * }
      * ```
      */
@@ -278,7 +278,7 @@ var ie = browser.ie,
  * @file
  * @name UM.Utils
  * @short Utils
- * @desc UEditor封装使用的静态工具函数
+ * @desc UMditor封装使用的静态工具函数
  * @import editor.js
  */
 var utils = UM.utils = {
@@ -328,7 +328,7 @@ var utils = UM.utils = {
      * 将source对象中的属性扩展到target对象上
      * @name extend
      * @grammar UM.utils.extend(target,source)  => Object  //覆盖扩展
-     * @grammar UM.utils.extend(target,source,true)  ==> Object  //保留扩展
+     * @grammar UM.utils.extend(target,source,trUM)  ==> Object  //保留扩展
      */
     extend:function (t, s, b) {
         if (s) {
@@ -375,7 +375,7 @@ var utils = UM.utils = {
     inherits:function (subClass, superClass) {
         var oldP = subClass.prototype,
             newP = utils.makeInstance(superClass.prototype);
-        utils.extend(newP, oldP, true);
+        utils.extend(newP, oldP, trUM);
         subClass.prototype = newP;
         return (newP.constructor = subClass);
     },
@@ -405,7 +405,7 @@ var utils = UM.utils = {
      * testDefer();   =>  "延迟输出！";
      * testDefer();   =>  "延迟输出！";
      * //互斥延迟执行
-     * var testDefer1 = UM.utils.defer(test,1000,true);
+     * var testDefer1 = UM.utils.defer(test,1000,trUM);
      * testDefer1();   =>  //本次不执行
      * testDefer1();   =>  "延迟输出！";
      */
@@ -480,9 +480,9 @@ var utils = UM.utils = {
      * @grammar UM.utils.unhtml(str);  => String
      * @grammar UM.utils.unhtml(str,reg)  => String
      * @example
-     * var html = '<body>You say:"你好！Baidu & UEditor!"</body>';
-     * UM.utils.unhtml(html);   ==>  &lt;body&gt;You say:&quot;你好！Baidu &amp; UEditor!&quot;&lt;/body&gt;
-     * UM.utils.unhtml(html,/[<>]/g)  ==>  &lt;body&gt;You say:"你好！Baidu & UEditor!"&lt;/body&gt;
+     * var html = '<body>You say:"你好！Baidu & UMditor!"</body>';
+     * UM.utils.unhtml(html);   ==>  &lt;body&gt;You say:&quot;你好！Baidu &amp; UMditor!&quot;&lt;/body&gt;
+     * UM.utils.unhtml(html,/[<>]/g)  ==>  &lt;body&gt;You say:"你好！Baidu & UMditor!"&lt;/body&gt;
      */
     unhtml:function (str, reg) {
         return str ? str.replace(reg || /[&<">'](?:(amp|lt|quot|gt|#39|nbsp);)?/g, function (a, b) {
@@ -583,7 +583,7 @@ var utils = UM.utils = {
             if (!doc.body) {
                 var html = [];
                 for (var p in obj) {
-                    if (p == 'tag')continue;
+                    if (p == 'tag')continUM;
                     html.push(p + '="' + obj[p] + '"')
                 }
                 doc.write('<' + obj.tag + ' ' + html.join(' ') + ' ></' + obj.tag + '>');
@@ -618,39 +618,39 @@ var utils = UM.utils = {
     /**
      * 判断obj对象是否为空
      * @name isEmptyObject
-     * @grammar UM.utils.isEmptyObject(obj)  => true|false
+     * @grammar UM.utils.isEmptyObject(obj)  => trUM|false
      * @example
-     * UM.utils.isEmptyObject({}) ==>true
-     * UM.utils.isEmptyObject([]) ==>true
-     * UM.utils.isEmptyObject("") ==>true
+     * UM.utils.isEmptyObject({}) ==>trUM
+     * UM.utils.isEmptyObject([]) ==>trUM
+     * UM.utils.isEmptyObject("") ==>trUM
      */
     isEmptyObject:function (obj) {
-        if (obj == null) return true;
+        if (obj == null) return trUM;
         if (this.isArray(obj) || this.isString(obj)) return obj.length === 0;
         for (var key in obj) if (obj.hasOwnProperty(key)) return false;
-        return true;
+        return trUM;
     },
 
     /**
      * 统一将颜色值使用16进制形式表示
      * @name fixColor
-     * @grammar UM.utils.fixColor(name,value) => value
+     * @grammar UM.utils.fixColor(name,valUM) => valUM
      * @example
      * rgb(255,255,255)  => "#ffffff"
      */
-    fixColor:function (name, value) {
-        if (/color/i.test(name) && /rgba?/.test(value)) {
-            var array = value.split(",");
+    fixColor:function (name, valUM) {
+        if (/color/i.test(name) && /rgba?/.test(valUM)) {
+            var array = valUM.split(",");
             if (array.length > 3)
                 return "";
-            value = "#";
+            valUM = "#";
             for (var i = 0, color; color = array[i++];) {
                 color = parseInt(color.replace(/[^\d]/gi, ''), 10).toString(16);
-                value += color.length == 1 ? "0" + color : color;
+                valUM += color.length == 1 ? "0" + color : color;
             }
-            value = value.toUpperCase();
+            valUM = valUM.toUpperCase();
         }
-        return  value;
+        return  valUM;
     },
 
     /**
@@ -754,22 +754,22 @@ var utils = UM.utils = {
 /**
  * 判断str是否为字符串
  * @name isString
- * @grammar UM.utils.isString(str) => true|false
+ * @grammar UM.utils.isString(str) => trUM|false
  */
 /**
  * 判断array是否为数组
  * @name isArray
- * @grammar UM.utils.isArray(obj) => true|false
+ * @grammar UM.utils.isArray(obj) => trUM|false
  */
 /**
  * 判断obj对象是否为方法
  * @name isFunction
- * @grammar UM.utils.isFunction(obj)  => true|false
+ * @grammar UM.utils.isFunction(obj)  => trUM|false
  */
 /**
  * 判断obj对象是否为数字
  * @name isNumber
- * @grammar UM.utils.isNumber(obj)  => true|false
+ * @grammar UM.utils.isNumber(obj)  => trUM|false
  */
 utils.each(['String', 'Function', 'Array', 'Number', 'RegExp', 'Object'], function (v) {
     UM.utils['is' + v] = function (obj) {
@@ -781,8 +781,8 @@ utils.each(['String', 'Function', 'Array', 'Number', 'RegExp', 'Object'], functi
  * @name UM.EventBase
  * @short EventBase
  * @import editor.js,core/utils.js
- * @desc UE采用的事件基类，继承此类的对应类将获取addListener,removeListener,fireEvent方法。
- * 在UE中，Editor以及所有ui实例都继承了该类，故可以在对应的ui对象以及editor对象上使用上述方法。
+ * @desc UM采用的事件基类，继承此类的对应类将获取addListener,removeListener,fireEvent方法。
+ * 在UM中，Editor以及所有ui实例都继承了该类，故可以在对应的ui对象以及editor对象上使用上述方法。
  */
 var EventBase = UM.EventBase = function () {};
 
@@ -807,7 +807,7 @@ EventBase.prototype = {
     addListener:function (types, listener) {
         types = utils.trim(types).split(' ');
         for (var i = 0, ti; ti = types[i++];) {
-            getListener(this, ti, true).push(listener);
+            getListener(this, ti, trUM).push(listener);
         }
     },
     /**
@@ -840,9 +840,9 @@ EventBase.prototype = {
             if (listeners) {
                 k = listeners.length;
                 while (k--) {
-                    if(!listeners[k])continue;
+                    if(!listeners[k])continUM;
                     t = listeners[k].apply(this, arguments);
-                    if(t === true){
+                    if(t === trUM){
                         return t;
                     }
                     if (t !== undefined) {
@@ -863,7 +863,7 @@ EventBase.prototype = {
  * @function
  * @param {Object} obj  查询监听器的对象
  * @param {String} type 事件类型
- * @param {Boolean} force  为true且当前所有type类型的侦听器不存在时，创建一个空监听器数组
+ * @param {Boolean} force  为trUM且当前所有type类型的侦听器不存在时，创建一个空监听器数组
  * @returns {Array} 监听器数组
  */
 function getListener(obj, type, force) {
@@ -1059,7 +1059,7 @@ var dtd = dom.dtd = (function() {
  * @name UM.dom.domUtils
  * @short DomUtils
  * @import editor.js, core/utils.js,core/browser.js,core/dom/dtd.js
- * @desc UEditor封装的底层dom操作库
+ * @desc UMditor封装的底层dom操作库
  */
 
 function getDomNode(node, start, ltr, startFromChild, fn, guard) {
@@ -1173,15 +1173,15 @@ var domUtils = dom.domUtils = {
      * @name getPosition
      * @grammar UM.dom.domUtils.getPosition(nodeA,nodeB)  =>  Number
      * @example
-     *  switch (returnValue) {
+     *  switch (returnValUM) {
      *      case 0: //相等，同一节点
      *      case 1: //无关，节点不相连
      *      case 2: //跟随，即节点A头部位于节点B头部的后面
      *      case 4: //前置，即节点A头部位于节点B头部的前面
      *      case 8: //被包含，即节点A被节点B包含
-     *      case 10://组合类型，即节点A满足跟随节点B且被节点B包含。实际上，如果被包含，必定跟随，所以returnValue事实上不会存在8的情况。
+     *      case 10://组合类型，即节点A满足跟随节点B且被节点B包含。实际上，如果被包含，必定跟随，所以returnValUM事实上不会存在8的情况。
      *      case 16://包含，即节点A包含节点B
-     *      case 20://组合类型，即节点A满足前置节点A且包含节点B。同样，如果包含，必定前置，所以returnValue事实上也不会存在16的情况
+     *      case 20://组合类型，即节点A满足前置节点A且包含节点B。同样，如果包含，必定前置，所以returnValUM事实上也不会存在16的情况
      *  }
      */
     getPosition: function (nodeA, nodeB) {
@@ -1245,7 +1245,7 @@ var domUtils = dom.domUtils = {
                 if (preNode.nodeType != preNode.nextSibling.nodeType) {
                     i++;
                 }
-                continue;
+                continUM;
             }
             i++;
         }
@@ -1255,7 +1255,7 @@ var domUtils = dom.domUtils = {
     /**
      * 检测节点node是否在节点doc的树上，实质上是检测是否被doc包含
      * @name inDoc
-     * @grammar UM.dom.domUtils.inDoc(node,doc)   =>  true|false
+     * @grammar UM.dom.domUtils.inDoc(node,doc)   =>  trUM|false
      */
     inDoc: function (node, doc) {
         return domUtils.getPosition(node, doc) == 10;
@@ -1264,7 +1264,7 @@ var domUtils = dom.domUtils = {
      * 查找node节点的祖先节点
      * @name findParent
      * @grammar UM.dom.domUtils.findParent(node)  => Element  // 直接返回node节点的父节点
-     * @grammar UM.dom.domUtils.findParent(node,filterFn)  => Element  //filterFn为过滤函数，node作为参数，返回true时才会将node作为符合要求的节点返回
+     * @grammar UM.dom.domUtils.findParent(node,filterFn)  => Element  //filterFn为过滤函数，node作为参数，返回trUM时才会将node作为符合要求的节点返回
      * @grammar UM.dom.domUtils.findParent(node,filterFn,includeSelf)  => Element  //includeSelf指定是否包含自身
      */
     findParent: function (node, filterFn, includeSelf) {
@@ -1284,7 +1284,7 @@ var domUtils = dom.domUtils = {
      * @name findParentByTagName
      * @grammar UM.dom.domUtils.findParentByTagName(node,tagNames)   =>  Element  //tagNames支持数组，区分大小写
      * @grammar UM.dom.domUtils.findParentByTagName(node,tagNames,includeSelf)   =>  Element  //includeSelf指定是否包含自身
-     * @grammar UM.dom.domUtils.findParentByTagName(node,tagNames,includeSelf,excludeFn)   =>  Element  //excludeFn指定例外过滤条件，返回true时忽略该节点
+     * @grammar UM.dom.domUtils.findParentByTagName(node,tagNames,includeSelf,excludeFn)   =>  Element  //excludeFn指定例外过滤条件，返回trUM时忽略该节点
      */
     findParentByTagName: function (node, tagNames, includeSelf, excludeFn) {
         tagNames = utils.listToMap(utils.isArray(tagNames) ? tagNames : [tagNames]);
@@ -1297,8 +1297,8 @@ var domUtils = dom.domUtils = {
      * @name findParents
      * @grammar UM.dom.domUtils.findParents(node)  => Array  //返回一个祖先节点数组集合，不包含自身
      * @grammar UM.dom.domUtils.findParents(node,includeSelf)  => Array  //返回一个祖先节点数组集合，includeSelf指定是否包含自身
-     * @grammar UM.dom.domUtils.findParents(node,includeSelf,filterFn)  => Array  //返回一个祖先节点数组集合，filterFn指定过滤条件，返回true的node将被选取
-     * @grammar UM.dom.domUtils.findParents(node,includeSelf,filterFn,closerFirst)  => Array  //返回一个祖先节点数组集合，closerFirst为true的话，node的直接父亲节点是数组的第0个
+     * @grammar UM.dom.domUtils.findParents(node,includeSelf,filterFn)  => Array  //返回一个祖先节点数组集合，filterFn指定过滤条件，返回trUM的node将被选取
+     * @grammar UM.dom.domUtils.findParents(node,includeSelf,filterFn,closerFirst)  => Array  //返回一个祖先节点数组集合，closerFirst为trUM的话，node的直接父亲节点是数组的第0个
      */
     findParents: function (node, includeSelf, filterFn, closerFirst) {
         var parents = includeSelf && ( filterFn && filterFn(node) || !filterFn ) ? [node] : [];
@@ -1356,7 +1356,7 @@ var domUtils = dom.domUtils = {
      * <script>
      *
      *     //output: i节点
-     *     console.log( UE.dom.domUtils.getNextDomNode( document.getElementById( "test" ) ) );
+     *     console.log( UM.dom.domUtils.getNextDomNode( document.getElementById( "test" ) ) );
      *
      * </script>
      * ```
@@ -1373,7 +1373,7 @@ var domUtils = dom.domUtils = {
      *
      *     //由于id为test的i节点之后没有兄弟节点， 则查找其父节点（div）后面的兄弟节点
      *     //output: b节点
-     *     console.log( UE.dom.domUtils.getNextDomNode( document.getElementById( "test" ) ) );
+     *     console.log( UM.dom.domUtils.getNextDomNode( document.getElementById( "test" ) ) );
      *
      * </script>
      * ```
@@ -1382,12 +1382,12 @@ var domUtils = dom.domUtils = {
     /**
      * 取得node节点的下一个兄弟节点， 如果startFromChild的值为ture，则先获取其子节点，
      * 如果有子节点则直接返回第一个子节点；如果没有子节点或者startFromChild的值为false，
-     * 则执行<a href="#UE.dom.domUtils.getNextDomNode(Node)">getNextDomNode(Node node)</a>的查找过程。
+     * 则执行<a href="#UM.dom.domUtils.getNextDomNode(Node)">getNextDomNode(Node node)</a>的查找过程。
      * @method getNextDomNode
      * @param { Node } node 需要获取其后的兄弟节点的节点对象
      * @param { Boolean } startFromChild 查找过程是否从其子节点开始
      * @return { Node | NULL } 如果找满足条件的节点， 则返回该节点， 否则返回NULL
-     * @see UE.dom.domUtils.getNextDomNode(Node)
+     * @see UM.dom.domUtils.getNextDomNode(Node)
      */
     getNextDomNode:function (node, startFromChild, filterFn, guard) {
         return getDomNode(node, 'firstChild', 'nextSibling', startFromChild, filterFn, guard);
@@ -1399,7 +1399,7 @@ var domUtils = dom.domUtils = {
     /**
      * 检测节点node是否属于bookmark节点
      * @name isBookmarkNode
-     * @grammar UM.dom.domUtils.isBookmarkNode(node)  => true|false
+     * @grammar UM.dom.domUtils.isBookmarkNode(node)  => trUM|false
      */
     isBookmarkNode: function (node) {
         return node.nodeType == 1 && node.id && /^_baidu_bookmark_/i.test(node.id);
@@ -1423,8 +1423,8 @@ var domUtils = dom.domUtils = {
      * @return { Node | NULL } 如果未找到公共节点， 返回NULL， 否则返回最近的公共祖先节点。
      * @example
      * ```javascript
-     * var commonAncestor = UE.dom.domUtils.getCommonAncestor( document.body, document.body.firstChild );
-     * //output: true
+     * var commonAncestor = UM.dom.domUtils.getCommonAncestor( document.body, document.body.firstChild );
+     * //output: trUM
      * console.log( commonAncestor.tagName.toLowerCase() === 'body' );
      * ```
      */
@@ -1456,8 +1456,8 @@ var domUtils = dom.domUtils = {
      * @method clearEmptySibling
      * @param { Node } node 执行的节点对象， 如果该节点的左右连续的兄弟节点是空的inline节点，
      * 则这些兄弟节点将被删除
-     * @grammar UE.dom.domUtils.clearEmptySibling(node,ignoreNext)  //ignoreNext指定是否忽略右边空节点
-     * @grammar UE.dom.domUtils.clearEmptySibling(node,ignoreNext,ignorePre)  //ignorePre指定是否忽略左边空节点
+     * @grammar UM.dom.domUtils.clearEmptySibling(node,ignoreNext)  //ignoreNext指定是否忽略右边空节点
+     * @grammar UM.dom.domUtils.clearEmptySibling(node,ignoreNext,ignorePre)  //ignorePre指定是否忽略左边空节点
      * @example
      * ```html
      * <body>
@@ -1470,7 +1470,7 @@ var domUtils = dom.domUtils = {
      * </body>
      * <script>
      *
-     *      UE.dom.domUtils.clearEmptySibling( document.getElementById( "test" ) );
+     *      UM.dom.domUtils.clearEmptySibling( document.getElementById( "test" ) );
      *
      *      //output: <div></div><span id="test"></span><em>xxx</em><span></span>
      *      console.log( document.body.innerHTML );
@@ -1480,31 +1480,31 @@ var domUtils = dom.domUtils = {
      */
 
     /**
-     * 清除node节点左右连续为空的兄弟inline节点， 如果ignoreNext的值为true，
+     * 清除node节点左右连续为空的兄弟inline节点， 如果ignoreNext的值为trUM，
      * 则忽略对右边兄弟节点的操作。
      * @method clearEmptySibling
      * @param { Node } node 执行的节点对象， 如果该节点的左右连续的兄弟节点是空的inline节点，
      * @param { Boolean } ignoreNext 是否忽略忽略对右边的兄弟节点的操作
      * 则这些兄弟节点将被删除
-     * @see UE.dom.domUtils.clearEmptySibling(Node)
+     * @see UM.dom.domUtils.clearEmptySibling(Node)
      */
 
     /**
-     * 清除node节点左右连续为空的兄弟inline节点， 如果ignoreNext的值为true，
-     * 则忽略对右边兄弟节点的操作， 如果ignorePre的值为true，则忽略对左边兄弟节点的操作。
+     * 清除node节点左右连续为空的兄弟inline节点， 如果ignoreNext的值为trUM，
+     * 则忽略对右边兄弟节点的操作， 如果ignorePre的值为trUM，则忽略对左边兄弟节点的操作。
      * @method clearEmptySibling
      * @param { Node } node 执行的节点对象， 如果该节点的左右连续的兄弟节点是空的inline节点，
      * @param { Boolean } ignoreNext 是否忽略忽略对右边的兄弟节点的操作
      * @param { Boolean } ignorePre 是否忽略忽略对左边的兄弟节点的操作
      * 则这些兄弟节点将被删除
-     * @see UE.dom.domUtils.clearEmptySibling(Node)
+     * @see UM.dom.domUtils.clearEmptySibling(Node)
      */
     clearEmptySibling:function (node, ignoreNext, ignorePre) {
         function clear(next, dir) {
             var tmpNode;
             while (next && !domUtils.isBookmarkNode(next) && (domUtils.isEmptyInlineElement(next)
                 //这里不能把空格算进来会吧空格干掉，出现文字间的空格丢掉了
-                || !new RegExp('[^\t\n\r' + domUtils.fillChar + ']').test(next.nodeValue) )) {
+                || !new RegExp('[^\t\n\r' + domUtils.fillChar + ']').test(next.nodeValUM) )) {
                 tmpNode = next[dir];
                 domUtils.remove(next);
                 next = tmpNode;
@@ -1521,7 +1521,7 @@ var domUtils = dom.domUtils = {
      */
     split: function (node, offset) {
         var doc = node.ownerDocument;
-        if (browser.ie && offset == node.nodeValue.length) {
+        if (browser.ie && offset == node.nodeValUM.length) {
             var next = doc.createTextNode('');
             return domUtils.insertAfter(node, next);
         }
@@ -1538,10 +1538,10 @@ var domUtils = dom.domUtils = {
     /**
      * 检测节点node是否为空节点（包括空格、换行、占位符等字符）
      * @name  isWhitespace
-     * @grammar  UM.dom.domUtils.isWhitespace(node)  => true|false
+     * @grammar  UM.dom.domUtils.isWhitespace(node)  => trUM|false
      */
     isWhitespace: function (node) {
-        return !new RegExp('[^ \t\n\r' + domUtils.fillChar + ']').test(node.nodeValue);
+        return !new RegExp('[^ \t\n\r' + domUtils.fillChar + ']').test(node.nodeValUM);
     },
     /**
      * 获取元素element相对于viewport的位置坐标
@@ -1592,7 +1592,7 @@ var domUtils = dom.domUtils = {
     /**
      * 检查节点node是否为块元素
      * @name isBlockElm
-     * @grammar UM.dom.domUtils.isBlockElm(node)  => true|false
+     * @grammar UM.dom.domUtils.isBlockElm(node)  => trUM|false
      */
     isBlockElm: function (node) {
         return node.nodeType == 1 && (dtd.$block[node.tagName] || styleBlock[domUtils.getComputedStyle(node, 'display')]) && !dtd.$nonChild[node.tagName];
@@ -1611,7 +1611,7 @@ var domUtils = dom.domUtils = {
                 var result = false;
                 $.each(utils.trim(className).replace(/[ ]{2,}/g, ' ').split(' '), function (i, v) {
                     if ($(node).hasClass(v)) {
-                        result = true;
+                        result = trUM;
                         return false;
                     }
                 })
@@ -1707,23 +1707,23 @@ var domUtils = dom.domUtils = {
     setAttributes: function (node, attrs) {
         for (var attr in attrs) {
             if (attrs.hasOwnProperty(attr)) {
-                var value = attrs[attr];
+                var valUM = attrs[attr];
                 switch (attr) {
                     case 'class':
                         //ie下要这样赋值，setAttribute不起作用
-                        node.className = value;
+                        node.className = valUM;
                         break;
                     case 'style' :
-                        node.style.cssText = node.style.cssText + ";" + value;
+                        node.style.cssText = node.style.cssText + ";" + valUM;
                         break;
                     case 'innerHTML':
-                        node[attr] = value;
+                        node[attr] = valUM;
                         break;
-                    case 'value':
-                        node.value = value;
+                    case 'valUM':
+                        node.valUM = valUM;
                         break;
                     default:
-                        node.setAttribute(attrFix[attr] || attr, value);
+                        node.setAttribute(attrFix[attr] || attr, valUM);
                 }
             }
         }
@@ -1747,7 +1747,7 @@ var domUtils = dom.domUtils = {
      * @param {Event} evt    需要组织的事件对象
      */
     preventDefault: function (evt) {
-        evt.preventDefault ? evt.preventDefault() : (evt.returnValue = false);
+        evt.preventDefault ? evt.preventDefault() : (evt.returnValUM = false);
     },
 
     /**
@@ -1757,15 +1757,15 @@ var domUtils = dom.domUtils = {
      * @param { String } styleName 需要删除的样式名
      * @example
      * ```html
-     * <span id="test" style="color: red; background: blue;"></span>
+     * <span id="test" style="color: red; background: blUM;"></span>
      *
      * <script>
      *
      *     var testNode = document.getElementById("test");
      *
-     *     UE.dom.domUtils.removeStyle( testNode, 'color' );
+     *     UM.dom.domUtils.removeStyle( testNode, 'color' );
      *
-     *     //output: background: blue;
+     *     //output: background: blUM;
      *     console.log( testNode.style.cssText );
      *
      * </script>
@@ -1798,16 +1798,16 @@ var domUtils = dom.domUtils = {
      * @grammar UM.dom.domUtils.getStyle(element,name)  => String
      */
     getStyle: function (element, name) {
-        var value = element.style[ utils.cssStyleToDomStyle(name) ];
-        return utils.fixColor(name, value);
+        var valUM = element.style[ utils.cssStyleToDomStyle(name) ];
+        return utils.fixColor(name, valUM);
     },
     /**
      * 为元素element设置样式属性值
      * @name setStyle
-     * @grammar UM.dom.domUtils.setStyle(element,name,value)
+     * @grammar UM.dom.domUtils.setStyle(element,name,valUM)
      */
-    setStyle: function (element, name, value) {
-        element.style[utils.cssStyleToDomStyle(name)] = value;
+    setStyle: function (element, name, valUM) {
+        element.style[utils.cssStyleToDomStyle(name)] = valUM;
         if (!utils.trim(element.style.cssText)) {
             this.removeAttributes(element, 'style')
         }
@@ -1865,7 +1865,7 @@ var domUtils = dom.domUtils = {
         return node.nodeType == 1 && node.tagName == 'BR';
     },
     isFillChar: function (node, isInStart) {
-        return node.nodeType == 3 && !node.nodeValue.replace(new RegExp((isInStart ? '^' : '' ) + domUtils.fillChar), '').length
+        return node.nodeType == 3 && !node.nodeValUM.replace(new RegExp((isInStart ? '^' : '' ) + domUtils.fillChar), '').length
     },
 
     isEmptyBlock: function (node, reg) {
@@ -1885,7 +1885,7 @@ var domUtils = dom.domUtils = {
 
     //判断是否是编辑器自定义的参数
     isCustomeNode: function (node) {
-        return node.nodeType == 1 && node.getAttribute('_ue_custom_node_');
+        return node.nodeType == 1 && node.getAttribute('_UM_custom_node_');
     },
     fillNode: function (doc, node) {
         var tmpNode = browser.ie ? doc.createTextNode(domUtils.fillChar) : doc.createElement('br');
@@ -1901,10 +1901,10 @@ var domUtils = dom.domUtils = {
                 return false;
             }
         }
-        return true;
+        return trUM;
     },
     isFillChar: function (node, isInStart) {
-        return node.nodeType == 3 && !node.nodeValue.replace(new RegExp((isInStart ? '^' : '' ) + domUtils.fillChar), '').length
+        return node.nodeType == 3 && !node.nodeValUM.replace(new RegExp((isInStart ? '^' : '' ) + domUtils.fillChar), '').length
     },
     isBody: function(node){
         return $(node).hasClass('edui-body-container');
@@ -1923,7 +1923,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
  * @anthor zhanyi
  * @short Range
  * @import editor.js,core/utils.js,core/browser.js,core/dom/domUtils.js,core/dom/dtd.js
- * @desc Range范围实现类，本类是UEditor底层核心类，统一w3cRange和ieRange之间的差异，包括接口和属性
+ * @desc Range范围实现类，本类是UMditor底层核心类，统一w3cRange和ieRange之间的差异，包括接口和属性
  */
 (function () {
     var guid = 0,
@@ -1954,7 +1954,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             range.startContainer = node;
             range.startOffset = offset;
             if (!range.endContainer) {
-                range.collapse(true);
+                range.collapse(trUM);
             }
         } else {
             range.endContainer = node;
@@ -1973,9 +1973,9 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
      * @grammar new UM.dom.Range(document)  => Range 实例
      * @desc 创建一个跟document绑定的空的Range实例
      * - ***startContainer*** 开始边界的容器节点,可以是elementNode或者是textNode
-     * - ***startOffset*** 容器节点中的偏移量，如果是elementNode就是childNodes中的第几个，如果是textNode就是nodeValue的第几个字符
+     * - ***startOffset*** 容器节点中的偏移量，如果是elementNode就是childNodes中的第几个，如果是textNode就是nodeValUM的第几个字符
      * - ***endContainer*** 结束边界的容器节点,可以是elementNode或者是textNode
-     * - ***endOffset*** 容器节点中的偏移量，如果是elementNode就是childNodes中的第几个，如果是textNode就是nodeValue的第几个字符
+     * - ***endOffset*** 容器节点中的偏移量，如果是elementNode就是childNodes中的第几个，如果是textNode就是nodeValUM的第几个字符
      * - ***document*** 跟range关联的document对象
      * - ***collapsed*** 是否是闭合状态
      */
@@ -1986,7 +1986,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 me.endContainer =
                     me.endOffset = null;
         me.document = document;
-        me.collapsed = true;
+        me.collapsed = trUM;
         me.body = body;
     };
 
@@ -1998,7 +1998,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
     function removeFillData(doc, excludeNode) {
         try {
             if (fillData && domUtils.inDoc(fillData, doc)) {
-                if (!fillData.nodeValue.replace(fillCharReg, '').length) {
+                if (!fillData.nodeValUM.replace(fillCharReg, '').length) {
                     var tmpNode = fillData.parentNode;
                     domUtils.remove(fillData);
                     while (tmpNode && domUtils.isEmptyInlineElement(tmpNode) &&
@@ -2010,7 +2010,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         tmpNode = fillData;
                     }
                 } else {
-                    fillData.nodeValue = fillData.nodeValue.replace(fillCharReg, '');
+                    fillData.nodeValUM = fillData.nodeValUM.replace(fillCharReg, '');
                 }
             }
         } catch (e) {
@@ -2053,12 +2053,12 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             //is not clone
             if (action) {
                 start.deleteData(startOffset, endOffset - startOffset);
-                range.collapse(true);
+                range.collapse(trUM);
             }
             return frag;
         }
         var current, currentLevel, clone = frag,
-            startParents = domUtils.findParents(start, true), endParents = domUtils.findParents(end, true);
+            startParents = domUtils.findParents(start, trUM), endParents = domUtils.findParents(end, trUM);
         for (var i = 0; startParents[i] == endParents[i];) {
             i++;
         }
@@ -2067,13 +2067,13 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             if (si == start) {
                 if (!tmpStart) {
                     if (range.startContainer.nodeType == 3) {
-                        clone.appendChild(doc.createTextNode(start.nodeValue.slice(startOffset)));
+                        clone.appendChild(doc.createTextNode(start.nodeValUM.slice(startOffset)));
                         //is not clone
                         if (action) {
-                            start.deleteData(startOffset, start.nodeValue.length - startOffset);
+                            start.deleteData(startOffset, start.nodeValUM.length - startOffset);
                         }
                     } else {
-                        clone.appendChild(!action ? start.cloneNode(true) : start);
+                        clone.appendChild(!action ? start.cloneNode(trUM) : start);
                     }
                 }
             } else {
@@ -2085,7 +2085,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     break;
                 }
                 si = current.nextSibling;
-                clone.appendChild(!action ? current.cloneNode(true) : current);
+                clone.appendChild(!action ? current.cloneNode(trUM) : current);
                 current = si;
             }
             clone = currentLevel;
@@ -2116,14 +2116,14 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         break;
                     }
                     ei = current.previousSibling;
-                    clone.insertBefore(!action ? current.cloneNode(true) : current, clone.firstChild);
+                    clone.insertBefore(!action ? current.cloneNode(trUM) : current, clone.firstChild);
                     current = ei;
                 }
             }
             clone = currentLevel;
         }
         if (action) {
-            range.setStartBefore(!endParents[i] ? endParents[i - 1] : !startParents[i] ? startParents[i - 1] : endParents[i]).collapse(true);
+            range.setStartBefore(!endParents[i] ? endParents[i - 1] : !startParents[i] ? startParents[i - 1] : endParents[i]).collapse(trUM);
         }
         tmpStart && domUtils.remove(tmpStart);
         tmpEnd && domUtils.remove(tmpEnd);
@@ -2144,7 +2144,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * range.startOffset  => 2
          * range.endContainer => b
          * range.endOffset => 2
-         * range.collapsed => true
+         * range.collapsed => trUM
          */
         deleteContents:function () {
             var txt;
@@ -2153,8 +2153,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             }
             if (browser.webkit) {
                 txt = this.startContainer;
-                if (txt.nodeType == 3 && !txt.nodeValue.length) {
-                    this.setStartBefore(txt).collapse(true);
+                if (txt.nodeType == 3 && !txt.nodeValUM.length) {
+                    this.setStartBefore(txt).collapse(trUM);
                     domUtils.remove(txt);
                 }
             }
@@ -2163,9 +2163,9 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         inFillChar : function(){
             var start = this.startContainer;
             if(this.collapsed && start.nodeType == 3
-                && start.nodeValue.replace(new RegExp('^' + domUtils.fillChar),'').length + 1 == start.nodeValue.length
+                && start.nodeValUM.replace(new RegExp('^' + domUtils.fillChar),'').length + 1 == start.nodeValUM.length
                 ){
-                return true;
+                return trUM;
             }
             return false;
         },
@@ -2173,14 +2173,14 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @name  setStart
          * @grammar range.setStart(node,offset)  => Range
          * @desc    设置range的开始位置位于node节点内，偏移量为offset
-         * 如果node是elementNode那offset指的是childNodes中的第几个，如果是textNode那offset指的是nodeValue的第几个字符
+         * 如果node是elementNode那offset指的是childNodes中的第几个，如果是textNode那offset指的是nodeValUM的第几个字符
          */
         setStart:function (node, offset) {
-            return setEndPoint(true, node, offset, this);
+            return setEndPoint(trUM, node, offset, this);
         },
         /**
          * 设置range的结束位置位于node节点，偏移量为offset
-         * 如果node是elementNode那offset指的是childNodes中的第几个，如果是textNode那offset指的是nodeValue的第几个字符
+         * 如果node是elementNode那offset指的是childNodes中的第几个，如果是textNode那offset指的是nodeValUM的第几个字符
          * @name  setEnd
          * @grammar range.setEnd(node,offset)  => Range
          */
@@ -2253,7 +2253,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @grammar range.setStartAtLast(node)  => Range
          */
         setStartAtLast:function (node) {
-            return this.setStart(node, node.nodeType == 3 ? node.nodeValue.length : node.childNodes.length);
+            return this.setStart(node, node.nodeType == 3 ? node.nodeValUM.length : node.childNodes.length);
         },
         /**
          * 将Range结束位置设置到node节点内的开始位置
@@ -2269,7 +2269,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @grammar range.setEndAtLast(node)  => Range
          */
         setEndAtLast:function (node) {
-            return this.setEnd(node, node.nodeType == 3 ? node.nodeValue.length : node.childNodes.length);
+            return this.setEnd(node, node.nodeType == 3 ? node.nodeValUM.length : node.childNodes.length);
         },
 
         /**
@@ -2312,7 +2312,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * 让选区闭合到尾部，若toStart为真，则闭合到头部
          * @name  collapse
          * @grammar range.collapse() => Range
-         * @grammar range.collapse(true) => Range   //闭合选区到头部
+         * @grammar range.collapse(trUM) => Range   //闭合选区到头部
          */
         collapse:function (toStart) {
             var me = this;
@@ -2323,7 +2323,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 me.startContainer = me.endContainer;
                 me.startOffset = me.endOffset;
             }
-            me.collapsed = true;
+            me.collapsed = trUM;
             return me;
         },
 
@@ -2331,7 +2331,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * 调整range的边界，使其"收缩"到最小的位置
          * @name  shrinkBoundary
          * @grammar range.shrinkBoundary()  => Range  //range开始位置和结束位置都调整，参见<code><a href="#adjustmentboundary">adjustmentBoundary</a></code>
-         * @grammar range.shrinkBoundary(true)  => Range  //仅调整开始位置，忽略结束位置
+         * @grammar range.shrinkBoundary(trUM)  => Range  //仅调整开始位置，忽略结束位置
          * @example
          * <b>xx[</b>xxxxx] ==> <b>xx</b>[xxxxx]
          * <b>x[xx</b><i>]xxx</i> ==> <b>x[xx]</b><i>xxx</i>
@@ -2349,7 +2349,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 me.setStart(child, 0);
             }
             if (collapsed) {
-                return me.collapse(true);
+                return me.collapse(trUM);
             }
             if (!ignoreEnd) {
                 while (me.endContainer.nodeType == 1//是element
@@ -2365,7 +2365,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 调整边界容器，如果是textNode,就调整到elementNode上
          * @name trimBoundary
-         * @grammar range.trimBoundary([ignoreEnd])  => Range //true忽略结束边界
+         * @grammar range.trimBoundary([ignoreEnd])  => Range //trUM忽略结束边界
          * @example
          * DOM Element :
          * <b>|xxx</b>
@@ -2389,7 +2389,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 if (offset == 0) {
                     this.setStartBefore(start);
                 } else {
-                    if (offset >= start.nodeValue.length) {
+                    if (offset >= start.nodeValUM.length) {
                         this.setStartAfter(start);
                     } else {
                         var textNode = domUtils.split(start, offset);
@@ -2403,7 +2403,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     }
                 }
                 if (collapsed) {
-                    return this.collapse(true);
+                    return this.collapse(trUM);
                 }
             }
             if (!ignoreEnd) {
@@ -2413,7 +2413,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     if (offset == 0) {
                         this.setEndBefore(end);
                     } else {
-                        offset < end.nodeValue.length && domUtils.split(end, offset);
+                        offset < end.nodeValUM.length && domUtils.split(end, offset);
                         this.setEndAfter(end);
                     }
                 }
@@ -2445,7 +2445,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         r['set' + c.replace(/(\w)/, function (a) {
                             return a.toUpperCase();
                         }) + 'Before'](container);
-                    } else if (offset >= container.nodeValue.length) {
+                    } else if (offset >= container.nodeValUM.length) {
                         r['set' + c.replace(/(\w)/, function (a) {
                             return a.toUpperCase();
                         }) + 'After' ](container);
@@ -2478,7 +2478,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 first = node.firstChild;
                 length = node.childNodes.length;
             }
-            this.trimBoundary(true);
+            this.trimBoundary(trUM);
             var start = this.startContainer,
                 offset = this.startOffset;
             var nextNode = start.childNodes[ offset ];
@@ -2493,9 +2493,9 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             return this.setStartBefore(first);
         },
         /**
-         * 设置光标闭合位置,toEnd设置为true时光标将闭合到选区的结尾
+         * 设置光标闭合位置,toEnd设置为trUM时光标将闭合到选区的结尾
          * @name  setCursor
-         * @grammar range.setCursor([toEnd])  =>  Range   //toEnd为true时，光标闭合到选区的末尾
+         * @grammar range.setCursor([toEnd])  =>  Range   //toEnd为trUM时，光标闭合到选区的末尾
          */
         setCursor:function (toEnd, noFillData) {
             return this.collapse(!toEnd).select(noFillData);
@@ -2513,7 +2513,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             startNode.id = '_baidu_bookmark_start_' + (same ? '' : guid++);
 
             if (!this.collapsed) {
-                endNode = startNode.cloneNode(true);
+                endNode = startNode.cloneNode(trUM);
                 endNode.id = '_baidu_bookmark_end_' + (same ? '' : guid++);
             }
             this.insertNode(startNode);
@@ -2541,7 +2541,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 this.setEndBefore(end);
                 domUtils.remove(end);
             } else {
-                this.collapse(true);
+                this.collapse(trUM);
             }
             return this;
         },
@@ -2557,14 +2557,14 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         adjustmentBoundary:function () {
             if (!this.collapsed) {
                 while (!domUtils.isBody(this.startContainer) &&
-                    this.startOffset == this.startContainer[this.startContainer.nodeType == 3 ? 'nodeValue' : 'childNodes'].length &&
-                    this.startContainer[this.startContainer.nodeType == 3 ? 'nodeValue' : 'childNodes'].length
+                    this.startOffset == this.startContainer[this.startContainer.nodeType == 3 ? 'nodeValUM' : 'childNodes'].length &&
+                    this.startContainer[this.startContainer.nodeType == 3 ? 'nodeValUM' : 'childNodes'].length
                     ) {
 
                     this.setStartAfter(this.startContainer);
                 }
                 while (!domUtils.isBody(this.endContainer) && !this.endOffset &&
-                    this.endContainer[this.endContainer.nodeType == 3 ? 'nodeValue' : 'childNodes'].length
+                    this.endContainer[this.endContainer.nodeType == 3 ? 'nodeValUM' : 'childNodes'].length
                     ) {
                     this.setEndBefore(this.endContainer);
                 }
@@ -2635,7 +2635,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     mergeSibling(tmp, 'previousSibling');
                     mergeSibling(start, 'nextSibling');
                     nativeRange.moveStart('character', -1);
-                    nativeRange.collapse(true);
+                    nativeRange.collapse(trUM);
                 }
             }
             this.moveToBookmark(bookmark);
@@ -2650,8 +2650,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             function checkOffset(rng){
 
                 function check(node,offset,dir){
-                    if(node.nodeType == 3 && node.nodeValue.length < offset){
-                        rng[dir + 'Offset'] = node.nodeValue.length
+                    if(node.nodeType == 3 && node.nodeValUM.length < offset){
+                        rng[dir + 'Offset'] = node.nodeValUM.length
                     }
                 }
                 check(rng.startContainer,rng.startOffset,'start');
@@ -2671,7 +2671,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 //                    //opear如果没有节点接着，原生的不能够定位,不能在body的第一级插入空白节点
 //                    if (notInsertFillData && browser.opera && !domUtils.isBody(this.startContainer) && this.startContainer.nodeType == 1) {
 //                        var tmp = this.document.createTextNode('');
-//                        this.insertNode(tmp).setStart(tmp, 0).collapse(true);
+//                        this.insertNode(tmp).setStart(tmp, 0).collapse(trUM);
 //                    }
 //
                     //处理光标落在文本节点的情况
@@ -2698,7 +2698,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         mergeSibling(txtNode, 'previousSibling');
                         mergeSibling(txtNode, 'nextSibling');
                         fillData = txtNode;
-                        this.setStart(txtNode, browser.webkit ? 1 : 0).collapse(true);
+                        this.setStart(txtNode, browser.webkit ? 1 : 0).collapse(trUM);
                     }
                 }
                 var nativeRange = this.document.createRange();
@@ -2708,7 +2708,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         //往前靠拢
                         child = this.startContainer.lastChild;
                         if( child && domUtils.isBr(child)){
-                            this.setStartBefore(child).collapse(true);
+                            this.setStartBefore(child).collapse(trUM);
                         }
                     }else{
                         //向后靠拢
@@ -2719,7 +2719,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                                 break;
                             }
                         }
-                        child && this.setStartBefore(child).collapse(true)
+                        child && this.setStartBefore(child).collapse(trUM)
                     }
 
                 }
@@ -2738,7 +2738,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
             function getAddress(isStart){
                 var node = isStart ? me.startContainer : me.endContainer;
-                var parents = domUtils.findParents(node,true,function(node){return !domUtils.isBody(node)}),
+                var parents = domUtils.findParents(node,trUM,function(node){return !domUtils.isBody(node)}),
                     addrs = [];
                 for(var i = 0,ci;ci = parents[i++];){
                     addrs.push(domUtils.getNodeIndex(ci,ignoreTxt));
@@ -2749,10 +2749,10 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     if(node.nodeType == 3){
                         var tmpNode = node.previousSibling;
                         while(tmpNode && tmpNode.nodeType == 3){
-                            firstIndex += tmpNode.nodeValue.replace(fillCharReg,'').length;
+                            firstIndex += tmpNode.nodeValUM.replace(fillCharReg,'').length;
                             tmpNode = tmpNode.previousSibling;
                         }
-                        firstIndex +=  (isStart ? me.startOffset : me.endOffset)// - (fillCharReg.test(node.nodeValue) ? 1 : 0 )
+                        firstIndex +=  (isStart ? me.startOffset : me.endOffset)// - (fillCharReg.test(node.nodeValUM) ? 1 : 0 )
                     }else{
                         node =  node.childNodes[ isStart ? me.startOffset : me.endOffset];
                         if(node){
@@ -2763,7 +2763,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                             while(first){
                                 if(domUtils.isFillChar(first)){
                                     first = first.nextSibling;
-                                    continue;
+                                    continUM;
                                 }
                                 firstIndex++;
                                 if(first.nodeType == 3){
@@ -2786,7 +2786,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 addrs.push(firstIndex);
                 return addrs;
             }
-            addr.startAddress = getAddress(true);
+            addr.startAddress = getAddress(trUM);
             if(!ignoreEnd){
                 addr.endAddress = me.collapsed ? [].concat(addr.startAddress) : getAddress();
             }
@@ -2820,7 +2820,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     }
                 }
             }
-            getNode(addr.startAddress,true);
+            getNode(addr.startAddress,trUM);
             !ignoreEnd && addr.endAddress &&  getNode(addr.endAddress);
             return me;
         },
@@ -2831,7 +2831,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         return false
                 }
             }
-            return true;
+            return trUM;
 
         },
         scrollIntoView : function(){
@@ -2904,12 +2904,12 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             siblings = parent.childNodes;
             if ( !distance ) {
                 child = siblings[siblings.length - 1];
-                return  {container:child, offset:child.nodeValue.length};
+                return  {container:child, offset:child.nodeValUM.length};
             }
 
             var i = siblings.length;
             while ( distance > 0 ){
-                distance -= siblings[ --i ].nodeValue.length;
+                distance -= siblings[ --i ].nodeValUM.length;
             }
             return {container:siblings[i], offset:-distance};
         }
@@ -2925,12 +2925,12 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             try {
                 var pre = child;
                 child = child[position > 0 ? 'previousSibling' : 'nextSibling'];
-                distance -= child.nodeValue.length;
+                distance -= child.nodeValUM.length;
             } catch ( e ) {
                 return {container:parent, offset:getIndex( pre )};
             }
         }
-        return  {container:child, offset:position > 0 ? -distance : child.nodeValue.length + distance}
+        return  {container:child, offset:position > 0 ? -distance : child.nodeValUM.length + distance}
     }
 
     /**
@@ -2943,7 +2943,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         if ( ieRange.item ) {
             range.selectNode( ieRange.item( 0 ) );
         } else {
-            var bi = getBoundaryInformation( ieRange, true );
+            var bi = getBoundaryInformation( ieRange, trUM );
             range.setStart( bi.container, bi.offset );
             if ( ieRange.compareEndPoints( 'StartToEnd', ieRange ) != 0 ) {
                 bi = getBoundaryInformation( ieRange, false );
@@ -3062,7 +3062,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             }
             var start = this.getStart();
             if ( start ) {
-                return domUtils.findParents( start, true, null, true )
+                return domUtils.findParents( start, trUM, null, trUM )
             }
             return [];
         },
@@ -3102,7 +3102,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     range.setStart( me.body, 0 )
                 }
                 if ( collapsed ) {
-                    range.collapse( true );
+                    range.collapse( trUM );
                 }
             }
 
@@ -3223,7 +3223,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
      * @param form  编辑器所在的form元素
      * @param editor  编辑器实例对象
      */
-    function setValue(form, editor) {
+    function setValUM(form, editor) {
         var textarea;
         if (editor.textarea) {
             if (utils.isString(editor.textarea)) {
@@ -3246,8 +3246,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             //不要产生多个textarea
             editor.textarea = textarea;
         }
-        textarea.value = editor.hasContents() ?
-            (editor.options.allHtmlEnabled ? editor.getAllHtml() : editor.getContent(null, null, true)) :
+        textarea.valUM = editor.hasContents() ?
+            (editor.options.allHtmlEnabled ? editor.getAllHtml() : editor.getContent(null, null, trUM)) :
             ''
     }
     function loadPlugins(me){
@@ -3258,7 +3258,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 me.plugins[pi] = 1;
             }
         }
-        me.langIsReady = true;
+        me.langIsReady = trUM;
 
         me.fireEvent("langReady");
     }
@@ -3268,7 +3268,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         }
     }
     /**
-     * UEditor编辑器类
+     * UMditor编辑器类
      * @name Editor
      * @desc 创建一个跟编辑器实例
      * - ***container*** 编辑器容器对象
@@ -3283,20 +3283,20 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         me.uid = uid++;
         EventBase.call(me);
         me.commands = {};
-        me.options = utils.extend(utils.clone(options || {}), UMEDITOR_CONFIG, true);
+        me.options = utils.extend(utils.clone(options || {}), UMEDITOR_CONFIG, trUM);
         me.shortcutkeys = {};
         me.inputRules = [];
         me.outputRules = [];
         //设置默认的常用属性
         me.setOpt({
-            isShow: true,
+            isShow: trUM,
             initialContent: '',
             initialStyle:'',
             autoClearinitialContent: false,
-            textarea: 'editorValue',
+            textarea: 'editorValUM',
             focus: false,
-            focusInEnd: true,
-            autoClearEmptyNode: true,
+            focusInEnd: trUM,
+            autoClearEmptyNode: trUM,
             fullscreen: false,
             readonly: false,
             zIndex: 999,
@@ -3306,8 +3306,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             theme: 'default',
             themePath: me.options.UMEDITOR_HOME_URL + 'themes/',
             allHtmlEnabled: false,
-            autoSyncData : true,
-            autoHeightEnabled : true,
+            autoSyncData : trUM,
+            autoHeightEnabled : trUM,
             excludePlugins:''
         });
         me.plugins = {};
@@ -3337,7 +3337,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * var editor = new UM.ui.Editor();
          * editor.render("myEditor");
          * editor.ready(function(){
-         *     editor.setContent("欢迎使用UEditor！");
+         *     editor.setContent("欢迎使用UMditor！");
          * })
          */
         ready: function (fn) {
@@ -3348,8 +3348,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         },
         /**
          * 为编辑器设置默认参数值。若用户配置为空，则以默认配置为准
-         * @grammar editor.setOpt(key,value);      //传入一个键、值对
-         * @grammar editor.setOpt({ key:value});   //传入一个json对象
+         * @grammar editor.setOpt(key,valUM);      //传入一个键、值对
+         * @grammar editor.setOpt({ key:valUM});   //传入一个json对象
          */
         setOpt: function (key, val) {
             var obj = {};
@@ -3358,7 +3358,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             } else {
                 obj = key;
             }
-            utils.extend(this.options, obj, true);
+            utils.extend(this.options, obj, trUM);
         },
         getOpt:function(key){
             return this.options[key] || ''
@@ -3386,7 +3386,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
             textarea.style.width = me.body.offsetWidth + 'px';
             textarea.style.height = me.body.offsetHeight + 'px';
-            textarea.value = me.getContent();
+            textarea.valUM = me.getContent();
             textarea.id = me.key;
             if(container.contains(textarea)){
                 $(textarea).insertBefore(container);
@@ -3410,7 +3410,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 if (holder && /script|textarea/ig.test(holder.tagName)) {
                     var newDiv = document.createElement('div');
                     holder.parentNode.insertBefore(newDiv, holder);
-                    this.options.initialContent = UM.htmlparser(holder.value || holder.innerHTML|| this.options.initialContent).toHtml();
+                    this.options.initialContent = UM.htmlparser(holder.valUM || holder.innerHTML|| this.options.initialContent).toHtml();
                     holder.className && (newDiv.className = holder.className);
                     holder.style.cssText && (newDiv.style.cssText = holder.style.cssText);
 
@@ -3440,7 +3440,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         render: function (container) {
             var me = this,
                 options = me.options,
-                getStyleValue=function(attr){
+                getStyleValUM=function(attr){
                     return parseInt($(container).css(attr));
                 };
 
@@ -3470,10 +3470,10 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 }
 
                 container.style.width = /%$/.test(options.initialFrameWidth) ?  '100%' : options.initialFrameWidth -
-                    getStyleValue("padding-left")-
-                    getStyleValue("padding-right")  +'px';
+                    getStyleValUM("padding-left")-
+                    getStyleValUM("padding-right")  +'px';
 
-                var height = /%$/.test(options.initialFrameHeight) ?  '100%' : (options.initialFrameHeight - getStyleValue("padding-top")- getStyleValue("padding-bottom") );
+                var height = /%$/.test(options.initialFrameHeight) ?  '100%' : (options.initialFrameHeight - getStyleValUM("padding-top")- getStyleValUM("padding-bottom") );
                 if(this.options.autoHeightEnabled){
                     container.style.minHeight = height +'px';
                     container.style.height = '';
@@ -3499,7 +3499,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             var me = this,
                 options = me.options;
 
-            cont.contentEditable = true;
+            cont.contentEditable = trUM;
             document.body.spellcheck = false;
 
             me.document = document;
@@ -3520,11 +3520,11 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     me.form = form;
                     if(me.options.autoSyncData){
                         $(cont).on('blur',function(){
-                            setValue(form,me);
+                            setValUM(form,me);
                         })
                     }else{
                         $(form).on('submit', function () {
-                            setValue(this, me);
+                            setValUM(this, me);
                         })
                     }
                     break;
@@ -3539,7 +3539,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     };
                     this._setDefaultContent(options.initialContent);
                 } else
-                    this.setContent(options.initialContent, false, true);
+                    this.setContent(options.initialContent, false, trUM);
             }
 
             //编辑器不能为空内容
@@ -3602,8 +3602,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 form = formId ? document.getElementById(formId) :
                     domUtils.findParent(me.body.parentNode, function (node) {
                         return node.tagName == 'FORM'
-                    }, true);
-            form && setValue(form, me);
+                    }, trUM);
+            form && setValUM(form, me);
         },
         /**
          * 设置编辑器高度
@@ -3660,7 +3660,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                                 ) ||
                                 keyCode == RegExp.$1
                                 ) {
-                                if (me.queryCommandState(i,param) != -1)
+                                if (me.qUMryCommandState(i,param) != -1)
                                     me.execCommand(i, param);
                                 domUtils.preventDefault(e);
                             }
@@ -3718,7 +3718,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             }
             return '<html><head>' + (me.options.charset ? '<meta http-equiv="Content-Type" content="text/html; charset=' + me.options.charset + '"/>' : '')
                 + (headHtmlForIE9 || me.document.getElementsByTagName('head')[0].innerHTML) + headHtml.join('\n') + '</head>'
-                + '<body ' + (ie && browser.version < 9 ? 'class="view"' : '') + '>' + me.getContent(null, null, true) + '</body></html>';
+                + '<body ' + (ie && browser.version < 9 ? 'class="view"' : '') + '>' + me.getContent(null, null, trUM) + '</body></html>';
         },
         /**
          * 得到编辑器的纯文本内容，但会保留段落格式
@@ -3757,7 +3757,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * var editor = new UM.ui.Editor()
          * editor.ready(function(){
          *     //需要ready后执行，否则可能报错
-         *     editor.setContent("欢迎使用UEditor！");
+         *     editor.setContent("欢迎使用UMditor！");
          * })
          */
         setContent: function (html, isAppendTo, notFireSelectionchange) {
@@ -3819,23 +3819,23 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 geckoSel.removeAllRanges();
             }
             if(me.options.autoSyncData){
-                me.form && setValue(me.form,me);
+                me.form && setValUM(me.form,me);
             }
         },
 
         /**
          * 让编辑器获得焦点，toEnd确定focus位置
          * @name focus
-         * @grammar editor.focus([toEnd])   //默认focus到编辑器头部，toEnd为true时focus到内容尾部
+         * @grammar editor.focus([toEnd])   //默认focus到编辑器头部，toEnd为trUM时focus到内容尾部
          */
         focus: function (toEnd) {
             try {
                 var me = this,
                     rng = me.selection.getRange();
                 if (toEnd) {
-                    rng.setStartAtLast(me.body.lastChild).setCursor(false, true);
+                    rng.setStartAtLast(me.body.lastChild).setCursor(false, trUM);
                 } else {
-                    rng.select(true);
+                    rng.select(trUM);
                 }
                 this.fireEvent('focus');
             } catch (e) {
@@ -3853,14 +3853,14 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * 判断编辑器当前是否获得了焦点
          */
         isFocus : function(){
-            if(this.fireEvent('isfocus')===true){
-                return true;
+            if(this.fireEvent('isfocus')===trUM){
+                return trUM;
             }
             return this.selection.isFocus();
         },
 
         /**
-         * 初始化UE事件及部分事件代理
+         * 初始化UM事件及部分事件代理
          * @private
          * @ignore
          */
@@ -3909,7 +3909,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             if (browser.ie && browser.version < 9 && evt && evt.type == 'mouseup') {
                 var range = this.selection.getRange();
                 if (!range.collapsed) {
-                    hackForMouseUp = true;
+                    hackForMouseUp = trUM;
                     mouseX = evt.clientX;
                     mouseY = evt.clientY;
                 }
@@ -3943,7 +3943,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 }
                 if (me.selection._cachedRange && me.selection._cachedStartElement) {
                     me.fireEvent('beforeselectionchange');
-                    // 第二个参数causeByUi为true代表由用户交互造成的selectionchange.
+                    // 第二个参数causeByUi为trUM代表由用户交互造成的selectionchange.
                     me.fireEvent('selectionchange', !!evt);
                     me.fireEvent('afterselectionchange');
                     me.selection.clear();
@@ -3956,8 +3956,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 cmd, cmdFn;
             cmd = this.commands[cmdName] || UM.commands[cmdName];
             cmdFn = cmd && cmd[fnName];
-            //没有querycommandstate或者没有command的都默认返回0
-            if ((!cmd || !cmdFn) && fnName == 'queryCommandState') {
+            //没有qUMrycommandstate或者没有command的都默认返回0
+            if ((!cmd || !cmdFn) && fnName == 'qUMryCommandState') {
                 return 0;
             } else if (cmdFn) {
                 return cmdFn.apply(this, [cmdName].concat(args));
@@ -3975,7 +3975,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 if(bakRange){
                     bakRange.select()
                 }else{
-                    this.focus(true)
+                    this.focus(trUM)
                 }
 
             }
@@ -3987,8 +3987,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 return null;
             }
             if (!cmd.notNeedUndo && !me.__hasEnterExecCommand) {
-                me.__hasEnterExecCommand = true;
-                if (me.queryCommandState.apply(me,arguments) != -1) {
+                me.__hasEnterExecCommand = trUM;
+                if (me.qUMryCommandState.apply(me,arguments) != -1) {
                     me.fireEvent('saveScene');
                     me.fireEvent('beforeexeccommand', cmdName);
                     result = this._callCmdFn('execCommand', arguments);
@@ -4006,16 +4006,16 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         },
         /**
          * 根据传入的command命令，查选编辑器当前的选区，返回命令的状态
-         * @name  queryCommandState
-         * @grammar editor.queryCommandState(cmdName)  => (-1|0|1)
+         * @name  qUMryCommandState
+         * @grammar editor.qUMryCommandState(cmdName)  => (-1|0|1)
          * @desc
          * * ''-1'' 当前命令不可用
          * * ''0'' 当前命令可用
          * * ''1'' 当前命令已经执行过了
          */
-        queryCommandState: function (cmdName) {
+        qUMryCommandState: function (cmdName) {
             try{
-                return this._callCmdFn('queryCommandState', arguments);
+                return this._callCmdFn('qUMryCommandState', arguments);
             }catch(e){
                 return 0
             }
@@ -4024,24 +4024,24 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
         /**
          * 根据传入的command命令，查选编辑器当前的选区，根据命令返回相关的值
-         * @name  queryCommandValue
-         * @grammar editor.queryCommandValue(cmdName)  =>  {*}
+         * @name  qUMryCommandValUM
+         * @grammar editor.qUMryCommandValUM(cmdName)  =>  {*}
          */
-        queryCommandValue: function (cmdName) {
+        qUMryCommandValUM: function (cmdName) {
             try{
-                return this._callCmdFn('queryCommandValue', arguments);
+                return this._callCmdFn('qUMryCommandValUM', arguments);
             }catch(e){
                 return null
             }
         },
         /**
-         * 检查编辑区域中是否有内容，若包含tags中的节点类型，直接返回true
+         * 检查编辑区域中是否有内容，若包含tags中的节点类型，直接返回trUM
          * @name  hasContents
          * @desc
          * 默认有文本内容，或者有以下节点都不认为是空
          * <code>{table:1,ul:1,ol:1,dl:1,iframe:1,area:1,base:1,col:1,hr:1,img:1,embed:1,input:1,link:1,meta:1,param:1}</code>
-         * @grammar editor.hasContents()  => (true|false)
-         * @grammar editor.hasContents(tags)  =>  (true|false)  //若文档中包含tags数组里对应的tag，直接返回true
+         * @grammar editor.hasContents()  => (trUM|false)
+         * @grammar editor.hasContents(tags)  =>  (trUM|false)  //若文档中包含tags数组里对应的tag，直接返回trUM
          * @example
          * editor.hasContents(['span']) //如果编辑器里有这些，不认为是空
          */
@@ -4049,12 +4049,12 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             if (tags) {
                 for (var i = 0, ci; ci = tags[i++];) {
                     if (this.body.getElementsByTagName(ci).length > 0) {
-                        return true;
+                        return trUM;
                     }
                 }
             }
             if (!domUtils.isEmptyBlock(this.body)) {
-                return true
+                return trUM
             }
             //随时添加,定义的特殊标签如果存在，不能认为是空
             tags = ['div'];
@@ -4062,7 +4062,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 var nodes = domUtils.getElementsByTagName(this.body, ci);
                 for (var n = 0, cn; cn = nodes[n++];) {
                     if (domUtils.isCustomeNode(cn)) {
-                        return true;
+                        return trUM;
                     }
                 }
             }
@@ -4080,13 +4080,13 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             this.fireEvent('reset');
         },
         isEnabled: function(){
-            return this._isEnabled != true;
+            return this._isEnabled != trUM;
         },
 
         setEnabled: function () {
             var me = this, range;
 
-            me.body.contentEditable = true;
+            me.body.contentEditable = trUM;
 
             /* 恢复选区 */
             if (me.lastBk) {
@@ -4095,15 +4095,15 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     range.moveToBookmark(me.lastBk);
                     delete me.lastBk
                 } catch (e) {
-                    range.setStartAtFirst(me.body).collapse(true)
+                    range.setStartAtFirst(me.body).collapse(trUM)
                 }
-                range.select(true);
+                range.select(trUM);
             }
 
-            /* 恢复query函数 */
-            if (me.bkqueryCommandState) {
-                me.queryCommandState = me.bkqueryCommandState;
-                delete me.bkqueryCommandState;
+            /* 恢复qUMry函数 */
+            if (me.bkqUMryCommandState) {
+                me.qUMryCommandState = me.bkqUMryCommandState;
+                delete me.bkqUMryCommandState;
             }
 
             /* 恢复原生事件 */
@@ -4131,15 +4131,15 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
             /* 备份最后的选区 */
             if (!me.lastBk) {
-                me.lastBk = me.selection.getRange().createBookmark(true);
+                me.lastBk = me.selection.getRange().createBookmark(trUM);
             }
 
-            /* 备份并重置query函数 */
-            if(!me.bkqueryCommandState) {
-                me.bkqueryCommandState = me.queryCommandState;
-                me.queryCommandState = function (type) {
+            /* 备份并重置qUMry函数 */
+            if(!me.bkqUMryCommandState) {
+                me.bkqUMryCommandState = me.qUMryCommandState;
+                me.qUMryCommandState = function (type) {
                     if (utils.indexOf(me._except, type) != -1) {
-                        return me.bkqueryCommandState.apply(me, arguments);
+                        return me.bkqUMryCommandState.apply(me, arguments);
                     }
                     return -1;
                 };
@@ -4207,11 +4207,11 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     range.moveToBookmark(me.lastBk);
                     delete me.lastBk
                 } catch (e) {
-                    range.setStartAtFirst(me.body).collapse(true)
+                    range.setStartAtFirst(me.body).collapse(trUM)
                 }
                 //ie下focus实效，所以做了个延迟
                 setTimeout(function () {
-                    range.select(true);
+                    range.select(trUM);
                 }, 100);
                 me.container.style.display = '';
             }
@@ -4233,7 +4233,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         setHide: function () {
             var me = this;
             if (!me.lastBk) {
-                me.lastBk = me.selection.getRange().createBookmark(true);
+                me.lastBk = me.selection.getRange().createBookmark(trUM);
             }
             me.container.style.display = 'none'
         },
@@ -4269,10 +4269,10 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @name  getContentLength
          * @grammar editor.getContentLength(ingoneHtml,tagNames)  =>
          * @example
-         * editor.getLang(true)
+         * editor.getLang(trUM)
          */
         getContentLength: function (ingoneHtml, tagNames) {
-            var count = this.getContent(false,false,true).length;
+            var count = this.getContent(false,false,trUM).length;
             if (ingoneHtml) {
                 tagNames = (tagNames || []).concat([ 'hr', 'img', 'iframe']);
                 count = this.getContentTxt().replace(/[\t\r\n]+/g, '').length;
@@ -4289,7 +4289,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         filterInputRule: function (root,isUndoLoad) {
             for (var i = 0, ci; ci = this.inputRules[i++];) {
                 if(isUndoLoad && ci.ignoreUndo){
-                    continue;
+                    continUM;
                 }
                 ci.call(this, root)
             }
@@ -4301,7 +4301,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         filterOutputRule: function (root,isUndoLoad) {
             for (var i = 0, ci; ci = this.outputRules[i++];) {
                 if(isUndoLoad && ci.ignoreUndo){
-                    continue;
+                    continUM;
                 }
                 ci.call(this, root)
             }
@@ -4379,17 +4379,17 @@ var filterWord = UM.filterWord = function () {
 
                 for ( var i = 0,v; v = s[i];i++ ) {
 
-                    var name, value,
+                    var name, valUM,
                         parts = v.split( ":" );
 
                     if ( parts.length == 2 ) {
                         name = parts[0].toLowerCase();
-                        value = parts[1].toLowerCase();
-                        if(/^(background)\w*/.test(name) && value.replace(/(initial|\s)/g,'').length == 0
+                        valUM = parts[1].toLowerCase();
+                        if(/^(background)\w*/.test(name) && valUM.replace(/(initial|\s)/g,'').length == 0
                             ||
-                            /^(margin)\w*/.test(name) && /^0\w+$/.test(value)
+                            /^(margin)\w*/.test(name) && /^0\w+$/.test(valUM)
                             ){
-                            continue;
+                            continUM;
                         }
 
                         switch ( name ) {
@@ -4410,62 +4410,62 @@ var filterWord = UM.filterWord = function () {
                             case "mso-vertical-align-alt":
                                 //trace:1819 ff下会解析出padding在table上
                                 if(!/<table/.test(tag))
-                                    n[i] = name.replace( /^mso-|-alt$/g, "" ) + ":" + transUnit( value );
-                                continue;
+                                    n[i] = name.replace( /^mso-|-alt$/g, "" ) + ":" + transUnit( valUM );
+                                continUM;
                             case "horiz-align":
-                                n[i] = "text-align:" + value;
-                                continue;
+                                n[i] = "text-align:" + valUM;
+                                continUM;
 
                             case "vert-align":
-                                n[i] = "vertical-align:" + value;
-                                continue;
+                                n[i] = "vertical-align:" + valUM;
+                                continUM;
 
                             case "font-color":
                             case "mso-foreground":
-                                n[i] = "color:" + value;
-                                continue;
+                                n[i] = "color:" + valUM;
+                                continUM;
 
                             case "mso-background":
                             case "mso-highlight":
-                                n[i] = "background:" + value;
-                                continue;
+                                n[i] = "background:" + valUM;
+                                continUM;
 
                             case "mso-default-height":
-                                n[i] = "min-height:" + transUnit( value );
-                                continue;
+                                n[i] = "min-height:" + transUnit( valUM );
+                                continUM;
 
                             case "mso-default-width":
-                                n[i] = "min-width:" + transUnit( value );
-                                continue;
+                                n[i] = "min-width:" + transUnit( valUM );
+                                continUM;
 
                             case "mso-padding-between-alt":
-                                n[i] = "border-collapse:separate;border-spacing:" + transUnit( value );
-                                continue;
+                                n[i] = "border-collapse:separate;border-spacing:" + transUnit( valUM );
+                                continUM;
 
                             case "text-line-through":
-                                if ( (value == "single") || (value == "double") ) {
+                                if ( (valUM == "single") || (valUM == "double") ) {
                                     n[i] = "text-decoration:line-through";
                                 }
-                                continue;
+                                continUM;
                             case "mso-zero-height":
-                                if ( value == "yes" ) {
+                                if ( valUM == "yes" ) {
                                     n[i] = "display:none";
                                 }
-                                continue;
+                                continUM;
 //                                case 'background':
 //                                    break;
                             case 'margin':
-                                if ( !/[1-9]/.test( value ) ) {
-                                    continue;
+                                if ( !/[1-9]/.test( valUM ) ) {
+                                    continUM;
                                 }
 
                         }
 
                         if ( /^(mso|column|font-emph|lang|layout|line-break|list-image|nav|panose|punct|row|ruby|sep|size|src|tab-|table-border|text-(?:decor|trans)|top-bar|version|vnd|word-break)/.test( name )
                             ||
-                            /text\-indent|padding|margin/.test(name) && /\-[\d.]+/.test(value)
+                            /text\-indent|padding|margin/.test(name) && /\-[\d.]+/.test(valUM)
                             ) {
-                            continue;
+                            continUM;
                         }
 
                         n[i] = name + ":" + parts[1];
@@ -4552,7 +4552,7 @@ var filterWord = UM.filterWord = function () {
                 for (var i = 0, ci; ci = node.children[i++];) {
                     //插入新行
                     if (formatter && ci.type == 'element' && !dtd.$inlineWithA[ci.tagName] && i > 1) {
-                        insertLine(arr, current, true);
+                        insertLine(arr, current, trUM);
                         insertIndent(arr, current)
                     }
                     nodeToHtml(ci, arr, formatter, current)
@@ -4603,7 +4603,7 @@ var filterWord = UM.filterWord = function () {
         //插入新行
         if (formatter  &&  !dtd.$inlineWithA[node.tagName] && node.tagName != 'pre') {
             if(node.children && node.children.length){
-                current = insertLine(arr, current, true);
+                current = insertLine(arr, current, trUM);
                 insertIndent(arr, current)
             }
 
@@ -4694,7 +4694,7 @@ var filterWord = UM.filterWord = function () {
          * @return { String } 返回转换后的html字符串
          * @example
          * ```javascript
-         * node.toHtml( true );
+         * node.toHtml( trUM );
          * ```
          */
         toHtml:function (formatter) {
@@ -4992,11 +4992,11 @@ var filterWord = UM.filterWord = function () {
          * 从当前节点的子节点列表中，移除节点
          * @method removeChild
          * @param { UM.uNode } node 要移除的节点引用
-         * @param { Boolean } keepChildren 是否保留移除节点的子节点，若传入true，自动把移除节点的子节点插入到移除的位置
+         * @param { Boolean } keepChildren 是否保留移除节点的子节点，若传入trUM，自动把移除节点的子节点插入到移除的位置
          * @return { * } 返回刚移除的子节点
          * @example
          * ```javascript
-         * node.removeChild(childNode,true); //在node的子节点列表中移除child节点，并且吧child的子节点插入到移除的位置
+         * node.removeChild(childNode,trUM); //在node的子节点列表中移除child节点，并且吧child的子节点插入到移除的位置
          * ```
          */
         removeChild:function (node,keepChildren) {
@@ -5197,7 +5197,7 @@ var filterWord = UM.filterWord = function () {
                     hasClass = false;
                 $.each(classNames, function(key, item){
                     if( item === className ) {
-                        hasClass = true;
+                        hasClass = trUM;
                     }
                 });
                 return hasClass;
@@ -5218,7 +5218,7 @@ var filterWord = UM.filterWord = function () {
                 classes.forEach( function( item ){
 
                     if( item===className ) {
-                        hasClass = true;
+                        hasClass = trUM;
                         return;
                     }
 
@@ -5328,7 +5328,7 @@ var htmlparser = UM.htmlparser = function (htmlstr,ignoreBlank) {
             while(tmpParent.type != 'root'){
                 if(utils.isArray(needParentTag) ? utils.indexOf(needParentTag, tmpParent.tagName) != -1 : needParentTag == tmpParent.tagName){
                     parent = tmpParent;
-                    hasParent = true;
+                    hasParent = trUM;
                     break;
                 }
                 tmpParent = tmpParent.parentNode;
@@ -5510,7 +5510,7 @@ var filterNode = UM.filterNode = function () {
                     }else{
                         var parentNode = node.parentNode,
                             index = node.getIndex();
-                        node.parentNode.removeChild(node,true);
+                        node.parentNode.removeChild(node,trUM);
                         for(var i = index,ci;ci=parentNode.children[i];){
                             filterNode(ci,rules);
                             if(ci.parentNode){
@@ -5560,7 +5560,7 @@ UM.commands['inserthtml'] = {
         if(!html){
             return;
         }
-        if(me.fireEvent('beforeinserthtml',html) === true){
+        if(me.fireEvent('beforeinserthtml',html) === trUM){
             return;
         }
         range = me.selection.getRange();
@@ -5601,9 +5601,9 @@ UM.commands['inserthtml'] = {
                 tmpNode = range.startContainer;
                 if(domUtils.isBoundaryNode(tmpNode,'firstChild') ){
                     tmpNode = range.endContainer;
-                    if(range.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValue.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
+                    if(range.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValUM.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
                         me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br/>')+'</p>';
-                        range.setStart(me.body.firstChild,0).collapse(true)
+                        range.setStart(me.body.firstChild,0).collapse(trUM)
 
                     }
                 }
@@ -5628,12 +5628,12 @@ UM.commands['inserthtml'] = {
         if(range.inFillChar()){
             child = range.startContainer;
             if(domUtils.isFillChar(child)){
-                range.setStartBefore(child).collapse(true);
+                range.setStartBefore(child).collapse(trUM);
                 domUtils.remove(child);
-            }else if(domUtils.isFillChar(child,true)){
-                child.nodeValue = child.nodeValue.replace(fillCharReg,'');
+            }else if(domUtils.isFillChar(child,trUM)){
+                child.nodeValUM = child.nodeValUM.replace(fillCharReg,'');
                 range.startOffset--;
-                range.collapsed && range.collapse(true)
+                range.collapsed && range.collapse(trUM)
             }
         }
         while ( child = div.firstChild ) {
@@ -5689,7 +5689,7 @@ UM.commands['inserthtml'] = {
             var next = child.nextSibling;
             if(!div.firstChild && next && domUtils.isBlockElm(next)){
 
-                range.setStart(next,0).collapse(true);
+                range.setStart(next,0).collapse(trUM);
                 break;
             }
             range.setEndAfter( child ).collapse();
@@ -5707,7 +5707,7 @@ UM.commands['inserthtml'] = {
                 domUtils.remove(child);
                 if(nextNode.nodeType == 1 && dtd.$block[nextNode.tagName]){
 
-                    range.setStart(nextNode,0).collapse(true).shrinkBoundary()
+                    range.setStart(nextNode,0).collapse(trUM).shrinkBoundary()
                 }
             }else{
 
@@ -5721,17 +5721,17 @@ UM.commands['inserthtml'] = {
             }
 
         }
-        //加上true因为在删除表情等时会删两次，第一次是删的fillData
+        //加上trUM因为在删除表情等时会删两次，第一次是删的fillData
         try{
             if(browser.ie9below && range.startContainer.nodeType == 1 && !range.startContainer.childNodes[range.startOffset]){
                 var start = range.startContainer,pre = start.childNodes[range.startOffset-1];
                 if(pre && pre.nodeType == 1 && dtd.$empty[pre.tagName]){
                     var txt = this.document.createTextNode(domUtils.fillChar);
-                    range.insertNode(txt).setStart(txt,0).collapse(true);
+                    range.insertNode(txt).setStart(txt,0).collapse(trUM);
                 }
             }
             setTimeout(function(){
-                range.select(true);
+                range.select(trUM);
             })
 
         }catch(e){}
@@ -5792,7 +5792,7 @@ UM.commands['insertimage'] = {
             }
         }
 
-        me.execCommand('insertHtml', html.join(''), true);
+        me.execCommand('insertHtml', html.join(''), trUM);
     }
 };
 ///import core
@@ -5813,12 +5813,12 @@ UM.plugins['justify']=function(){
             execCommand:function (cmdName) {
                 return this.document.execCommand(cmdName);
             },
-            queryCommandValue: function (cmdName) {
-                var val = this.document.queryCommandValue(cmdName);
-                return   val === true || val === 'true' ? cmdName.replace(/justify/,'') : '';
+            qUMryCommandValUM: function (cmdName) {
+                var val = this.document.qUMryCommandValUM(cmdName);
+                return   val === trUM || val === 'trUM' ? cmdName.replace(/justify/,'') : '';
             },
-            queryCommandState: function (cmdName) {
-                return this.document.queryCommandState(cmdName) ? 1 : 0
+            qUMryCommandState: function (cmdName) {
+                return this.document.qUMryCommandState(cmdName) ? 1 : 0
             }
         };
     })
@@ -5833,7 +5833,7 @@ UM.plugins['justify']=function(){
  * @description 字体
  * @name UM.execCommand
  * @param {String}     cmdName    执行的功能名称
- * @param {String}    value             传入的值
+ * @param {String}    valUM             传入的值
  */
 UM.plugins['font'] = function () {
     var me = this,
@@ -5916,24 +5916,24 @@ UM.plugins['font'] = function () {
 
                     node.parentNode.attrs[k] = k == 'style' ? node.parentNode.attrs[k] + v : v;
                 })
-                node.parentNode.removeChild(node,true);
+                node.parentNode.removeChild(node,trUM);
             }
         });
     });
     for(var p in fonts){
         (function (cmd) {
             me.commands[cmd] = {
-                execCommand: function (cmdName,value) {
-                    if(value == 'transparent'){
+                execCommand: function (cmdName,valUM) {
+                    if(valUM == 'transparent'){
                         return;
                     }
                     var rng = this.selection.getRange();
                     if(rng.collapsed){
-                        var span = $('<span></span>').css(cmdNameToStyle[cmdName],value)[0];
+                        var span = $('<span></span>').css(cmdNameToStyle[cmdName],valUM)[0];
                         rng.insertNode(span).setStart(span,0).setCursor();
                     }else{
                         if(cmdName == 'fontsize'){
-                            value  = {
+                            valUM  = {
                                 '10':'1',
                                 '12':'2',
                                 '16':'3',
@@ -5941,9 +5941,9 @@ UM.plugins['font'] = function () {
                                 '24':'5',
                                 '32':'6',
                                 '48':'7'
-                            }[(value+"").replace(/px/,'')]
+                            }[(valUM+"").replace(/px/,'')]
                         }
-                        this.document.execCommand(fonts[cmdName],false, value);
+                        this.document.execCommand(fonts[cmdName],false, valUM);
                         if(browser.gecko){
                             $.each(this.$body.find('a'),function(i,a){
                                 var parent = a.parentNode;
@@ -5960,7 +5960,7 @@ UM.plugins['font'] = function () {
                             var nativeRange = this.selection.getNative().getRangeAt(0);
                             var common = nativeRange.commonAncestorContainer;
                             var rng = this.selection.getRange(),
-                                bk = rng.createBookmark(true);
+                                bk = rng.createBookmark(trUM);
 
                             $(common).find('a').each(function(i,n){
                                 var parent = n.parentNode;
@@ -5972,11 +5972,11 @@ UM.plugins['font'] = function () {
                             });
                             rng.moveToBookmark(bk).select()
                         }
-                        return true
+                        return trUM
                     }
 
                 },
-                queryCommandValue: function (cmdName) {
+                qUMryCommandValUM: function (cmdName) {
                     var start = me.selection.getStart();
                     var val = $(start).css(cmdNameToStyle[cmdName]);
                     if(val === undefined){
@@ -5984,8 +5984,8 @@ UM.plugins['font'] = function () {
                     }
                     return val ? utils.fixColor(cmdName,val).replace(/px/,'') : '';
                 },
-                queryCommandState: function (cmdName) {
-                    return this.queryCommandValue(cmdName)
+                qUMryCommandState: function (cmdName) {
+                    return this.qUMryCommandValUM(cmdName)
                 }
             };
         })(p);
@@ -6029,15 +6029,15 @@ UM.plugins['link'] = function(){
                         if(pre && pre.nodeType == 1){
                             var pre = pre.lastChild;
                             if(pre && pre.nodeName == 'A' && !pre.getAttribute('_href')){
-                                domUtils.remove(pre,true);
+                                domUtils.remove(pre,trUM);
                             }
                         }
                     }
                 }else if(keyCode == 32){
-                   if(start.nodeType == 3 && /^\s$/.test(start.nodeValue)){
+                   if(start.nodeType == 3 && /^\s$/.test(start.nodeValUM)){
                        start = start.previousSibling;
                        if(start && start.nodeName == 'A' && !start.getAttribute('_href')){
-                           domUtils.remove(start,true);
+                           domUtils.remove(start,trUM);
                        }
                    }
                 }
@@ -6073,7 +6073,7 @@ UM.plugins['link'] = function(){
             var rng = me.selection.getRange();
             if(rng.collapsed){
                 var start = rng.startContainer;
-                if(start = domUtils.findParentByTagName(start,'a',true)){
+                if(start = domUtils.findParentByTagName(start,'a',trUM)){
                     $(start).attr(opt);
                     rng.selectNode(start).select()
                 }else{
@@ -6096,10 +6096,10 @@ UM.plugins['link'] = function(){
             }
 
         },
-        queryCommandState:function(){
-            return this.queryCommandValue('link') ? 1 : 0;
+        qUMryCommandState:function(){
+            return this.qUMryCommandValUM('link') ? 1 : 0;
         },
-        queryCommandValue:function(){
+        qUMryCommandValUM:function(){
             var path = this.selection.getStartElementPath();
             var result;
             $.each(path,function(i,n){
@@ -6147,7 +6147,7 @@ UM.commands['print'] = {
         var w = window.open('', id, ''),
             d = w.document;
         d.open();
-        d.write('<html><head></head><body><div>'+this.getContent(null,null,true)+'</div><script>' +
+        d.write('<html><head></head><body><div>'+this.getContent(null,null,trUM)+'</div><script>' +
             "setTimeout(function(){" +
             "window.print();" +
             "setTimeout(function(){" +
@@ -6179,9 +6179,9 @@ UM.plugins['paragraph'] = function() {
         execCommand : function( cmdName, style ) {
             return this.document.execCommand('formatBlock',false,'<' + style + '>');
         },
-        queryCommandValue : function() {
+        qUMryCommandValUM : function() {
             try{
-                var  val = this.document.queryCommandValue('formatBlock')
+                var  val = this.document.qUMryCommandValUM('formatBlock')
             }catch(e){
             }
             return val ;
@@ -6205,7 +6205,7 @@ UM.plugins['horizontal'] = function(){
     me.commands['horizontal'] = {
         execCommand : function(  ) {
             this.document.execCommand('insertHorizontalRule');
-            var rng = me.selection.getRange().txtToElmBoundary(true),
+            var rng = me.selection.getRange().txtToElmBoundary(trUM),
                 start = rng.startContainer;
             if(domUtils.isBody(rng.startContainer)){
                 var next = rng.startContainer.childNodes[rng.startOffset];
@@ -6246,6 +6246,550 @@ UM.plugins['horizontal'] = function(){
 };
 
 
+
+// plugins/insertcode.js
+    /**
+     * 插入代码插件
+     * @file
+     * @since 1.2.6.1
+     */
+
+    UM.plugins['insertcode'] = function() {
+        var me = this;
+        me.ready(function(){
+            utils.cssRule('pre','pre{margin:.5em 0;padding:.4em .6em;border-radius:8px;background:#f8f8f8;}',
+                me.document)
+        });
+        me.setOpt('insertcode',{
+            'as3':'ActionScript3',
+            'bash':'Bash/Shell',
+            'cpp':'C/C++',
+            'css':'Css',
+            'cf':'CodeFunction',
+            'c#':'C#',
+            'delphi':'Delphi',
+            'diff':'Diff',
+            'erlang':'Erlang',
+            'groovy':'Groovy',
+            'html':'Html',
+            'java':'Java',
+            'jfx':'JavaFx',
+            'js':'Javascript',
+            'pl':'Perl',
+            'php':'Php',
+            'plain':'Plain Text',
+            'ps':'PowerShell',
+            'python':'Python',
+            'ruby':'Ruby',
+            'scala':'Scala',
+            'sql':'Sql',
+            'vb':'Vb',
+            'xml':'Xml'
+        });
+
+        /**
+         * 插入代码
+         * @command insertcode
+         * @method execCommand
+         * @param { String } cmd 命令字符串
+         * @param { String } lang 插入代码的语言
+         * @example
+         * ```javascript
+         * editor.execCommand( 'insertcode', 'javascript' );
+         * ```
+         */
+
+        /**
+         * 如果选区所在位置是插入插入代码区域，返回代码的语言
+         * @command insertcode
+         * @method qUMryCommandValUM
+         * @param { String } cmd 命令字符串
+         * @return { String } 返回代码的语言
+         * @example
+         * ```javascript
+         * editor.qUMryCommandValUM( 'insertcode' );
+         * ```
+         */
+
+        me.commands['insertcode'] = {
+            execCommand : function(cmd,lang){
+                var me = this,
+                    rng = me.selection.getRange(),
+                    pre = domUtils.findParentByTagName(rng.startContainer,'pre',trUM);
+                if(pre){
+                    pre.className = 'brush:'+lang+';toolbar:false;';
+                }else{
+                    var code = '';
+                    if(rng.collapsed){
+                        code = browser.ie && browser.ie11below ? (browser.version <= 8 ? '&nbsp;':''):'<br/>';
+                    }else{
+                        var frag = rng.extractContents();
+                        var div = me.document.createElement('div');
+                        div.appendChild(frag);
+
+                        utils.each(UM.filterNode(UM.htmlparser(div.innerHTML.replace(/[\r\t]/g,'')),me.options.filterTxtRules).children,function(node){
+                            if(browser.ie && browser.ie11below && browser.version > 8){
+
+                                if(node.type =='element'){
+                                    if(node.tagName == 'br'){
+                                        code += '\n'
+                                    }else if(!dtd.$empty[node.tagName]){
+                                        utils.each(node.children,function(cn){
+                                            if(cn.type =='element'){
+                                                if(cn.tagName == 'br'){
+                                                    code += '\n'
+                                                }else if(!dtd.$empty[node.tagName]){
+                                                    code += cn.innerText();
+                                                }
+                                            }else{
+                                                code += cn.data
+                                            }
+                                        })
+                                        if(!/\n$/.test(code)){
+                                            code += '\n';
+                                        }
+                                    }
+                                }else{
+                                    code += node.data + '\n'
+                                }
+                                if(!node.nextSibling() && /\n$/.test(code)){
+                                    code = code.replace(/\n$/,'');
+                                }
+                            }else{
+                                if(browser.ie && browser.ie11below){
+
+                                    if(node.type =='element'){
+                                        if(node.tagName == 'br'){
+                                            code += '<br>'
+                                        }else if(!dtd.$empty[node.tagName]){
+                                            utils.each(node.children,function(cn){
+                                                if(cn.type =='element'){
+                                                    if(cn.tagName == 'br'){
+                                                        code += '<br>'
+                                                    }else if(!dtd.$empty[node.tagName]){
+                                                        code += cn.innerText();
+                                                    }
+                                                }else{
+                                                    code += cn.data
+                                                }
+                                            });
+                                            if(!/br>$/.test(code)){
+                                                code += '<br>';
+                                            }
+                                        }
+                                    }else{
+                                        code += node.data + '<br>'
+                                    }
+                                    if(!node.nextSibling() && /<br>$/.test(code)){
+                                        code = code.replace(/<br>$/,'');
+                                    }
+
+                                }else{
+                                    code += (node.type == 'element' ? (dtd.$empty[node.tagName] ?  '' : node.innerText()) : node.data);
+                                    if(!/br\/?\s*>$/.test(code)){
+                                        if(!node.nextSibling())
+                                            return;
+                                        code += '<br>'
+                                    }
+                                }
+
+                            }
+
+                        });
+                    }
+                    me.execCommand('inserthtml','<pre id="coder"class="brush:'+lang+';toolbar:false">'+code+'</pre>',trUM);
+
+                    pre = me.document.getElementById('coder');
+                    domUtils.removeAttributes(pre,'id');
+                    var tmpNode = pre.previousSibling;
+
+                    if(tmpNode && (tmpNode.nodeType == 3 && tmpNode.nodeValUM.length == 1 && browser.ie && browser.version == 6 ||  domUtils.isEmptyBlock(tmpNode))){
+
+                        domUtils.remove(tmpNode)
+                    }
+                    var rng = me.selection.getRange();
+                    if(domUtils.isEmptyBlock(pre)){
+                        rng.setStart(pre,0).setCursor(false,trUM)
+                    }else{
+                        rng.selectNodeContents(pre).select()
+                    }
+                }
+
+
+
+            },
+            qUMryCommandValUM : function(){
+                var path = this.selection.getStartElementPath();
+                var lang = '';
+                utils.each(path,function(node){
+                    if(node.nodeName =='PRE'){
+                        var match = node.className.match(/brush:([^;]+)/);
+                        lang = match && match[1] ? match[1] : '';
+                        return false;
+                    }
+                });
+                return lang;
+            }
+        };
+
+        me.addInputRule(function(root){
+            utils.each(root.getNodesByTagName('pre'),function(pre){
+                var brs = pre.getNodesByTagName('br');
+                if(brs.length){
+                    browser.ie && browser.ie11below && browser.version > 8 && utils.each(brs,function(br){
+                        var txt = UM.uNode.createText('\n');
+                        br.parentNode.insertBefore(txt,br);
+                        br.parentNode.removeChild(br);
+                    });
+                    return;
+                }
+                if(browser.ie && browser.ie11below && browser.version > 8)
+                    return;
+                var code = pre.innerText().split(/\n/);
+                pre.innerHTML('');
+                utils.each(code,function(c){
+                    if(c.length){
+                        pre.appendChild(UM.uNode.createText(c));
+                    }
+                    pre.appendChild(UM.uNode.createElement('br'))
+                })
+            })
+        });
+        me.addOutputRule(function(root){
+            utils.each(root.getNodesByTagName('pre'),function(pre){
+                var code = '';
+                utils.each(pre.children,function(n){
+                    if(n.type == 'text'){
+                        //在ie下文本内容有可能末尾带有\n要去掉
+                        //trace:3396
+                        code += n.data.replace(/[ ]/g,'&nbsp;').replace(/\n$/,'');
+                    }else{
+                        if(n.tagName == 'br'){
+                            code  += '\n'
+                        }else{
+                            code += (!dtd.$empty[n.tagName] ? '' : n.innerText());
+                        }
+
+                    }
+
+                });
+
+                pre.innerText(code.replace(/(&nbsp;|\n)+$/,''))
+            })
+        });
+        //不需要判断highlight的command列表
+        me.notNeedCodeQUMry ={
+            help:1,
+            undo:1,
+            redo:1,
+            source:1,
+            print:1,
+            searchreplace:1,
+            fullscreen:1,
+            preview:1,
+            insertparagraph:1,
+            elementpath:1,
+            insertcode:1,
+            inserthtml:1,
+            selectall:1
+        };
+        //将qUMyCommamndState重置
+        var orgQUMry = me.qUMryCommandState;
+        me.qUMryCommandState = function(cmd){
+            var me = this;
+
+            if(!me.notNeedCodeQUMry[cmd.toLowerCase()] && me.selection && me.qUMryCommandValUM('insertcode')){
+                return -1;
+            }
+            return UM.Editor.prototype.qUMryCommandState.apply(this,arguments)
+        };
+        me.addListener('beforeenterkeydown',function(){
+            var rng = me.selection.getRange();
+            var pre = domUtils.findParentByTagName(rng.startContainer,'pre',trUM);
+            if(pre){
+                me.fireEvent('saveScene');
+                if(!rng.collapsed){
+                    rng.deleteContents();
+                }
+                if(!browser.ie || browser.ie9above){
+                    var tmpNode = me.document.createElement('br'),pre;
+                    rng.insertNode(tmpNode).setStartAfter(tmpNode).collapse(trUM);
+                    var next = tmpNode.nextSibling;
+                    if(!next && (!browser.ie || browser.version > 10)){
+                        rng.insertNode(tmpNode.cloneNode(false));
+                    }else{
+                        rng.setStartAfter(tmpNode);
+                    }
+                    pre = tmpNode.previousSibling;
+                    var tmp;
+                    while(pre ){
+                        tmp = pre;
+                        pre = pre.previousSibling;
+                        if(!pre || pre.nodeName == 'BR'){
+                            pre = tmp;
+                            break;
+                        }
+                    }
+                    if(pre){
+                        var str = '';
+                        while(pre && pre.nodeName != 'BR' &&  new RegExp('^[\\s'+domUtils.fillChar+']*$').test(pre.nodeValUM)){
+                            str += pre.nodeValUM;
+                            pre = pre.nextSibling;
+                        }
+                        if(pre.nodeName != 'BR'){
+                            var match = pre.nodeValUM.match(new RegExp('^([\\s'+domUtils.fillChar+']+)'));
+                            if(match && match[1]){
+                                str += match[1]
+                            }
+
+                        }
+                        if(str){
+                            str = me.document.createTextNode(str);
+                            rng.insertNode(str).setStartAfter(str);
+                        }
+                    }
+                    rng.collapse(trUM).select(trUM);
+                }else{
+                    if(browser.version > 8){
+
+                        var txt = me.document.createTextNode('\n');
+                        var start = rng.startContainer;
+                        if(rng.startOffset == 0){
+                            var preNode = start.previousSibling;
+                            if(preNode){
+                                rng.insertNode(txt);
+                                var fillchar = me.document.createTextNode(' ');
+                                rng.setStartAfter(txt).insertNode(fillchar).setStart(fillchar,0).collapse(trUM).select(trUM)
+                            }
+                        }else{
+                            rng.insertNode(txt).setStartAfter(txt);
+                            var fillchar = me.document.createTextNode(' ');
+                            start = rng.startContainer.childNodes[rng.startOffset];
+                            if(start && !/^\n/.test(start.nodeValUM)){
+                                rng.setStartBefore(txt)
+                            }
+                            rng.insertNode(fillchar).setStart(fillchar,0).collapse(trUM).select(trUM)
+                        }
+
+                    }else{
+                        var tmpNode = me.document.createElement('br');
+                        rng.insertNode(tmpNode);
+                        rng.insertNode(me.document.createTextNode(domUtils.fillChar));
+                        rng.setStartAfter(tmpNode);
+                        pre = tmpNode.previousSibling;
+                        var tmp;
+                        while(pre ){
+                            tmp = pre;
+                            pre = pre.previousSibling;
+                            if(!pre || pre.nodeName == 'BR'){
+                                pre = tmp;
+                                break;
+                            }
+                        }
+                        if(pre){
+                            var str = '';
+                            while(pre && pre.nodeName != 'BR' &&  new RegExp('^[ '+domUtils.fillChar+']*$').test(pre.nodeValUM)){
+                                str += pre.nodeValUM;
+                                pre = pre.nextSibling;
+                            }
+                            if(pre.nodeName != 'BR'){
+                                var match = pre.nodeValUM.match(new RegExp('^([ '+domUtils.fillChar+']+)'));
+                                if(match && match[1]){
+                                    str += match[1]
+                                }
+
+                            }
+
+                            str = me.document.createTextNode(str);
+                            rng.insertNode(str).setStartAfter(str);
+                        }
+                        rng.collapse(trUM).select();
+                    }
+
+
+                }
+                me.fireEvent('saveScene');
+                return trUM;
+            }
+
+
+        });
+
+        me.addListener('tabkeydown',function(cmd,evt){
+            var rng = me.selection.getRange();
+            var pre = domUtils.findParentByTagName(rng.startContainer,'pre',trUM);
+            if(pre){
+                me.fireEvent('saveScene');
+                if(evt.shiftKey){
+
+                }else{
+                    if(!rng.collapsed){
+                        var bk = rng.createBookmark();
+                        var start = bk.start.previousSibling;
+
+                        while(start){
+                            if(pre.firstChild === start && !domUtils.isBr(start)){
+                                pre.insertBefore(me.document.createTextNode('    '),start);
+
+                                break;
+                            }
+                            if(domUtils.isBr(start)){
+                                pre.insertBefore(me.document.createTextNode('    '),start.nextSibling);
+
+                                break;
+                            }
+                            start = start.previousSibling;
+                        }
+                        var end = bk.end;
+                        start = bk.start.nextSibling;
+                        if(pre.firstChild === bk.start){
+                            pre.insertBefore(me.document.createTextNode('    '),start.nextSibling)
+
+                        }
+                        while(start && start !== end){
+                            if(domUtils.isBr(start) && start.nextSibling){
+                                if(start.nextSibling === end){
+                                    break;
+                                }
+                                pre.insertBefore(me.document.createTextNode('    '),start.nextSibling)
+                            }
+
+                            start = start.nextSibling;
+                        }
+                        rng.moveToBookmark(bk).select();
+                    }else{
+                        var tmpNode = me.document.createTextNode('    ');
+                        rng.insertNode(tmpNode).setStartAfter(tmpNode).collapse(trUM).select(trUM);
+                    }
+                }
+
+
+                me.fireEvent('saveScene');
+                return trUM;
+            }
+
+
+        });
+
+
+        me.addListener('beforeinserthtml',function(evtName,html){
+            var me = this,
+                rng = me.selection.getRange(),
+                pre = domUtils.findParentByTagName(rng.startContainer,'pre',trUM);
+            if(pre){
+                if(!rng.collapsed){
+                    rng.deleteContents()
+                }
+                var htmlstr = '';
+                if(browser.ie && browser.version > 8){
+
+                    utils.each(UM.filterNode(UM.htmlparser(html),me.options.filterTxtRules).children,function(node){
+                        if(node.type =='element'){
+                            if(node.tagName == 'br'){
+                                htmlstr += '\n'
+                            }else if(!dtd.$empty[node.tagName]){
+                                utils.each(node.children,function(cn){
+                                    if(cn.type =='element'){
+                                        if(cn.tagName == 'br'){
+                                            htmlstr += '\n'
+                                        }else if(!dtd.$empty[node.tagName]){
+                                            htmlstr += cn.innerText();
+                                        }
+                                    }else{
+                                        htmlstr += cn.data
+                                    }
+                                })
+                                if(!/\n$/.test(htmlstr)){
+                                    htmlstr += '\n';
+                                }
+                            }
+                        }else{
+                            htmlstr += node.data + '\n'
+                        }
+                        if(!node.nextSibling() && /\n$/.test(htmlstr)){
+                            htmlstr = htmlstr.replace(/\n$/,'');
+                        }
+                    });
+                    var tmpNode = me.document.createTextNode(utils.html(htmlstr.replace(/&nbsp;/g,' ')));
+                    rng.insertNode(tmpNode).selectNode(tmpNode).select();
+                }else{
+                    var frag = me.document.createDocumentFragment();
+
+                    utils.each(UM.filterNode(UM.htmlparser(html),me.options.filterTxtRules).children,function(node){
+                        if(node.type =='element'){
+                            if(node.tagName == 'br'){
+                                frag.appendChild(me.document.createElement('br'))
+                            }else if(!dtd.$empty[node.tagName]){
+                                utils.each(node.children,function(cn){
+                                    if(cn.type =='element'){
+                                        if(cn.tagName == 'br'){
+
+                                            frag.appendChild(me.document.createElement('br'))
+                                        }else if(!dtd.$empty[node.tagName]){
+                                            frag.appendChild(me.document.createTextNode(utils.html(cn.innerText().replace(/&nbsp;/g,' '))));
+
+                                        }
+                                    }else{
+                                        frag.appendChild(me.document.createTextNode(utils.html( cn.data.replace(/&nbsp;/g,' '))));
+
+                                    }
+                                })
+                                if(frag.lastChild.nodeName != 'BR'){
+                                    frag.appendChild(me.document.createElement('br'))
+                                }
+                            }
+                        }else{
+                            frag.appendChild(me.document.createTextNode(utils.html( node.data.replace(/&nbsp;/g,' '))));
+                        }
+                        if(!node.nextSibling() && frag.lastChild.nodeName == 'BR'){
+                            frag.removeChild(frag.lastChild)
+                        }
+
+
+                    });
+                    rng.insertNode(frag).select();
+
+                }
+
+                return trUM;
+            }
+        });
+        //方向键的处理
+        me.addListener('keydown',function(cmd,evt){
+            var me = this,keyCode = evt.keyCode || evt.which;
+            if(keyCode == 40){
+                var rng = me.selection.getRange(),pre,start = rng.startContainer;
+                if(rng.collapsed && (pre = domUtils.findParentByTagName(rng.startContainer,'pre',trUM)) && !pre.nextSibling){
+                    var last = pre.lastChild
+                    while(last && last.nodeName == 'BR'){
+                        last = last.previousSibling;
+                    }
+                    if(last === start || rng.startContainer === pre && rng.startOffset == pre.childNodes.length){
+                        me.execCommand('insertparagraph');
+                        domUtils.preventDefault(evt)
+                    }
+
+                }
+            }
+        });
+        //trace:3395
+        me.addListener('delkeydown',function(type,evt){
+            var rng = this.selection.getRange();
+            rng.txtToElmBoundary(trUM);
+            var start = rng.startContainer;
+            if(domUtils.isTagNode(start,'pre') && rng.collapsed && domUtils.isStartInblock(rng)){
+                var p = me.document.createElement('p');
+                domUtils.fillNode(me.document,p);
+                start.parentNode.insertBefore(p,start);
+                domUtils.remove(start);
+                rng.setStart(p,0).setCursor(false,trUM);
+                domUtils.preventDefault(evt);
+                return trUM;
+            }
+        })
+    };
+
+
 ///import core
 ///commands 清空文档
 ///commandsName  ClearDoc
@@ -6263,7 +6807,7 @@ UM.commands['cleardoc'] = {
         var me = this,
             range = me.selection.getRange();
         me.body.innerHTML = "<p>"+(ie ? "" : "<br/>")+"</p>";
-        range.setStart(me.body.firstChild,0).setCursor(false,true);
+        range.setStart(me.body.firstChild,0).setCursor(false,trUM);
         setTimeout(function(){
             me.fireEvent("clearDoc");
         },0);
@@ -6348,7 +6892,7 @@ UM.plugins['undo'] = function () {
             var scene = this.list[this.index];
             var root = UM.htmlparser(scene.content.replace(fillchar, ''));
             me.options.autoClearEmptyNode = false;
-            me.filterInputRule(root,true);
+            me.filterInputRule(root,trUM);
             me.options.autoClearEmptyNode = orgState;
             //trace:873
             //去掉展位符
@@ -6368,7 +6912,7 @@ UM.plugins['undo'] = function () {
                 if(browser.ie && rng.collapsed && rng.startContainer.nodeType == 1){
                     var tmpNode = rng.startContainer.childNodes[rng.startOffset];
                     if( !tmpNode || tmpNode.nodeType == 1 && dtd.$empty[tmpNode]){
-                        rng.insertNode(me.document.createTextNode(' ')).collapse(true);
+                        rng.insertNode(me.document.createTextNode(' ')).collapse(trUM);
                     }
                 }
                 rng.select(noNeedFillCharTags[rng.startContainer.nodeName.toLowerCase()]);
@@ -6377,17 +6921,17 @@ UM.plugins['undo'] = function () {
             this.update();
             this.clearKey();
             //不能把自己reset了
-            me.fireEvent('reset', true);
+            me.fireEvent('reset', trUM);
         };
 
         this.getScene = function () {
             var me = this.editor;
             var rng = me.selection.getRange(),
-                rngAddress = rng.createAddress(false,true);
+                rngAddress = rng.createAddress(false,trUM);
             me.fireEvent('beforegetscene');
-            var root = UM.htmlparser(me.body.innerHTML,true);
+            var root = UM.htmlparser(me.body.innerHTML,trUM);
             me.options.autoClearEmptyNode = false;
-            me.filterOutputRule(root,true);
+            me.filterOutputRule(root,trUM);
             me.options.autoClearEmptyNode = orgState;
             var cont = root.toHtml();
             browser.ie && (cont = cont.replace(/>&nbsp;</g, '><').replace(/\s*</g, '<').replace(/>\s*/g, '>'));
@@ -6459,7 +7003,7 @@ UM.plugins['undo'] = function () {
         execCommand:function (cmdName) {
             this.undoManger[cmdName]();
         },
-        queryCommandState:function (cmdName) {
+        qUMryCommandState:function (cmdName) {
             return this.undoManger['has' + (cmdName.toLowerCase() == 'undo' ? 'Undo' : 'Redo')] ? 0 : -1;
         },
         notNeedUndo:1
@@ -6477,7 +7021,7 @@ UM.plugins['undo'] = function () {
     var inputType = false;
     me.addListener('ready', function () {
         $(this.body).on('compositionstart', function () {
-            inputType = true;
+            inputType = trUM;
         }).on('compositionend', function () {
             inputType = false;
         })
@@ -6488,7 +7032,7 @@ UM.plugins['undo'] = function () {
         "Redo":"ctrl+89,shift+ctrl+z" //redo
 
     });
-    var isCollapsed = true;
+    var isCollapsed = trUM;
     me.addListener('keydown', function (type, evt) {
 
         var me = this;
@@ -6498,19 +7042,19 @@ UM.plugins['undo'] = function () {
                 return;
 
             if(!me.selection.getRange().collapsed){
-                me.undoManger.save(false,true);
+                me.undoManger.save(false,trUM);
                 isCollapsed = false;
                 return;
             }
             if (me.undoManger.list.length == 0) {
-                me.undoManger.save(true);
+                me.undoManger.save(trUM);
             }
             clearTimeout(saveSceneTimer);
             function save(cont){
 
                 if (cont.selection.getRange().collapsed)
                     cont.fireEvent('contentchange');
-                cont.undoManger.save(false,true);
+                cont.undoManger.save(false,trUM);
                 cont.fireEvent('selectionchange');
             }
             saveSceneTimer = setTimeout(function(){
@@ -6539,8 +7083,8 @@ UM.plugins['undo'] = function () {
             if (inputType)
                 return;
             if(!isCollapsed){
-                this.undoManger.save(false,true);
-                isCollapsed = true;
+                this.undoManger.save(false,trUM);
+                isCollapsed = trUM;
             }
         }
     });
@@ -6580,11 +7124,11 @@ UM.plugins['paste'] = function () {
         //要在现在光标平行的位置加入，否则会出现跳动的问题
         $(bk.start).position().top  + 'px';
 
-        range.selectNodeContents(pastebin).select(true);
+        range.selectNodeContents(pastebin).select(trUM);
 
         setTimeout(function () {
             if (browser.webkit) {
-                for (var i = 0, pastebins = doc.querySelectorAll('#baidu_pastebin'), pi; pi = pastebins[i++];) {
+                for (var i = 0, pastebins = doc.qUMrySelectorAll('#baidu_pastebin'), pi; pi = pastebins[i++];) {
                     if (domUtils.isEmptyNode(pi)) {
                         domUtils.remove(pi);
                     } else {
@@ -6597,7 +7141,7 @@ UM.plugins['paste'] = function () {
                 pastebin.parentNode.removeChild(pastebin);
             } catch (e) {
             }
-            range.moveToBookmark(bk).select(true);
+            range.moveToBookmark(bk).select(trUM);
             callback(pastebin);
         }, 0);
     }
@@ -6618,7 +7162,7 @@ UM.plugins['paste'] = function () {
 
             if (browser.webkit) {
 
-                var brs = div.querySelectorAll('div br');
+                var brs = div.qUMrySelectorAll('div br');
                 for (var i = 0, bi; bi = brs[i++];) {
                     var pN = bi.parentNode;
                     if (pN.tagName == 'DIV' && pN.childNodes.length == 1) {
@@ -6626,7 +7170,7 @@ UM.plugins['paste'] = function () {
                         domUtils.remove(pN);
                     }
                 }
-                var divs = div.querySelectorAll('#baidu_pastebin');
+                var divs = div.qUMrySelectorAll('#baidu_pastebin');
                 for (var i = 0, di; di = divs[i++];) {
                     var tmpP = me.document.createElement('p');
                     di.parentNode.insertBefore(tmpP, di);
@@ -6636,12 +7180,12 @@ UM.plugins['paste'] = function () {
                     domUtils.remove(di);
                 }
 
-                var metas = div.querySelectorAll('meta');
+                var metas = div.qUMrySelectorAll('meta');
                 for (var i = 0, ci; ci = metas[i++];) {
                     domUtils.remove(ci);
                 }
 
-                var brs = div.querySelectorAll('br');
+                var brs = div.qUMrySelectorAll('br');
                 for (i = 0; ci = brs[i++];) {
                     if (/^apple-/i.test(ci.className)) {
                         domUtils.remove(ci);
@@ -6649,15 +7193,15 @@ UM.plugins['paste'] = function () {
                 }
             }
             if (browser.gecko) {
-                var dirtyNodes = div.querySelectorAll('[_moz_dirty]');
+                var dirtyNodes = div.qUMrySelectorAll('[_moz_dirty]');
                 for (i = 0; ci = dirtyNodes[i++];) {
                     ci.removeAttribute('_moz_dirty');
                 }
             }
             if (!browser.ie) {
-                var spans = div.querySelectorAll('span.Apple-style-span');
+                var spans = div.qUMrySelectorAll('span.Apple-style-span');
                 for (var i = 0, ci; ci = spans[i++];) {
-                    domUtils.remove(ci, true);
+                    domUtils.remove(ci, trUM);
                 }
             }
 
@@ -6680,7 +7224,7 @@ UM.plugins['paste'] = function () {
                 if (br && br.type == 'element' && br.tagName == 'br') {
                     root.removeChild(br)
                 }
-                utils.each(me.body.querySelectorAll('div'), function (node) {
+                utils.each(me.body.qUMrySelectorAll('div'), function (node) {
                     if (domUtils.isEmptyBlock(node)) {
                         domUtils.remove(node)
                     }
@@ -6693,7 +7237,7 @@ UM.plugins['paste'] = function () {
                 return;
             }
 
-            me.execCommand('insertHtml', html.html, true);
+            me.execCommand('insertHtml', html.html, trUM);
             me.fireEvent("afterpaste", html);
         }
     }
@@ -6770,7 +7314,7 @@ UM.plugins['list'] = function () {
             execCommand:function (cmdName) {
                 this.document.execCommand(cmdName);
                 var rng = this.selection.getRange(),
-                    bk = rng.createBookmark(true);
+                    bk = rng.createBookmark(trUM);
 
                 this.$body.find('ol,ul').each(function(i,n){
                     var parent = n.parentNode;
@@ -6804,7 +7348,7 @@ UM.plugins['list'] = function () {
                             })
 
                         }
-                        domUtils.remove(parent,true)
+                        domUtils.remove(parent,trUM)
                     }
                 });
 
@@ -6812,10 +7356,10 @@ UM.plugins['list'] = function () {
 
 
                 rng.moveToBookmark(bk).select();
-                return true;
+                return trUM;
             },
-            queryCommandState:function (cmdName) {
-                return this.document.queryCommandState(cmdName);
+            qUMryCommandState:function (cmdName) {
+                return this.document.qUMryCommandState(cmdName);
             }
         };
 };
@@ -6846,16 +7390,16 @@ UM.plugins['list'] = function () {
             return {
                 container : textarea,
                 setContent: function (content){
-                    textarea.value = content;
+                    textarea.valUM = content;
                 },
                 getContent: function (){
-                    return textarea.value;
+                    return textarea.valUM;
                 },
                 select: function (){
                     var range;
                     if (browser.ie) {
                         range = textarea.createTextRange();
-                        range.collapse(true);
+                        range.collapse(trUM);
                         range.select();
                     } else {
                         //todo: chrome下无法设置焦点
@@ -6899,8 +7443,8 @@ UM.plugins['list'] = function () {
 
                 sourceMode = !sourceMode;
                 if (sourceMode) {
-                    bakAddress = me.selection.getRange().createAddress(false,true);
-                    me.undoManger && me.undoManger.save(true);
+                    bakAddress = me.selection.getRange().createAddress(false,trUM);
+                    me.undoManger && me.undoManger.save(trUM);
                     if(browser.gecko){
                         me.body.contentEditable = false;
                     }
@@ -6933,16 +7477,16 @@ UM.plugins['list'] = function () {
 
                     me.fireEvent('aftergetcontent');
 
-                    var content = root.toHtml(true);
+                    var content = root.toHtml(trUM);
 
                     sourceEditor = createSourceEditor(me.body.parentNode);
 
                     sourceEditor.setContent(content);
 
-                    var getStyleValue=function(attr){
+                    var getStyleValUM=function(attr){
                         return parseInt($(me.body).css(attr));
                     };
-                    $(sourceEditor.container).width($(me.body).width()+getStyleValue("padding-left")+getStyleValue("padding-right"))
+                    $(sourceEditor.container).width($(me.body).width()+getStyleValUM("padding-left")+getStyleValUM("padding-right"))
                         .height($(me.body).height());
                     setTimeout(function (){
                         sourceEditor.select();
@@ -6978,9 +7522,9 @@ UM.plugins['list'] = function () {
                     }
                     //要在ifm为显示时ff才能取到selection,否则报错
                     //这里不能比较位置了
-                    me.undoManger && me.undoManger.save(true);
+                    me.undoManger && me.undoManger.save(trUM);
                     if(browser.gecko){
-                        me.body.contentEditable = true;
+                        me.body.contentEditable = trUM;
                     }
                     try{
                         me.selection.getRange().moveToAddress(bakAddress).select();
@@ -6989,24 +7533,24 @@ UM.plugins['list'] = function () {
                 }
                 this.fireEvent('sourcemodechanged', sourceMode);
             },
-            queryCommandState: function (){
+            qUMryCommandState: function (){
                 return sourceMode|0;
             },
             notNeedUndo : 1
         };
-        var oldQueryCommandState = me.queryCommandState;
+        var oldQUMryCommandState = me.qUMryCommandState;
 
 
-        me.queryCommandState = function (cmdName){
+        me.qUMryCommandState = function (cmdName){
             cmdName = cmdName.toLowerCase();
             if (sourceMode) {
                 //源码模式下可以开启的命令
                 return cmdName in {
                     'source' : 1,
                     'fullscreen' : 1
-                } ? oldQueryCommandState.apply(this, arguments)  : -1
+                } ? oldQUMryCommandState.apply(this, arguments)  : -1
             }
-            return oldQueryCommandState.apply(this, arguments);
+            return oldQUMryCommandState.apply(this, arguments);
         };
 
     };
@@ -7038,7 +7582,7 @@ UM.plugins['enterkey'] = function() {
 
                 if (/h\d/i.test(hTag)) {
                     if (browser.gecko) {
-                        var h = domUtils.findParentByTagName(start, [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6','blockquote','caption','table'], true);
+                        var h = domUtils.findParentByTagName(start, [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6','blockquote','caption','table'], trUM);
                         if (!h) {
                             me.document.execCommand('formatBlock', false, '<p>');
                             doSave = 1;
@@ -7048,7 +7592,7 @@ UM.plugins['enterkey'] = function() {
                         if (start.nodeType == 1) {
                             var tmp = me.document.createTextNode(''),div;
                             range.insertNode(tmp);
-                            div = domUtils.findParentByTagName(tmp, 'div', true);
+                            div = domUtils.findParentByTagName(tmp, 'div', trUM);
                             if (div) {
                                 var p = me.document.createElement('p');
                                 while (div.firstChild) {
@@ -7071,7 +7615,7 @@ UM.plugins['enterkey'] = function() {
                 //没有站位符，会出现多行的问题
                 browser.opera &&  range.select();
             }else{
-                me.fireEvent('saveScene',true,true)
+                me.fireEvent('saveScene',trUM,trUM)
             }
         }
     });
@@ -7083,7 +7627,7 @@ UM.plugins['enterkey'] = function() {
                 domUtils.preventDefault(evt);
                 return;
             }
-            me.fireEvent('saveScene',true,true);
+            me.fireEvent('saveScene',trUM,trUM);
             hTag = '';
 
 
@@ -7093,10 +7637,10 @@ UM.plugins['enterkey'] = function() {
                 //跨td不能删
                 var start = range.startContainer,
                     end = range.endContainer,
-                    startTd = domUtils.findParentByTagName(start, 'td', true),
-                    endTd = domUtils.findParentByTagName(end, 'td', true);
+                    startTd = domUtils.findParentByTagName(start, 'td', trUM),
+                    endTd = domUtils.findParentByTagName(end, 'td', trUM);
                 if (startTd && endTd && startTd !== endTd || !startTd && endTd || startTd && !endTd) {
-                    evt.preventDefault ? evt.preventDefault() : ( evt.returnValue = false);
+                    evt.preventDefault ? evt.preventDefault() : ( evt.returnValUM = false);
                     return;
                 }
             }
@@ -7105,7 +7649,7 @@ UM.plugins['enterkey'] = function() {
 
                 if (!browser.ie) {
 
-                    start = domUtils.findParentByTagName(range.startContainer, ['ol','ul','p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6','blockquote','caption'], true);
+                    start = domUtils.findParentByTagName(range.startContainer, ['ol','ul','p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6','blockquote','caption'], trUM);
 
                     //opera下执行formatblock会在table的场景下有问题，回车在opera原生支持很好，所以暂时在opera去掉调用这个原生的command
                     //trace:2431
@@ -7115,7 +7659,7 @@ UM.plugins['enterkey'] = function() {
 
                         if (browser.gecko) {
                             range = me.selection.getRange();
-                            start = domUtils.findParentByTagName(range.startContainer, 'p', true);
+                            start = domUtils.findParentByTagName(range.startContainer, 'p', trUM);
                             start && domUtils.removeDirtyAttr(start);
                         }
 
@@ -7155,11 +7699,11 @@ UM.commands['preview'] = {
     execCommand : function(){
         var w = window.open('', '_blank', ''),
             d = w.document,
-            c = this.getContent(null,null,true),
+            c = this.getContent(null,null,trUM),
             path = this.getOpt('UMEDITOR_HOME_URL'),
             formula = c.indexOf('mathquill-embedded-latex')!=-1 ?
                 '<link rel="stylesheet" href="' + path + 'third-party/mathquill/mathquill.css"/>' +
-                '<script src="' + path + 'third-party/jquery.min.js"></script>' +
+                '<script src="' + path + 'third-party/jqUMry.min.js"></script>' +
                 '<script src="' + path + 'third-party/mathquill/mathquill.min.js"></script>':'';
         d.open();
         d.write('<html><head>' + formula + '</head><body><div>'+c+'</div></body></html>');
@@ -7213,7 +7757,7 @@ UM.plugins['basestyle'] = function(){
         me.commands[cmd] = {
             execCommand : function( cmdName ) {
                 var rng = this.selection.getRange();
-                if(rng.collapsed && this.queryCommandState(cmdName) != 1){
+                if(rng.collapsed && this.qUMryCommandState(cmdName) != 1){
                     var node = this.document.createElement({
                         'bold':'strong',
                         'underline':'u',
@@ -7223,15 +7767,15 @@ UM.plugins['basestyle'] = function(){
                         'strikethrough':'strike'
                     }[cmdName]);
                     rng.insertNode(node).setStart(node,0).setCursor(false);
-                    return true;
+                    return trUM;
                 }else{
                     return this.document.execCommand(cmdName)
                 }
 
             },
-            queryCommandState : function(cmdName) {
+            qUMryCommandState : function(cmdName) {
                 if(browser.gecko){
-                    return this.document.queryCommandState(cmdName)
+                    return this.document.qUMryCommandState(cmdName)
                 }
                 var path = this.selection.getStartElementPath(),result = false;
                 $.each(path,function(i,n){
@@ -7309,7 +7853,7 @@ UM.plugins['video'] = function (){
                 :
                 '<embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
                 ' src="' + url + '" width="' + width  + '" height="' + height  + '"'  + (align ? ' style="float:' + align + '"': '') +
-                ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';
+                ' wmode="transparent" play="trUM" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="trUM" >';
     }
 
     function switchImgAndEmbed(root,img2embed){
@@ -7323,7 +7867,7 @@ UM.plugins['video'] = function (){
     }
 
     me.addOutputRule(function(root){
-        switchImgAndEmbed(root,true)
+        switchImgAndEmbed(root,trUM)
     });
     me.addInputRule(function(root){
         switchImgAndEmbed(root)
@@ -7337,10 +7881,10 @@ UM.plugins['video'] = function (){
                  vi = videoObjs[i];
                  html.push(creatInsertStr( vi.url, vi.width || 420,  vi.height || 280, id + i,vi.align,false));
             }
-            me.execCommand("inserthtml",html.join(""),true);
+            me.execCommand("inserthtml",html.join(""),trUM);
 
         },
-        queryCommandState : function(){
+        qUMryCommandState : function(){
             var img = me.selection.getRange().getClosedNode(),
                 flag = img && (img.className == "edui-faked-video");
             return flag ? 1 : 0;
@@ -7371,9 +7915,9 @@ UM.plugins['selectall'] = function(){
                 if(browser.opera && body.firstChild && body.firstChild.nodeType == 1){
                     range.setStartAtFirst(body.firstChild);
                 }
-                range.collapse(true);
+                range.collapse(trUM);
             }
-            range.select(true);
+            range.select(trUM);
         },
         notNeedUndo : 1
     };
@@ -7401,10 +7945,10 @@ UM.plugins['selectall'] = function(){
 //                function isEleInBookmark(node, bk){
 //                    if ( (domUtils.getPosition(node, bk.start) & domUtils.POSITION_FOLLOWING) &&
 //                        (domUtils.getPosition(bk.end, node) & domUtils.POSITION_FOLLOWING) ) {
-//                        return true;
+//                        return trUM;
 //                    } else if ( (domUtils.getPosition(node, bk.start) & domUtils.POSITION_CONTAINS) ||
 //                        (domUtils.getPosition(node, bk.end) & domUtils.POSITION_CONTAINS) ) {
-//                        return true;
+//                        return trUM;
 //                    }
 //                    return false;
 //                }
@@ -7463,17 +8007,17 @@ UM.plugins['removeformat'] = function(){
 
                 var bookmark1 = range.createBookmark();
                 if ( range.collapsed ) {
-                    range.enlarge( true );
+                    range.enlarge( trUM );
                 }
 
                 //不能把a标签切了
                 if(!notIncludeA){
-                    var aNode = domUtils.findParentByTagName(range.startContainer,'a',true);
+                    var aNode = domUtils.findParentByTagName(range.startContainer,'a',trUM);
                     if(aNode){
                         range.setStartBefore(aNode);
                     }
 
-                    aNode = domUtils.findParentByTagName(range.endContainer,'a',true);
+                    aNode = domUtils.findParentByTagName(range.endContainer,'a',trUM);
                     if(aNode){
                         range.setEndAfter(aNode);
                     }
@@ -7506,24 +8050,24 @@ UM.plugins['removeformat'] = function(){
                             break;
                         }
 
-                        next = domUtils.getNextDomNode( current, true, filter );
+                        next = domUtils.getNextDomNode( current, trUM, filter );
 
                         if ( !dtd.$empty[current.tagName.toLowerCase()] && !domUtils.isBookmarkNode( current ) ) {
                             if ( tagReg.test( current.tagName ) ) {
                                 if ( style ) {
                                     domUtils.removeStyle( current, style );
                                     if ( isRedundantSpan( current ) && style != 'text-decoration'){
-                                        domUtils.remove( current, true );
+                                        domUtils.remove( current, trUM );
                                     }
                                 } else {
-                                    domUtils.remove( current, true );
+                                    domUtils.remove( current, trUM );
                                 }
                             } else {
                                 //trace:939  不能把list上的样式去掉
                                 if(!dtd.$tableContent[current.tagName] && !dtd.$list[current.tagName]){
                                     domUtils.removeAttributes( current, removeFormatAttributes );
                                     if ( isRedundantSpan( current ) ){
-                                        domUtils.remove( current, true );
+                                        domUtils.remove( current, trUM );
                                     }
                                 }
 
@@ -7591,7 +8135,7 @@ UM.plugins['removeformat'] = function(){
  */
 UM.plugins['keystrokes'] = function() {
     var me = this;
-    var collapsed = true;
+    var collapsed = trUM;
     me.addListener('keydown', function(type, evt) {
         var keyCode = evt.keyCode || evt.which,
             rng = me.selection.getRange();
@@ -7627,10 +8171,10 @@ UM.plugins['keystrokes'] = function() {
                 tmpNode = rng.startContainer;
                 if(domUtils.isBoundaryNode(tmpNode,'firstChild') ){
                     tmpNode = rng.endContainer;
-                    if(rng.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValue.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
+                    if(rng.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValUM.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
                         me.fireEvent('saveScene');
                         me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br/>')+'</p>';
-                        rng.setStart(me.body.firstChild,0).setCursor(false,true);
+                        rng.setStart(me.body.firstChild,0).setCursor(false,trUM);
                         me._selectionChange();
                         return;
                     }
@@ -7651,12 +8195,12 @@ UM.plugins['keystrokes'] = function() {
                 start = rng.startContainer;
 
                 if(domUtils.isFillChar(start)){
-                    rng.setStartBefore(start).shrinkBoundary(true).collapse(true);
+                    rng.setStartBefore(start).shrinkBoundary(trUM).collapse(trUM);
                     domUtils.remove(start)
                 }else{
-                    start.nodeValue = start.nodeValue.replace(new RegExp('^' + domUtils.fillChar ),'');
+                    start.nodeValUM = start.nodeValUM.replace(new RegExp('^' + domUtils.fillChar ),'');
                     rng.startOffset--;
-                    rng.collapse(true).select(true)
+                    rng.collapse(trUM).select(trUM)
                 }
             }
             //解决选中control元素不能删除的问题
@@ -7671,8 +8215,8 @@ UM.plugins['keystrokes'] = function() {
             }
             //阻止在table上的删除
             if (!browser.ie) {
-                start = domUtils.findParentByTagName(rng.startContainer, 'table', true);
-                end = domUtils.findParentByTagName(rng.endContainer, 'table', true);
+                start = domUtils.findParentByTagName(rng.startContainer, 'table', trUM);
+                end = domUtils.findParentByTagName(rng.endContainer, 'table', trUM);
                 if (start && !end || !start && end || start !== end) {
                     evt.preventDefault();
                     return;
@@ -7683,7 +8227,7 @@ UM.plugins['keystrokes'] = function() {
                 var currentNode = start.childNodes[rng.startOffset-1];
                 if(currentNode && currentNode.nodeType == 1 && currentNode.tagName == 'BR'){
                     me.fireEvent('saveScene');
-                    rng.setStartBefore(currentNode).collapse(true);
+                    rng.setStartBefore(currentNode).collapse(trUM);
                     domUtils.remove(currentNode);
                     rng.select();
                     me.fireEvent('saveScene');
@@ -7739,18 +8283,18 @@ UM.plugins['keystrokes'] = function() {
             if(rng.collapsed){
                 var tmpNode,
                     autoClearTagName = ['h1','h2','h3','h4','h5','h6'];
-                if(tmpNode = domUtils.findParentByTagName(rng.startContainer,autoClearTagName,true)){
+                if(tmpNode = domUtils.findParentByTagName(rng.startContainer,autoClearTagName,trUM)){
                     if(domUtils.isEmptyBlock(tmpNode)){
                         var pre = tmpNode.previousSibling;
                         if(pre && pre.nodeName != 'TABLE'){
                             domUtils.remove(tmpNode);
-                            rng.setStartAtLast(pre).setCursor(false,true);
+                            rng.setStartAtLast(pre).setCursor(false,trUM);
                             return;
                         }else{
                             var next = tmpNode.nextSibling;
                             if(next && next.nodeName != 'TABLE'){
                                 domUtils.remove(tmpNode);
-                                rng.setStartAtFirst(next).setCursor(false,true);
+                                rng.setStartAtFirst(next).setCursor(false,trUM);
                                 return;
                             }
                         }
@@ -7761,7 +8305,7 @@ UM.plugins['keystrokes'] = function() {
                     var tmpNode = domUtils.createElement(me.document,'p',{
                         'innerHTML' : browser.ie ? domUtils.fillChar : '<br/>'
                     });
-                    rng.insertNode(tmpNode).setStart(tmpNode,0).setCursor(false,true);
+                    rng.insertNode(tmpNode).setStart(tmpNode,0).setCursor(false,trUM);
                 }
             }
 
@@ -7770,7 +8314,7 @@ UM.plugins['keystrokes'] = function() {
             if( !collapsed && (rng.startContainer.nodeType == 3 || rng.startContainer.nodeType == 1 && domUtils.isEmptyBlock(rng.startContainer))){
                 if(browser.ie){
                     var span = rng.document.createElement('span');
-                    rng.insertNode(span).setStartBefore(span).collapse(true);
+                    rng.insertNode(span).setStartBefore(span).collapse(trUM);
                     rng.select();
                     domUtils.remove(span)
                 }else{
@@ -7812,7 +8356,7 @@ UM.plugins['autosave'] = function() {
 
                 if ( storage && data) {
                     storage.setItem( key, data  );
-                    return true;
+                    return trUM;
                 }
 
                 return false;
@@ -7866,10 +8410,10 @@ UM.plugins['autosave'] = function() {
 
                 },
 
-                setItem: function ( key, value ) {
+                setItem: function ( key, valUM ) {
 
                     document.body.appendChild( container );
-                    container.setAttribute( key, value );
+                    container.setAttribute( key, valUM );
                     container.save( LOCAL_FILE );
                     document.body.removeChild( container );
 
@@ -7942,7 +8486,7 @@ UM.plugins['autosave'] = function() {
         if ( me.key ) {
             key = me.key + _suffix;
         } else {
-            key = ( me.container.parentNode.id || 'ue-common' ) + _suffix;
+            key = ( me.container.parentNode.id || 'UM-common' ) + _suffix;
         }
 
         //页面地址+编辑器ID 保持唯一
@@ -7982,30 +8526,30 @@ UM.plugins['autosave'] = function() {
                 LocalStorage.removeItem( saveKey )
             }
         },
-        notNeedUndo: true,
-        ignoreContentChange:true
+        notNeedUndo: trUM,
+        ignoreContentChange:trUM
     };
 
     me.commands['getlocaldata'] = {
         execCommand:function (cmd, name) {
             return saveKey ? LocalStorage.getLocalData( saveKey ) || '' : '';
         },
-        notNeedUndo: true,
-        ignoreContentChange:true
+        notNeedUndo: trUM,
+        ignoreContentChange:trUM
     };
 
     me.commands['drafts'] = {
         execCommand:function (cmd, name) {
             if ( saveKey ) {
                 me.body.innerHTML = LocalStorage.getLocalData( saveKey ) || '<p>'+(browser.ie ? '&nbsp;' : '<br/>')+'</p>';
-                me.focus(true);
+                me.focus(trUM);
             }
         },
-        queryCommandState: function () {
+        qUMryCommandState: function () {
             return saveKey ? ( LocalStorage.getLocalData( saveKey ) === null ? -1 : 0 ) : -1;
         },
-        notNeedUndo: true,
-        ignoreContentChange:true
+        notNeedUndo: trUM,
+        ignoreContentChange:trUM
     }
 
 };
@@ -8021,16 +8565,16 @@ UM.plugins['autoupload'] = function () {
 
     var me = this;
 
-    me.setOpt('pasteImageEnabled', true);
-    me.setOpt('dropFileEnabled', true);
+    me.setOpt('pasteImageEnabled', trUM);
+    me.setOpt('dropFileEnabled', trUM);
     var sendAndInsertImage = function (file, editor) {
         //模拟数据
         var fd = new FormData();
         fd.append(editor.options.imageFieldName || 'upfile', file, file.name || ('blob.' + file.type.substr('image/'.length)));
         fd.append('type', 'ajax');
-        var xhr = new XMLHttpRequest();
-        xhr.open("post", me.options.imageUrl, true);
-        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        var xhr = new XMLHttpReqUMst();
+        xhr.open("post", me.options.imageUrl, trUM);
+        xhr.setReqUMstHeader("X-ReqUMsted-With", "XMLHttpReqUMst");
         xhr.addEventListener('load', function (e) {
             try {
                 var json = eval('('+e.target.response+')'),
@@ -8069,7 +8613,7 @@ UM.plugins['autoupload'] = function () {
                         if (file.getAsFile) file = file.getAsFile();
                         if (file && file.size > 0 && /image\/\w+/i.test(file.type)) {
                             sendAndInsertImage(file, me);
-                            hasImg = true;
+                            hasImg = trUM;
                         }
                     }
                     if (hasImg) return false;
@@ -8160,10 +8704,10 @@ UM.plugins['formula'] = function () {
                 },100)
             }
         },
-        queryCommandState: function (cmd) {
+        qUMryCommandState: function (cmd) {
             return 0;
         },
-        queryCommandValue: function (cmd) {
+        qUMryCommandValUM: function (cmd) {
             var iframe = getActiveIframe();
             return iframe && iframe.contentWindow.formula.getLatex();
         }
@@ -8172,7 +8716,7 @@ UM.plugins['formula'] = function () {
 };
 
 (function ($) {
-    //对jquery的扩展
+    //对jqUMry的扩展
     $.parseTmpl = function parse(str, data) {
         var tmpl = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' + 'with(obj||{}){__p.push(\'' + str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/<%=([\s\S]+?)%>/g,function (match, code) {
             return "'," + code.replace(/\\'/g, "'") + ",'";
@@ -8248,7 +8792,7 @@ UM.plugins['formula'] = function () {
         ClassObj.prototype = $.extend2(
             $.extend({}, properties),
             (UM.ui[supperClass] || _widget).prototype,
-            true
+            trUM
         );
         ClassObj.prototype.supper = (UM.ui[supperClass] || _widget).prototype;
         //父class的defaultOpt 合并
@@ -8315,7 +8859,7 @@ UM.plugins['formula'] = function () {
                         return obj.root()[_prefix + className].apply(obj.root(), arguments)
                     } else {
                         $el && obj.root($el);
-                        obj.init && obj.init(!options || $.isPlainObject(options) ? $.extend2(options || {}, obj.defaultOpt || {}, true) : options);
+                        obj.init && obj.init(!options || $.isPlainObject(options) ? $.extend2(options || {}, obj.defaultOpt || {}, trUM) : options);
                         try{
                             obj.root().find('a').click(function (evt) {
                                 evt.preventDefault()
@@ -8345,7 +8889,7 @@ UM.plugins['formula'] = function () {
             })
         })
     })
-})(jQuery);
+})(jQUMry);
 //button 类
 UM.ui.define('button', {
     tpl: '<<%if(!texttype){%>div class="edui-btn edui-btn-<%=icon%> <%if(name){%>edui-btn-name-<%=name%><%}%>" unselectable="on" onmousedown="return false" <%}else{%>a class="edui-text-btn"<%}%><% if(title) {%> data-original-title="<%=title%>" <%};%>> ' +
@@ -8494,7 +9038,7 @@ UM.ui.define('dropmenu', {
     tmpl: '<ul class="edui-dropdown-menu" aria-labelledby="dropdownMenu" >' +
         '<%for(var i=0,ci;ci=data[i++];){%>' +
         '<%if(ci.divider){%><li class="edui-divider"></li><%}else{%>' +
-        '<li <%if(ci.active||ci.disabled){%>class="<%= ci.active|| \'\' %> <%=ci.disabled||\'\' %>" <%}%> data-value="<%= ci.value%>">' +
+        '<li <%if(ci.active||ci.disabled){%>class="<%= ci.active|| \'\' %> <%=ci.disabled||\'\' %>" <%}%> data-valUM="<%= ci.valUM%>">' +
         '<a href="#" tabindex="-1"><em class="edui-dropmenu-checkbox"><i class="edui-icon-ok"></i></em><%= ci.label%></a>' +
         '</li><%}%>' +
         '<%}%>' +
@@ -8514,7 +9058,7 @@ UM.ui.define('dropmenu', {
         };
 
         this.root($($.parseTmpl(this.tmpl, options))).on('click', 'li[class!="edui-disabled edui-divider edui-dropdown-submenu"]',function (evt) {
-            $.proxy(options.click, me, evt, $(this).data('value'), $(this))()
+            $.proxy(options.click, me, evt, $(this).data('valUM'), $(this))()
         }).find('li').each(function (i, el) {
                 var $this = $(this);
                 if (!$this.hasClass("edui-disabled edui-divider edui-dropdown-submenu")) {
@@ -8531,7 +9075,7 @@ UM.ui.define('dropmenu', {
     disabled: function (cb) {
         $('li[class!=edui-divider]', this.root()).each(function () {
             var $el = $(this);
-            if (cb === true) {
+            if (cb === trUM) {
                 $el.addClass('edui-disabled')
             } else if ($.isFunction(cb)) {
                 $el.toggleClass('edui-disabled', cb(li))
@@ -8547,11 +9091,11 @@ UM.ui.define('dropmenu', {
             var $el = $(this);
             if (val === undefined) {
                 if ($el.find('em.edui-dropmenu-checked').length) {
-                    currentVal = $el.data('value');
+                    currentVal = $el.data('valUM');
                     return false
                 }
             } else {
-                $el.find('em').toggleClass('edui-dropmenu-checked', $el.data('value') == val)
+                $el.find('em').toggleClass('edui-dropmenu-checked', $el.data('valUM') == val)
             }
         });
         if (val === undefined) {
@@ -8847,23 +9391,23 @@ UM.ui.define('scale', {
             $dom.css('height', me._validScaledProp('height', tmp));
         }
     },
-    _validScaledProp: function (prop, value) {
+    _validScaledProp: function (prop, valUM) {
         var $ele = this.root(),
             $wrap = this.defaultOpt.$doc,
             calc = function(val, a, b){
-                return (val + a) > b ? b - a : value;
+                return (val + a) > b ? b - a : valUM;
             };
 
-        value = isNaN(value) ? 0 : value;
+        valUM = isNaN(valUM) ? 0 : valUM;
         switch (prop) {
             case 'left':
-                return value < 0 ? 0 : calc(value, $ele.width(), $wrap.width());
+                return valUM < 0 ? 0 : calc(valUM, $ele.width(), $wrap.width());
             case 'top':
-                return value < 0 ? 0 : calc(value, $ele.height(),$wrap.height());
+                return valUM < 0 ? 0 : calc(valUM, $ele.height(),$wrap.height());
             case 'width':
-                return value <= 0 ? 1 : calc(value, $ele.offset().left, $wrap.width());
+                return valUM <= 0 ? 1 : calc(valUM, $ele.offset().left, $wrap.width());
             case 'height':
-                return value <= 0 ? 1 : calc(value, $ele.offset().top, $wrap.height());
+                return valUM <= 0 ? 1 : calc(valUM, $ele.offset().top, $wrap.height());
         }
     },
     show: function ($obj) {
@@ -8988,11 +9532,11 @@ UM.ui.define('colorpicker', {
                 //可用项列表
                 items: [],
 		        //item对应的值列表
-                value: [],
+                valUM: [],
                 comboboxName: '',
                 selected: '',
                 //自动记录
-                autoRecord: true,
+                autoRecord: trUM,
                 //最多记录条数
                 recordCount: 5
             },
@@ -9038,7 +9582,7 @@ UM.ui.define('colorpicker', {
                     me.trigger('comboboxselect', {
                         index: index,
                         label: $li.find(labelClass).text(),
-                        value: me.data('options').value[ index ]
+                        valUM: me.data('options').valUM[ index ]
                     }).select( index );
 
                     me.hide();
@@ -9258,7 +9802,7 @@ UM.ui.define('colorpicker', {
                 var me = this;
 
                 var btnWidget = $.eduibutton({
-                    caret: true,
+                    caret: trUM,
                     name: options.comboboxName,
                     title: options.title,
                     text: options.label,
@@ -9311,8 +9855,8 @@ UM.ui.define('modal', {
         oklabel: "",
         width: '',
         height: '',
-        backdrop: true,
-        keyboard: true
+        backdrop: trUM,
+        keyboard: trUM
     },
     init: function (options) {
         var me = this;
@@ -9346,7 +9890,7 @@ UM.ui.define('modal', {
 
         if (me.data("isShown")) return;
 
-        me.data("isShown", true);
+        me.data("isShown", trUM);
 
         me.escape();
 
@@ -9630,7 +10174,7 @@ UM.ui.define('separator', {
                     return this.$root || (this.$root = $el);
                 },
                 preventDefault:function(){
-                    this._preventDefault = true;
+                    this._preventDefault = trUM;
                 },
                 clear:false
             });
@@ -9738,7 +10282,7 @@ UM.ui.define('separator', {
                 });
 
                 //ie6下缓存图片
-                UM.browser.ie && UM.browser.version === 6 && document.execCommand("BackgroundImageCache", false, true);
+                UM.browser.ie && UM.browser.version === 6 && document.execCommand("BackgroundImageCache", false, trUM);
 
                 editor.render(id);
 
@@ -9833,7 +10377,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
         });
 
         this.addListener('selectionchange',function(){
-            var state = this.queryCommandState(name);
+            var state = this.qUMryCommandState(name);
             $btn.edui().disabled(state == -1).active(state == 1)
         });
         return $btn;
@@ -9874,7 +10418,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
 
         me.addListener( "selectionchange", function () {
 
-            var state = this.queryCommandState( name );
+            var state = this.qUMryCommandState( name );
             $button.edui().disabled( state == -1 ).active( state == 1 );
 
         } );
@@ -9897,7 +10441,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
             Fullscreen.getInstance( this ).toggle();
 
         },
-        queryCommandState: function (cmdName) {
+        qUMryCommandState: function (cmdName) {
 
             return this._edui_fullscreen_status;
         },
@@ -9943,7 +10487,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
             !_edui_fullscreen_status ? this.enlarge() : this.revert();
 
             editor.fireEvent('afterfullscreenchange', !_edui_fullscreen_status );
-            if(editor.body.contentEditable === 'true'){
+            if(editor.body.contentEditable === 'trUM'){
                 editor.fireEvent( 'fullscreenchanged', !_edui_fullscreen_status );
             }
 
@@ -9969,7 +10513,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
 
             //还原CSS表达式
             var options = this.editor.options,
-                height = /%$/.test(options.initialFrameHeight) ?  '100%' : (options.initialFrameHeight - this.getStyleValue("padding-top")- this.getStyleValue("padding-bottom") - this.getStyleValue('border-width'));
+                height = /%$/.test(options.initialFrameHeight) ?  '100%' : (options.initialFrameHeight - this.getStyleValUM("padding-top")- this.getStyleValUM("padding-bottom") - this.getStyleValUM('border-width'));
 
             $.IE6 && this.getEditorHolder().style.setExpression('height', 'this.scrollHeight <= ' + height + ' ? "' + height + 'px" : "auto"');
 
@@ -10192,8 +10736,8 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
         getBound: function () {
 
             var tags = {
-                    html: true,
-                    body: true
+                    html: trUM,
+                    body: trUM
                 },
                 result = {
                     top: 0,
@@ -10216,7 +10760,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
             return result;
 
         },
-        getStyleValue: function (attr) {
+        getStyleValUM: function (attr) {
             return parseInt(domUtils.getComputedStyle( this.getEditorHolder() ,attr));
         }
     };
@@ -10234,7 +10778,7 @@ UM.registerUI('bold italic redo undo underline strikethrough superscript subscri
                 return;
             }
 
-            Fullscreen._hasFullscreenListener = true;
+            Fullscreen._hasFullscreenListener = trUM;
 
             $( window ).on( 'resize', function(){
 
@@ -10369,7 +10913,7 @@ UM.registerUI('link image video map formula',function(name){
 
 
     me.addListener('selectionchange', function () {
-        var state = this.queryCommandState(name);
+        var state = this.qUMryCommandState(name);
         $btn.edui().disabled(state == -1).active(state == 1)
     });
     return $btn;
@@ -10416,7 +10960,7 @@ UM.registerUI( 'emotion formula', function( name ){
                 caretTop:-8
             });
         me.addListener('selectionchange', function () {
-            var state = this.queryCommandState(name);
+            var state = this.qUMryCommandState(name);
             $btn.edui().disabled(state == -1).active(state == 1);
         });
     });
@@ -10427,7 +10971,7 @@ UM.registerUI('imagescale',function () {
     var me = this,
         $imagescale;
 
-    me.setOpt('imageScaleEnabled', true);
+    me.setOpt('imageScaleEnabled', trUM);
 
     if (browser.webkit && me.getOpt('imageScaleEnabled')) {
 
@@ -10503,7 +11047,7 @@ UM.registerUI('autofloat',function(){
     var me = this,
         lang = me.getLang();
     me.setOpt({
-        autoFloatEnabled: true,
+        autoFloatEnabled: trUM,
         topOffset: 0
     });
     var optsAutoFloatEnabled = me.options.autoFloatEnabled !== false,
@@ -10601,7 +11145,7 @@ UM.registerUI('autofloat',function(){
         }
         var defer_updateFloating = utils.defer(function(){
             updateFloating();
-        },browser.ie ? 200 : 100,true);
+        },browser.ie ? 200 : 100,trUM);
 
         me.addListener('destroy',function(){
             $(window).off('scroll resize',updateFloating);
@@ -10673,7 +11217,7 @@ UM.registerUI('source',function(name){
     });
 
     this.addListener('selectionchange',function(){
-        var state = this.queryCommandState(name);
+        var state = this.qUMryCommandState(name);
         $btn.edui().disabled(state == -1).active(state == 1)
     });
     return $btn;
@@ -10689,7 +11233,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
             comboboxName: name,
             items: me.options[ name ] || [],
             itemStyles: [],
-            value: [],
+            valUM: [],
             autowidthitem: []
         },
         $combox = null,
@@ -10718,7 +11262,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
     comboboxWidget =  $combox.edui();
 
     comboboxWidget.on('comboboxselect', function( evt, res ){
-                        me.execCommand( name, res.value );
+                        me.execCommand( name, res.valUM );
                     }).on("beforeshow", function(){
                         if( $combox.parent().length === 0 ) {
                             $combox.appendTo(  me.$container.find('.edui-dialog-container') );
@@ -10730,16 +11274,16 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
     //状态反射
     this.addListener('selectionchange',function( evt ){
 
-        var state  = this.queryCommandState( name ),
-            value = this.queryCommandValue( name );
+        var state  = this.qUMryCommandState( name ),
+            valUM = this.qUMryCommandValUM( name );
 
         //设置按钮状态
         comboboxWidget.button().edui().disabled( state == -1 ).active( state == 1 );
-        if(value){
+        if(valUM){
             //设置label
-            value = value.replace(/['"]/g, '').toLowerCase().split(/['|"]?\s*,\s*[\1]?/);
+            valUM = valUM.replace(/['"]/g, '').toLowerCase().split(/['|"]?\s*,\s*[\1]?/);
 
-            comboboxWidget.selectItemByLabel( value );
+            comboboxWidget.selectItemByLabel( valUM );
         }
 
 
@@ -10777,7 +11321,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
                 return '...';
             }
 
-            return wordCountAdaptive( word + '...', true );
+            return wordCountAdaptive( word + '...', trUM );
 
         }
 
@@ -10791,7 +11335,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
 
         for( var key in options.items ) {
 
-            options.value.push( key );
+            options.valUM.push( key );
             tempItems.push( key );
             options.autowidthitem.push( wordCountAdaptive( key ) );
 
@@ -10815,7 +11359,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
             temp = options.items[ i ].val;
             tempItems.push( temp.split(/\s*,\s*/)[0] );
             options.itemStyles.push('font-family: ' + temp);
-            options.value.push( temp );
+            options.valUM.push( temp );
             options.autowidthitem.push( wordCountAdaptive( tempItems[ i ] ) );
 
         }
@@ -10833,7 +11377,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
             tempItems = [];
 
         options.itemStyles = [];
-        options.value = [];
+        options.valUM = [];
 
         for( var i = 0, len = options.items.length; i < len; i++ ) {
 
@@ -10843,7 +11387,7 @@ UM.registerUI('paragraph fontfamily fontsize', function( name ) {
 
         }
 
-        options.value = options.items;
+        options.valUM = options.items;
         options.items = tempItems;
         options.autoRecord = false;
 
@@ -10864,17 +11408,17 @@ UM.registerUI('forecolor backcolor', function( name ) {
         $colorLabel = null,
         $btn = null;
 
-    //querycommand
+    //qUMrycommand
     this.addListener('selectionchange', function(){
 
-        var state = this.queryCommandState( name );
+        var state = this.qUMryCommandState( name );
         $btn.edui().disabled( state == -1 ).active( state == 1 );
 
     });
 
     $btn = $.eduicolorsplitbutton({
         icon: name,
-        caret: true,
+        caret: trUM,
         name: name,
         title: me.getLang("labelMap")[name],
         click: function() {
@@ -10920,4 +11464,4 @@ UM.registerUI('forecolor backcolor', function( name ) {
 
 });
 
-})(jQuery)
+})(jQUMry)

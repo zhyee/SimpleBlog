@@ -93,7 +93,7 @@ var themeApp = {
 		themeApp.backToTop();
 		themeApp.backTop();
 	}
-}
+};
 
 /*===========================
 2. Initialization

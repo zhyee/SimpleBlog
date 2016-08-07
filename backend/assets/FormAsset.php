@@ -16,7 +16,6 @@ class FormAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'umeditor/themes/default/css/umeditor.css',
-        'css/uploadify.css',
         'css/simple-uploader.css'
     ];
 
@@ -24,7 +23,6 @@ class FormAsset extends AssetBundle
         'umeditor/umeditor.config.js',
         'umeditor/umeditor.min.js',
         'umeditor/lang/zh-cn/zh-cn.js',
-        'js/jquery.uploadify.min.js',
         'js/jquery.simpleuploader.js'
     ];
 
