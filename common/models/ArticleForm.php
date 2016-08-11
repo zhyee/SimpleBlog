@@ -6,8 +6,10 @@
 namespace common\models;
 
 use Yii;
+use yii\base\Exception;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
+use commmon\exceptions\ArticleException;
 use common\constants\ArticleConstant;
 
 class ArticleForm extends Model
@@ -105,7 +107,7 @@ class ArticleForm extends Model
     public function rules()
     {
         return [
-            [['title', 'type', 'author', 'decription', 'addtime'], 'required'],
+            [['title', 'type', 'author', 'addtime'], 'required'],
             ['title', 'string', 'max' => 60],
             ['type', 'in', 'range' => array_keys(Yii::$app->params['articleType'])],
             ['tag', 'string'],
@@ -113,9 +115,44 @@ class ArticleForm extends Model
             ['thumbnail', 'string', 'max' => 200],
             ['description', 'string', 'max' => 200],
             ['content', 'string', 'max' => 65535],
-            [['id', 'add_time', 'is_del', 'del_time'], 'integer'],
+            [['id', 'addtime', 'is_del', 'del_time'], 'integer'],
             [['thumbUrl', 'thumbDescription', 'thumbAddtime'], 'default', 'value' => []]
         ];
+    }
+
+    /**
+     * 新增文章时初始化一些信息
+     */
+    public function beforeValidate()
+    {
+        if (!$this->id)
+        {
+            $this->author = Yii::$app->user->isGuest ?
+                '' : Yii::$app->user->identity->username;
+            $this->setDescription();
+            $this->addtime = time();
+            $this->is_del = 0;
+            $this->del_time = 0;
+        }
+
+        return TRUE;
+    }
+
+    /**
+     * 自动提取文章简介
+     */
+    private function setDescription()
+    {
+        switch ($this->type)
+        {
+            case ArticleConstant::ARTICLE_TYPE_TEXT:
+                $this->description = $this->content ? mb_substr(html_entity_decode(strip_tags($this->content), ENT_QUOTES|ENT_HTML5), 0, ArticleConstant::ARTICLE_DESCRIPTION_LENGTH, Yii::$app->charset) : '';
+                break;
+            case ArticleConstant::ARTICLE_TYPE_THUMB:
+                break;
+        }
+
+
     }
 
     public function attributeLabels()
@@ -133,11 +170,86 @@ class ArticleForm extends Model
 
     /**
      * 添加文章
+     * @param $postData
+     * @return boolean
      */
-    public function add(){
+    public function add($postData){
+        $this->load($postData);
+        $transation = Yii::$app->getDb()->beginTransaction();
+        try
+        {
+            if ($this->validate())
+            {
+                $article = new Article();
+                $article->attributes = $this->attributes;
 
+                Yii::error(print_r($this->attributes,true));
 
+                if (!$article->save())
+                {
+                    throw new ArticleException('文章保存失败');
+                }
 
+                $this->id = $article->id;
+
+                // 添加标签
+                $tags = array_filter(array_map('trim', explode(' ', $this->tag)));
+
+                Yii::error(print_r($tags, true));
+
+                if (!Tag::add($tags))
+                {
+                    throw new ArticleException('保存标签失败');
+                }
+
+                $tagARs = Tag::find()->where(['in', 'name', $tags])->all();
+                foreach($tagARs as $tagAR)
+                {
+                    $articleTag = new ArticleTag();
+                    $articleTag->attributes = [
+                        'aid' => $this->id,
+                        'tid' => $tagAR->id,
+                        'tname' => $tagAR->name
+                    ];
+
+                    if (!$articleTag->save())
+                    {
+                        throw new ArticleException('添加文章标签失败');
+                    }
+                }
+
+                if ($this->type == ArticleConstant::ARTICLE_TYPE_TEXT)
+                {
+                    $articleContent = new ArticleContent();
+                    $articleContent->attributes = [
+                        'aid' => $this->id,
+                        'content' => $this->content
+                    ];
+
+                    if (!$articleContent->save())
+                    {
+                        throw new ArticleException('文章内容保存失败');
+                    }
+                }
+                elseif ($this->type === ArticleConstant::ARTICLE_TYPE_THUMB)
+                {
+                    // @todo
+                }
+
+                $transation->commit();
+                return TRUE;
+            }
+            else
+            {
+                Yii::error(print_r($this->errors, true));
+            }
+        }
+        catch (Exception $e)
+        {
+            $transation->rollBack();
+            Yii::error($e->getMessage());
+        }
+        return FALSE;
     }
 
     /**

@@ -91,33 +91,22 @@ class ArticleController extends ArticleBaseController
      */
     public function actionCreate()
     {
-        $article = new Article();
-
+        $model = new ArticleForm();
         $request = Yii::$app->request;
 
         if($request->isPost)
         {
-            $data = $request->post();
-            $article->load($data);
-            $article->preSave();
-            if($article->validate())
+
+
+            if($model->add($request->post()))
             {
-                if(isset($data[$article->formName()])){
-                    $data = $data[$article->formName()];
-                }
-                if($article->add($data))
-                {
-                    return $this->redirect(['view', 'id' => $article->id]);
-                }
-                else
-                {
-                    return $this->error('添加文章失败');
-                }
+                return $this->redirect(['view', 'id' => $model->id]);
             }
             else
             {
-                print_r($article->errors);
+                return $this->error('添加文章失败');
             }
+
         }
         else
         {

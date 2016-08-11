@@ -17,5 +17,10 @@ class ArticleConstant
      */
     const ARTICLE_TYPE_THUMB = 1;
 
+    /**
+     * 文正简介最大长度
+     */
+    const ARTICLE_DESCRIPTION_LENGTH = 200;
+
 }
 

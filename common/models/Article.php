@@ -61,22 +61,13 @@ class Article extends BaseActiveRecord
     {
         return [
             [['title', 'addtime', 'author'], 'required'],
-            [['addtime'], 'integer'],
-            [['description'], 'string', 'max' => 200],
-            [['thumbnail'], 'string', 'max' => 200],
-            [['title'], 'string', 'max' => 60],
-            [['author'], 'string', 'max' => 16]
+            ['title', 'string', 'max' => 60],
+            ['type', 'in', 'range' => array_keys(Yii::$app->params['articleType'])],
+            [['author'], 'string', 'max' => 16],
+            [['thumbnail', 'description'], 'string', 'max' => 200],
+            [['addtime', 'del_time'], 'integer'],
+            ['is_del', 'in', 'range' => [0,1]]
         ];
-    }
-
-    /**
-     * 验证前初始化一些文章数据
-     */
-    public function beforeValidate()
-    {
-        $this->addtime = time();
-        $this->setDescription();
-        $this->author = Yii::$app->user->isGuest ? '' : Yii::$app->user->identity->username;
     }
 
     /**
@@ -89,19 +80,9 @@ class Article extends BaseActiveRecord
             'title' => '文章标题',
             'type'  => '文章类型',
             'author' => '作者',
-            'content' => '内容',
-            'addtime' => '发布时间',
-            'thumbnail' => '缩略图'
+            'thumbnail' => '缩略图',
+            'addtime' => '发布时间'
         ];
-    }
-
-    /**
-     * 设置文章简介
-     * @param null $description
-     */
-    public function setDescription($description = NULL){
-        $description = $description === NULL ? $this->content : $description;
-        $this->description = mb_substr(html_entity_decode(strip_tags($description), ENT_QUOTES|ENT_HTML5), 0, self::DESCRIPTION_LENGTH, Yii::$app->charset);
     }
 
     /**

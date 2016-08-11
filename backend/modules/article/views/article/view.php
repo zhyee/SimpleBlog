@@ -39,9 +39,9 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
 
             <div class="pull-left tag-list">
                 <i class="fa fa-folder-open-o"></i>
-                <?php foreach($article->tags as $k => $tag): ?>
+                <?php foreach($article->tag as $k => $tag): ?>
                     <?php if($k > 0):?>,<?php endif ?>
-                        <a href="<?= Url::to(['/tag/view', 'id' => $tag['id']]) ?>"><?= Html::encode($tag['tagname']) ?></a>
+                        <a href="<?= Url::to(['/tag/view', 'id' => $tag['aid']]) ?>"><?= Html::encode($tag['tname']) ?></a>
                 <?php endforeach ?>
             </div>
             <div class="pull-right edit">

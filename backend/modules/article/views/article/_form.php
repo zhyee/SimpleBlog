@@ -11,6 +11,7 @@ use yii\helpers\Url;
 FormAsset::register($this);
 
 $params = Yii::$app->params;
+$formName = $model->formName();
 ?>
 
 <script>
@@ -36,7 +37,7 @@ $params = Yii::$app->params;
         <label class="control-label" for="article-thumbnail">缩略图</label>
         <div>
             <input type="file" id="article-thumbnail">
-            <input type="hidden" name="Article[thumbnail]">
+            <input type="hidden" name="<?= $formName  ?>[thumbnail]">
             <div class="help-block"></div>
         </div>
     </div>
@@ -129,7 +130,7 @@ $params = Yii::$app->params;
                     alert(result.msg);
                 }else{
                     var data = result.data;
-                    $('input[name="Article[thumbnail]"]').val(data.url);
+                    $('input[name="<?= $formName ?>[thumbnail]"]').val(data.url);
                     var o = $('.field-article-thumbnail');
                     o.find('img').remove();
                     $('<img>').attr({src : data.url, width:80}).appendTo(o);

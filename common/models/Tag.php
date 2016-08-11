@@ -8,9 +8,20 @@
 namespace common\models;
 use yii\data\Pagination;
 
-class Tag extends BaseActiveRecord{
+class Tag extends BaseActiveRecord
+{
+
     public static function tableName(){
         return 'tag';
+    }
+
+    public function rules()
+    {
+        return [
+            [['name', 'usecount', 'addtime'], 'required'],
+            ['name', 'string', 'max' => 16],
+            [['id', 'usecount', 'addtime'], 'integer']
+        ];
     }
 
     /**
@@ -45,22 +56,34 @@ class Tag extends BaseActiveRecord{
     /**
      * 添加tag标签
      * @param array $tags
+     * @return boolean
      */
     public static function add(array $tags){
         //查找所有已存在的tag标签，把引用数加1
-        $tagARs = self::find()->where(['in', 'tagname', $tags])->indexBy('tagname')->all();
+        $tagARs = self::find()->where(['in', 'name', $tags])->all();
+        $existTags = [];
         foreach($tagARs as $tagAR){
-            $tagAR->updateCounters(['usecount' => 1]);
+            if (!$tagAR->updateCounters(['usecount' => 1]))
+            {
+                return FALSE;
+            }
+            $existTags[] = $tagAR->name;
         }
-        $tags = array_diff($tags, array_keys($tagARs));
-        //不存在的则新建
-        foreach($tags as $tag){
+        //  数据库中不存在的新标签
+        $notExistTags = array_diff($tags, $existTags);
+        foreach($notExistTags as $tag){
             $tagObj = new self();
-            $tagObj->tagname = $tag;
-            $tagObj->usecount = 1;
-            $tagObj->addtime = time();
-            $tagObj->save();
+            $tagObj->attributes = [
+                'name' => $tag,
+                'usecount' => 1,
+                'addtime' => time()
+            ];
+            if (!$tagObj->save())
+            {
+                return FALSE;
+            }
         }
+        return TRUE;
     }
 
     /**

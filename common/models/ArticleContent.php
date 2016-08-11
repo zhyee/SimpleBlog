@@ -15,4 +15,13 @@ class ArticleContent extends BaseActiveRecord
     {
         return 'article_content';
     }
+
+    public function rules()
+    {
+        return [
+            ['aid', 'required'],
+            [['id', 'aid'], 'integer'],
+            ['content', 'string']
+        ];
+    }
 }

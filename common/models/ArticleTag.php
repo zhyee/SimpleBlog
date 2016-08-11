@@ -12,4 +12,13 @@ class ArticleTag extends BaseActiveRecord
     {
         return 'article_tag';
     }
+
+    public function rules()
+    {
+        return [
+            [['aid', 'tid', 'tname'], 'required'],
+            [['id', 'aid', 'tid'], 'integer'],
+            ['tname', 'string', 'max' => 16]
+        ];
+    }
 }
