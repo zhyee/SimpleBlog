@@ -31,7 +31,7 @@ class TagCloudWidget extends Widget
             foreach($tags as $tag)
             {
                 $url = Url::to(['/article/tag/view', 'id' => $tag['id']]);
-                $tagname = Html::encode($tag['tagname']);
+                $tagname = Html::encode($tag['name']);
                 $out .= <<<EOT
                 <a href="{$url}">{$tagname}</a>
 

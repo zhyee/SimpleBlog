@@ -18,7 +18,7 @@ class ArticleSearch extends Article
     public function rules()
     {
         return [
-            [['id', 'publish_time'], 'integer'],
+            [['id', 'addtime'], 'integer'],
             [['title', 'author', 'content'], 'safe'],
         ];
     }
@@ -57,7 +57,7 @@ class ArticleSearch extends Article
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'publish_time' => $this->publish_time,
+            'addtime' => $this->addtime,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])

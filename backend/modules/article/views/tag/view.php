@@ -29,7 +29,7 @@ use common\helpers\CoreHelper;
         <div class="post-meta">
             <span class="author">作者：<a href=""><?= Html::encode($article['author']) ?></a></span>
             &nbsp;&bull;&nbsp;
-            <time class="post-date" datetime="<?= CoreHelper::formatTimestamp($article['publish_time']) ?>" title="<?= CoreHelper::formatTimestamp($article['publish_time']) ?>"><?= date('Y年m月d日 H:i', $article['publish_time']) ?></time>
+            <time class="post-date" datetime="<?= CoreHelper::formatTimestamp($article['addtime']) ?>" title="<?= CoreHelper::formatTimestamp($article['addtime']) ?>"><?= date('Y年m月d日 H:i', $article['addtime']) ?></time>
         </div>
     </div>
     <?php if($article['thumbnail']): ?>

@@ -20,8 +20,8 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
             <section class="post-meta">
                 <span class="author">作者：<a><?= Html::encode($article->author) ?></a></span>
                 &nbsp;&bull;&nbsp;
-                <time class="post-date" datetime="<?= date('Y年m月d日H点i分', $article->publish_time) ?>" title="<?= date('Y年m月d日H点i分', $article->publish_time) ?>">
-                    <?= date('Y年m月d日', $article->publish_time) ?>
+                <time class="post-date" datetime="<?= date('Y年m月d日H点i分', $article->addtime) ?>" title="<?= date('Y年m月d日H点i分', $article->addtime) ?>">
+                    <?= date('Y年m月d日', $article->addtime) ?>
                 </time>
             </section>
         </header>

@@ -30,7 +30,7 @@ class LatestArticleWidget extends Widget
             foreach($articles as $arc){
                 $url = Url::to(['/article/article/view', 'id' => $arc['id']]);
                 $title = Html::encode($arc['title']);
-                $time = date('Y年m月d日', $arc['publish_time']);
+                $time = date('Y年m月d日', $arc['addtime']);
                 $out .= <<<EOT
                        <div class="recent-single-post">
                             <a href="{$url}" class="post-title">{$title}</a>

@@ -9,6 +9,8 @@ use yii\helpers\Url;
 /* @var $form yii\widgets\ActiveForm */
 
 FormAsset::register($this);
+
+$params = Yii::$app->params;
 ?>
 
 <script>
@@ -22,11 +24,13 @@ FormAsset::register($this);
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'inputTags')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
+    <?php if ($model->id): ?>
+        <?= $form->field($model, 'type')->dropDownList($params['articleType'], ['disabled' => 'disabled']) ?>
+    <?php else : ?>
+        <?= $form->field($model, 'type')->dropDownList($params['articleType']) ?>
+    <?php endif; ?>
 
-    <div class="form-group field-type">
-
-    </div>
+    <?= $form->field($model, 'tag')->textInput(['maxlength' => true])->hint("最多设置5个标签，超过5个会被忽略，每个标签最多6个字符，多个标签之间用空格分隔") ?>
 
     <div class="form-group field-article-thumbnail">
         <label class="control-label" for="article-thumbnail">缩略图</label>
@@ -37,22 +41,25 @@ FormAsset::register($this);
         </div>
     </div>
 
-    <div class="form-group field-article-thumb hidden">
-        <label class="control-label" for="article-thumb">图集</label>
-        <input type="file" id="article-thumb">
-
-        <div class="help-block"></div>
+    <div id="article-type-0">
+        <?= $form->field($model, 'content')->textarea(['rows' => 20, 'id' => 'ueditor']) ?>
+        <div class="form-group field-content-thumb">
+            <label class="control-label">插入正文图片</label>
+            <input type="file" id="content-thumb">
+            <div id="thumb-list" class="mt-10"></div>
+        </div>
     </div>
 
-    <div id="thumbs"></div>
-
-    <?= $form->field($model, 'content')->textarea(['rows' => 20, 'id' => 'ueditor']) ?>
-
-    <div class="form-group field-content-thumb">
-        <label class="control-label">插入正文图片</label>
-        <input type="file" id="content-thumb">
-        <div id="thumb-list" class="mt-10"></div>
+    <div class="hidden" id="article-type-1">
+        <div class="form-group field-article-thumb">
+            <label class="control-label" for="article-thumb">图集</label>
+            <input type="file" id="article-thumb">
+            <div class="help-block"></div>
+        </div>
+        <div id="thumbs"></div>
     </div>
+
+    <div class="hidden" id="article-type-2"></div>
 
     <div class="form-group">
         <?= Html::submitButton('提交', ['class' =>'btn btn-default']) ?>
@@ -67,7 +74,6 @@ FormAsset::register($this);
     .fa-trash-o.delete{
         cursor: pointer;
     }
-
 
 </style>
 
@@ -104,6 +110,11 @@ FormAsset::register($this);
             var href = $(this).parent().prev().find('a').prop('href');
             var img = '<img src="' + href + '" class="img-responsive" >';
             um.execCommand('insertHtml', img);
+        });
+
+        //  切换文章类型
+        $('#articleform-type').change(function () {
+            $('div[id^="article-type-"]').addClass('hidden').filter('#article-type-' + $(this).val()).removeClass('hidden');
         });
 
         $('#article-thumbnail').simpleUploader({
@@ -183,6 +194,5 @@ FormAsset::register($this);
                 }
             }
         });
-
     });
 </script>

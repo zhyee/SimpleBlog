@@ -4,9 +4,12 @@ namespace backend\modules\article\controllers;
 
 use Yii;
 use common\models\Article;
+use yii\base\InvalidParamException;
 use yii\data\Pagination;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use common\models\ArticleForm;
+use commmon\exceptions\ArticleException;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -59,19 +62,21 @@ class ArticleController extends ArticleBaseController
 
     /**
      * Displays a single Article model.
-     * @param string $id
-     * @return mixed
+     * @return string
+     * @throws ArticleException
      */
-    public function actionView($id)
+    public function actionView()
     {
-        $id = (int)$id;
-        if(!$id){
-            return $this->error('ID参数错误');
+        $id = (int)Yii::$app->request->get('id', 0);
+        if(!$id)
+        {
+            throw new InvalidParamException('ID参数不正确');
         }
-        $article = Article::findOne(['id' => $id, 'is_del' => 0]);
+        $article = Article::getDetail(['id' => $id, 'is_del' => 0]);
 
-        if(!$article){
-            return $this->error('文章不存在');
+        if(NULL === $article)
+        {
+            throw new ArticleException('该文章不存在');
         }
 
         return $this->render('view', [
@@ -87,6 +92,7 @@ class ArticleController extends ArticleBaseController
     public function actionCreate()
     {
         $article = new Article();
+
         $request = Yii::$app->request;
 
         if($request->isPost)
@@ -115,52 +121,44 @@ class ArticleController extends ArticleBaseController
         }
         else
         {
+            $model = new ArticleForm();
             return $this->render('create', [
-                'model' => $article
+                'model' => $model
             ]);
         }
     }
 
-
     /**
      * Updates an existing Article model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $id
-     * @return mixed
+     * @return string|void
+     * @throws ArticleException
      */
-    public function actionUpdate($id)
+    public function actionUpdate()
     {
 
-        $id = intval($id);
-        if(!$id){
-            return $this->error('ID参数错误');
-        }
-
-        $article = Article::findOne(['id' => $id, 'is_del' => 0]);
-
-        if(!$article){
-            return $this->error('文章不存在');
-        }
-
         $request = Yii::$app->request;
-        if($request->isPost){
-            $data = $request->post();
-            $article->load($data);
-            $article->preSave();
-            if(isset($data[$article->formName()])){
-                $data = $data[$article->formName()];
+        $id = (int)$request->get('id', 0);
+        if(!$id){
+            throw new InvalidParamException('ID参数错误');
+        }
+
+        if($request->isPost)
+        {
+            $model = new ArticleForm();
+            $model->load($request->post());
+            return $model->update();
+        }
+        else
+        {
+            $model = ArticleForm::findOne(['id' => $id, 'is_del' => 0]);
+            if (NULL === $model)
+            {
+                throw new ArticleException('该文章不存在');
             }
-            if($article->add($data, true)){
-                $this->redirect(['index']);
-            }else{
-                return $this->error('文章保存失败');
-            }
-        }else{
-            $tags = $article->tags;
-            $tags = ArrayHelper::getColumn($tags, 'tagname');
-            $article->inputTags = implode(' ', $tags);
+
             return $this->render('update', [
-                'model' => $article,
+                'model' => $model,
             ]);
         }
     }

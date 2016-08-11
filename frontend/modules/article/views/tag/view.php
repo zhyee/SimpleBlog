@@ -27,7 +27,7 @@ use yii\helpers\Url;
         <div class="post-meta">
             <span class="author">作者：<a href=""><?= Html::encode($article['author']) ?></a></span>
             &nbsp;&bull;&nbsp;
-            <time class="post-date" datetime="2016年1月8日星期五上午10点33分" title="<?= date('Y年m月d日H点i分', $article['publish_time']) ?>"><?= date('Y年m月d日', $article['publish_time']) ?></time>
+            <time class="post-date" datetime="2016年1月8日星期五上午10点33分" title="<?= date('Y年m月d日H点i分', $article['addtime']) ?>"><?= date('Y年m月d日', $article['addtime']) ?></time>
         </div>
     </div>
     <?php if($article['thumbnail']):?>

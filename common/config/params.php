@@ -18,7 +18,6 @@ return [
     'uploadServer' => 'http://img.zyee.org/uploads/upload.php',
     'articleType' => [
         0 => '普通文章',
-        1 => '图集',
-        2 => '音视频'
+        1 => '图集'
     ]
 ];

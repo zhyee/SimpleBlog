@@ -3862,3 +3862,1029 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1470550854.7329
     'REQUEST_TIME' => 1470550854
 ]
+2016-08-09 00:17:41 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Article::content' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('content')
+#1 E:\project\SimpleBlog\backend\modules\article\views\article\view.php(35): yii\db\BaseActiveRecord->__get('content')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('view', Array, Object(backend\modules\article\controllers\ArticleController))
+#6 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(79): yii\base\Controller->render('view', Array)
+#7 [internal function]: backend\modules\article\controllers\ArticleController->actionView('46')
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('view', Array)
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#14 {main}
+2016-08-09 00:17:41 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => '41ad4809ba02dc1b0fab0ec087297fef8a9b637841d525ff6a6d23b00bd1c567a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-Jij-TFCvBYHIROnnAUz2p-H2_U7rKFP\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '688'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '49919'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=41ad4809ba02dc1b0fab0ec087297fef8a9b637841d525ff6a6d23b00bd1c567a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-Jij-TFCvBYHIROnnAUz2p-H2_U7rKFP%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470673061.2226
+    'REQUEST_TIME' => 1470673061
+]
+2016-08-09 00:21:39 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Article::content' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('content')
+#1 E:\project\SimpleBlog\backend\modules\article\views\article\view.php(35): yii\db\BaseActiveRecord->__get('content')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('view', Array, Object(backend\modules\article\controllers\ArticleController))
+#6 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(81): yii\base\Controller->render('view', Array)
+#7 [internal function]: backend\modules\article\controllers\ArticleController->actionView()
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('view', Array)
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#14 {main}
+2016-08-09 00:21:38 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => '41ad4809ba02dc1b0fab0ec087297fef8a9b637841d525ff6a6d23b00bd1c567a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-Jij-TFCvBYHIROnnAUz2p-H2_U7rKFP\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2344'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '50971'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=41ad4809ba02dc1b0fab0ec087297fef8a9b637841d525ff6a6d23b00bd1c567a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-Jij-TFCvBYHIROnnAUz2p-H2_U7rKFP%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470673298.8166
+    'REQUEST_TIME' => 1470673298
+]
+2016-08-09 01:17:19 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'commmon\constants\ArticleConstant' not found' in E:\project\SimpleBlog\common\models\Article.php:133
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-09 01:17:19 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    '_csrf' => 'e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2360'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '49661'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; _csrf=e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470676639.0979
+    'REQUEST_TIME' => 1470676639
+]
+2016-08-09 01:20:48 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'commmon\constants\ArticleConstant' not found' in E:\project\SimpleBlog\common\models\Article.php:133
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-09 01:20:48 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => 'e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2360'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '50593'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470676848.5582
+    'REQUEST_TIME' => 1470676848
+]
+2016-08-09 01:23:14 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'commmon\models\TextArticle' not found' in E:\project\SimpleBlog\common\models\Article.php:134
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-09 01:23:13 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => 'e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2360'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '51236'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470676993.8921
+    'REQUEST_TIME' => 1470676993
+]
+2016-08-09 01:24:03 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'commmon\models\TextArticle' not found' in E:\project\SimpleBlog\common\models\Article.php:134
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-09 01:24:03 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => 'e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2172'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '51462'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470677043.1982
+    'REQUEST_TIME' => 1470677043
+]
+2016-08-09 01:24:36 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'preg_match() expects parameter 2 to be string, array given' in E:\project\SimpleBlog\vendor\ezyang\htmlpurifier\library\HTMLPurifier\Lexer.php:348
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'preg_match() ex...', 'E:\\project\\Simp...', 348, Array)
+#1 E:\project\SimpleBlog\vendor\ezyang\htmlpurifier\library\HTMLPurifier\Lexer.php(348): preg_match('!<body[^>]*>(.*...', Array, '[]')
+#2 E:\project\SimpleBlog\vendor\ezyang\htmlpurifier\library\HTMLPurifier\Lexer.php(318): HTMLPurifier_Lexer->extractBody(Array)
+#3 E:\project\SimpleBlog\vendor\ezyang\htmlpurifier\library\HTMLPurifier\Lexer\DOMLex.php(50): HTMLPurifier_Lexer->normalize(Array, Object(HTMLPurifier_Config), Object(HTMLPurifier_Context))
+#4 E:\project\SimpleBlog\vendor\ezyang\htmlpurifier\library\HTMLPurifier.php(216): HTMLPurifier_Lexer_DOMLex->tokenizeHTML(Array, Object(HTMLPurifier_Config), Object(HTMLPurifier_Context))
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtmlPurifier.php(58): HTMLPurifier->purify(Array)
+#6 E:\project\SimpleBlog\backend\modules\article\views\article\view.php(35): yii\helpers\BaseHtmlPurifier::process(Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('view', Array, Object(backend\modules\article\controllers\ArticleController))
+#11 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(83): yii\base\Controller->render('view', Array)
+#12 [internal function]: backend\modules\article\controllers\ArticleController->actionView()
+#13 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('view', Array)
+#16 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#17 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#19 {main}
+2016-08-09 01:24:35 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/view'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => 'e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2172'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/view?id=46'
+    'QUERY_STRING' => 'r=article/article/view&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/view&id=46'
+    'REDIRECT_URL' => '/back/article/article/view'
+    'REMOTE_PORT' => '51612'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=e90a12c870f426623914697ccdd1a7376720facc6653903d4baa590a04789f8ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22T_Bhlz5fZgHJD2F28q2YkI4yif8bETbs%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470677075.8523
+    'REQUEST_TIME' => 1470677075
+]
+2016-08-09 01:32:32 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Article::content' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('content')
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtml.php(2051): yii\db\BaseActiveRecord->__get('content')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtml.php(1367): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Article), 'content')
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\widgets\ActiveField.php(451): yii\helpers\BaseHtml::activeTextarea(Object(common\models\Article), 'content', Array)
+#4 E:\project\SimpleBlog\backend\modules\article\views\article\_form.php(41): yii\widgets\ActiveField->textarea(Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, NULL)
+#8 E:\project\SimpleBlog\backend\modules\article\views\article\create.php(19): yii\base\View->render('_form', Array)
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('create', Array, Object(backend\modules\article\controllers\ArticleController))
+#13 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(124): yii\base\Controller->render('create', Array)
+#14 [internal function]: backend\modules\article\controllers\ArticleController->actionCreate()
+#15 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#17 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#18 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#19 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#21 {main}
+2016-08-09 01:32:31 [127.0.0.1][11][osei8dfuntcvuhfp1bjfhrfm46][info][application] $_GET = [
+    'r' => 'article/article/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'osei8dfuntcvuhfp1bjfhrfm46'
+    '_csrf' => '3650fb165621cf33bae08a1da47ccff1b41e4ce4b73ef4c1e5fee81d81d2e914a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"uk2sl96datesVvanWf7mCovCjRAWVE3e\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2328'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/create'
+    'QUERY_STRING' => 'r=article/article/create'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/create'
+    'REDIRECT_URL' => '/back/article/article/create'
+    'REMOTE_PORT' => '53727'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=osei8dfuntcvuhfp1bjfhrfm46; _csrf=3650fb165621cf33bae08a1da47ccff1b41e4ce4b73ef4c1e5fee81d81d2e914a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22uk2sl96datesVvanWf7mCovCjRAWVE3e%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470677551.8793
+    'REQUEST_TIME' => 1470677551
+]
+2016-08-09 14:43:03 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'qdm111422236_db.tagindex' doesn't exist' in E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Command.php:840
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Command.php(840): PDOStatement->execute()
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(Object(yii\db\Connection))
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveRelationTrait.php(525): yii\db\ActiveQuery->all(Object(yii\db\Connection))
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(171): yii\db\ActiveQuery->findJunctionRows('[<span class="t...')
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\QueryBuilder.php(89): yii\db\ActiveQuery->prepare(Object(yii\db\mysql\QueryBuilder))
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(314): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Query.php(210): yii\db\ActiveQuery->createCommand('<span class="ke...')
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#10 E:\project\SimpleBlog\common\models\Article.php(45): yii\db\ActiveQuery->all()
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Component.php(130): common\models\Article->getTags()
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('<span class="st...')
+#13 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Model.php(984): yii\db\BaseActiveRecord->__get('<span class="st...')
+#14 E:\project\SimpleBlog\backend\modules\article\views\article\index.php(46): yii\base\Model->offsetGet('<span class="st...')
+#15 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#16 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#17 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\modules\article\controllers\ArticleController))
+#18 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\modules\article\controllers\ArticleController))
+#19 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(60): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#20 [internal function]: backend\modules\article\controllers\ArticleController->actionIndex()
+#21 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#22 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#23 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#24 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#25 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#27 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'qdm111422236_db.tagindex' doesn't exist
+The SQL being executed was: SELECT * FROM `tagindex` WHERE `article_id`='46'' in E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Command.php(855): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(Object(yii\db\Connection))
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveRelationTrait.php(525): yii\db\ActiveQuery->all(Object(yii\db\Connection))
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(171): yii\db\ActiveQuery->findJunctionRows('[<span class="t...')
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\QueryBuilder.php(89): yii\db\ActiveQuery->prepare(Object(yii\db\mysql\QueryBuilder))
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(314): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\Query.php(210): yii\db\ActiveQuery->createCommand('<span class="ke...')
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#10 E:\project\SimpleBlog\common\models\Article.php(45): yii\db\ActiveQuery->all()
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Component.php(130): common\models\Article->getTags()
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('<span class="st...')
+#13 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Model.php(984): yii\db\BaseActiveRecord->__get('<span class="st...')
+#14 E:\project\SimpleBlog\backend\modules\article\views\article\index.php(46): yii\base\Model->offsetGet('<span class="st...')
+#15 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#16 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#17 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\modules\article\controllers\ArticleController))
+#18 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\modules\article\controllers\ArticleController))
+#19 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(60): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#20 [internal function]: backend\modules\article\controllers\ArticleController->actionIndex()
+#21 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#22 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#23 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#24 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#25 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'qdm111422236_db.tagindex' doesn't exist
+)
+
+2016-08-09 14:43:02 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][info][application] $_COOKIE = [
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2332'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '57176'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470724981.969
+    'REQUEST_TIME' => 1470724981
+]
+2016-08-09 14:45:23 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: tagname' in E:\project\SimpleBlog\backend\modules\article\views\article\index.php:48
+Stack trace:
+#0 E:\project\SimpleBlog\backend\modules\article\views\article\index.php(48): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\project\\Simp...', 48, Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('index', Array, Object(backend\modules\article\controllers\ArticleController))
+#5 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(60): yii\base\Controller->render('index', Array)
+#6 [internal function]: backend\modules\article\controllers\ArticleController->actionIndex()
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#13 {main}
+2016-08-09 14:45:23 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][info][application] $_COOKIE = [
+    'PHPSESSID' => '5ugnqtq202vb8r9ccckofe0co1'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2332'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '57216'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=5ugnqtq202vb8r9ccckofe0co1; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470725123.2721
+    'REQUEST_TIME' => 1470725123
+]
+2016-08-09 14:51:59 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: tagname' in E:\project\SimpleBlog\common\widgets\TagCloudWidget.php:34
+Stack trace:
+#0 E:\project\SimpleBlog\common\widgets\TagCloudWidget.php(34): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\project\\Simp...', 34, Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Widget.php(98): common\widgets\TagCloudWidget->run()
+#2 E:\project\SimpleBlog\backend\views\layouts\main.php(112): yii\base\Widget::widget()
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#4 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(392): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\Controller->renderContent('\r\n\r\n    \r\n    <...')
+#7 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(60): yii\base\Controller->render('index', Array)
+#8 [internal function]: backend\modules\article\controllers\ArticleController->actionIndex()
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#13 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#15 {main}
+2016-08-09 14:51:58 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][info][application] $_COOKIE = [
+    'PHPSESSID' => '5ugnqtq202vb8r9ccckofe0co1'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2340'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '57373'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=5ugnqtq202vb8r9ccckofe0co1; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470725518.5394
+    'REQUEST_TIME' => 1470725518
+]
+2016-08-09 15:41:14 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\ArticleForm::isNewRecord' in E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 E:\project\SimpleBlog\backend\modules\article\views\article\_form.php(27): yii\base\Component->__get('isNewRecord')
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, NULL)
+#4 E:\project\SimpleBlog\backend\modules\article\views\article\update.php(18): yii\base\View->render('_form', Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#8 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('update', Array, Object(backend\modules\article\controllers\ArticleController))
+#9 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(173): yii\base\Controller->render('update', Array)
+#10 [internal function]: backend\modules\article\controllers\ArticleController->actionUpdate()
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('update', Array)
+#14 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#15 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#17 {main}
+2016-08-09 15:41:13 [127.0.0.1][11][5ugnqtq202vb8r9ccckofe0co1][info][application] $_GET = [
+    'r' => 'article/article/update'
+    'id' => '46'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '5ugnqtq202vb8r9ccckofe0co1'
+    '_csrf' => 'fcce2e13863b629249be0880ad16c469c6203f59fa5b068882111781f4db1e05a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i-wRY2_WE0sQEM2j0Fn5dyUC1j0MsKE7\";}'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2108'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/update?id=46'
+    'QUERY_STRING' => 'r=article/article/update&id=46'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/update&id=46'
+    'REDIRECT_URL' => '/back/article/article/update'
+    'REMOTE_PORT' => '59548'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=5ugnqtq202vb8r9ccckofe0co1; _csrf=fcce2e13863b629249be0880ad16c469c6203f59fa5b068882111781f4db1e05a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i-wRY2_WE0sQEM2j0Fn5dyUC1j0MsKE7%22%3B%7D; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470728473.5084
+    'REQUEST_TIME' => 1470728473
+]
+2016-08-11 08:35:11 [127.0.0.1][11][gk2o373adurnugl3f8esb2ko97][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Array to string conversion' in E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtml.php:520
+Stack trace:
+#0 E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtml.php(520): yii\base\ErrorHandler->handleError(8, 'Array to string...', 'E:\\project\\Simp...', 520, Array)
+#1 E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtml.php(1230): yii\helpers\BaseHtml::input('text', 'Article[tag]', Array, Array)
+#2 E:\project\SimpleBlog\vendor\yiisoft\yii2\helpers\BaseHtml.php(1275): yii\helpers\BaseHtml::activeInput('text', Object(common\models\Article), 'tag', Array)
+#3 E:\project\SimpleBlog\vendor\yiisoft\yii2\widgets\ActiveField.php(364): yii\helpers\BaseHtml::activeTextInput(Object(common\models\Article), 'tag', Array)
+#4 E:\project\SimpleBlog\backend\modules\article\views\article\_form.php(33): yii\widgets\ActiveField->textInput(Array)
+#5 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#6 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#7 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, NULL)
+#8 E:\project\SimpleBlog\backend\modules\article\views\article\create.php(19): yii\base\View->render('_form', Array)
+#9 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(325): require('E:\\project\\Simp...')
+#10 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\project\\Simp...', Array)
+#11 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\project\\Simp...', Array, Object(backend\modules\article\controllers\ArticleController))
+#12 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('create', Array, Object(backend\modules\article\controllers\ArticleController))
+#13 E:\project\SimpleBlog\backend\modules\article\controllers\ArticleController.php(125): yii\base\Controller->render('create', Array)
+#14 [internal function]: backend\modules\article\controllers\ArticleController->actionCreate()
+#15 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#17 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#18 E:\project\SimpleBlog\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('article/article...', Array)
+#19 E:\project\SimpleBlog\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\project\SimpleBlog\back\index.php(21): yii\base\Application->run()
+#21 {main}
+2016-08-11 08:35:10 [127.0.0.1][11][gk2o373adurnugl3f8esb2ko97][info][application] $_GET = [
+    'r' => 'article/article/create'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'gk2o373adurnugl3f8esb2ko97'
+    '_identity' => '980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a:2:{i:0;s:9:\"_identity\";i:1;s:49:\"[\"11\",\"7d7a5763fddb3d475e7400fb684830af\",2592000]\";}'
+    '_csrf' => 'a933feb3fc3c141ac5e79805be34e99fe69a2439d9f120cdb08d54f7aab3cb13a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"y_YZFuj3QJdYV1YwMtCmLQjjhEEr4vdI\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '11'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\amp\\MySQL Server 5.5\\bin;C:\\Program Files\\TortoiseSVN\\bin;F:\\mingw492_32\\bin;D:\\phpStudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '2076'
+    'SCRIPT_NAME' => '/back/index.php'
+    'REQUEST_URI' => '/back/article/article/create'
+    'QUERY_STRING' => 'r=article/article/create'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'r=article/article/create'
+    'REDIRECT_URL' => '/back/article/article/create'
+    'REMOTE_PORT' => '60219'
+    'SCRIPT_FILENAME' => 'E:/project/SimpleBlog/back/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'E:/project/SimpleBlog'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'simpleblog.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => 'PHPSESSID=gk2o373adurnugl3f8esb2ko97; _identity=980e009b82b4153bf546ab1a63abfc47d45ae719d49b26726a5454a36f478522a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A49%3A%22%5B%2211%22%2C%227d7a5763fddb3d475e7400fb684830af%22%2C2592000%5D%22%3B%7D; _csrf=a933feb3fc3c141ac5e79805be34e99fe69a2439d9f120cdb08d54f7aab3cb13a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22y_YZFuj3QJdYV1YwMtCmLQjjhEEr4vdI%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://simpleblog.com/back/'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'simpleblog.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/back/index.php'
+    'REQUEST_TIME_FLOAT' => 1470875710.4038
+    'REQUEST_TIME' => 1470875710
+]

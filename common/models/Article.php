@@ -2,11 +2,10 @@
 
 namespace common\models;
 
-use commmon\models\Thumb;
-use SplObserver;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\helpers\ArrayHelper;
+use common\constants\ArticleConstant;
 
 /**
  * This is the model class for table "article".
@@ -15,34 +14,10 @@ use yii\helpers\ArrayHelper;
  * @property string $title
  * @property string $author
  * @property string $content
- * @property string $publish_time
+ * @property string $addtime
  */
-class Article extends BaseActiveRecord implements \SplSubject
+class Article extends BaseActiveRecord
 {
-    private $observers;
-
-    public function init()
-    {
-        parent::init();
-        $this->observers = new \SplObjectStorage();
-    }
-
-    public function attach(SplObserver $observer)
-    {
-        if(!$this->observers->contains($observer)){
-            $this->observers->attach($observer);
-        }
-    }
-
-    public function detach(SplObserver $observer)
-    {
-
-    }
-
-    public function notify()
-    {
-
-    }
 
     /**
      * 文章简介长度
@@ -57,34 +32,20 @@ class Article extends BaseActiveRecord implements \SplSubject
         return 'article';
     }
 
-    public $inputTags;    //用户输入的标签字符串
-
     /**
      * 关联文章和标签
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function getTags(){
-        return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
-            ->viaTable(TagIndex::tableName(), ['article_id' => 'id'])
-            ->asArray()
-            ->all();
+    public function getTag(){
+        return $this->hasMany(ArticleTag::className(), ['aid' => 'id'])->asArray()->all();
     }
 
-    /**
-     * 关联文章和图集
-     * @return array|\yii\db\ActiveRecord[]
-     */
-    public function getThumbs() {
-        return $this->hasMany(Thumb::className(), ['aid' => 'id'])
-            ->asArray()
-            ->all();
-    }
 
     /**
      * 生成时间字符串 格式：2016年1月8日星期五上午10点33分
      */
     public function getTimeStr(){
-        $time = $this->publish_time;
+        $time = $this->addtime;
         $str = date('Y年m月d日', $time);
         $weekArr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
         $str .= $weekArr[date('w', $time)];
@@ -99,14 +60,23 @@ class Article extends BaseActiveRecord implements \SplSubject
     public function rules()
     {
         return [
-            [['title','content'], 'required'],
-            [['content'], 'string'],
-            [['publish_time'], 'integer'],
+            [['title', 'addtime', 'author'], 'required'],
+            [['addtime'], 'integer'],
             [['description'], 'string', 'max' => 200],
             [['thumbnail'], 'string', 'max' => 200],
             [['title'], 'string', 'max' => 60],
             [['author'], 'string', 'max' => 16]
         ];
+    }
+
+    /**
+     * 验证前初始化一些文章数据
+     */
+    public function beforeValidate()
+    {
+        $this->addtime = time();
+        $this->setDescription();
+        $this->author = Yii::$app->user->isGuest ? '' : Yii::$app->user->identity->username;
     }
 
     /**
@@ -117,10 +87,10 @@ class Article extends BaseActiveRecord implements \SplSubject
         return [
             'id' => 'ID',
             'title' => '文章标题',
+            'type'  => '文章类型',
             'author' => '作者',
             'content' => '内容',
-            'publish_time' => '发布时间',
-            'inputTags' => '标签',
+            'addtime' => '发布时间',
             'thumbnail' => '缩略图'
         ];
     }
@@ -135,13 +105,32 @@ class Article extends BaseActiveRecord implements \SplSubject
     }
 
     /**
-     * 初始化文章的一些属性
+     * 根据文章详情
+     * @param $condition
+     * @return null|static
      */
-    public function preSave(){
-        $this->publish_time = time();
-        $this->setDescription();
-        $this->author = Yii::$app->user->isGuest ? '' : Yii::$app->user->identity->username;
+    public static function getDetail($condition)
+    {
+        $article = self::findOne($condition);
+        if (NULL === $article)
+        {
+            return NULL;
+        }
+
+        $result = NULL;
+        switch ($article->type)
+        {
+            case ArticleConstant::ARTICLE_TYPE_TEXT:
+                $result = TextArticle::findOne($condition);
+                break;
+            case ArticleConstant::ARTICLE_TYPE_THUMB:
+                $result = ThumbArticle::findOne($condition);
+                break;
+        }
+
+        return $result;
     }
+
 
     /**
      * 删除与该篇文章相关联的标签
@@ -166,7 +155,7 @@ class Article extends BaseActiveRecord implements \SplSubject
         }
 
         //更新标签引用计数
-        $tags = $this->getTags();
+        $tags = $this->getTag();
         $tagIds = ArrayHelper::getColumn($tags, 'id');
         $value = (int)$value;
         Tag::updateAllCounters(['usecount' => $value], ['in', 'id', $tagIds]);
@@ -196,7 +185,7 @@ class Article extends BaseActiveRecord implements \SplSubject
 
         if($isUpdate)
         {
-            unset($this->publish_time);
+            unset($this->addtime);
             $this->removeTags();
             $this->updateTagCount(-1);
         }

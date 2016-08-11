@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <a href="<?= Url::to(['article/view', 'id' => $arc['id']])?>"><?= Html::encode($arc['title']) ?></a></h1>
             <div class="post-meta">
                 <span class="author">作者：<a href=""><?= $arc['author'] ?></a></span> &bull;
-                <time class="post-date" datetime="<?= $arc['timeStr'] ?>" title="<?= $arc['timeStr'] ?>"> <?= date('Y年m月d日', $arc['publish_time'])?></time>
+                <time class="post-date" datetime="<?= $arc['timeStr'] ?>" title="<?= $arc['timeStr'] ?>"> <?= date('Y年m月d日', $arc['addtime'])?></time>
             </div>
         </div>
 
@@ -43,9 +43,9 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
         <footer class="post-footer clearfix">
             <div class="pull-left tag-list">
                 <i class="fa fa-folder-open-o"></i>
-                <?php foreach($arc['tags'] as $k => $tag):?>
+                <?php foreach($arc['tag'] as $k => $tag):?>
                     <?php if($k > 0): ?>,<?php endif ?>
-                        <a href="<?= Url::to(['tag/view', 'id' => $tag['id']])?>"><?= Html::encode($tag['tagname']) ?></a>
+                        <a href="<?= Url::to(['tag/view', 'id' => $tag['id']])?>"><?= Html::encode($tag['tname']) ?></a>
                 <?php endforeach ?>
             </div>
             <div class="pull-right edit">

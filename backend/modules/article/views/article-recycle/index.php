@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <td><?= $pagination->offset+$index+1 ?></td>
                 <td><?= Html::encode($arc['title']) ?></td>
                 <td><?= Html::encode($arc['author']) ?></td>
-                <td><?= date('Y-m-d H:i', $arc['publish_time']) ?></td>
+                <td><?= date('Y-m-d H:i', $arc['addtime']) ?></td>
                 <td>
                     <span class="separator"></span>
                     <i class="fa fa-recycle"></i><a href="<?= Url::to(['article-recycle/recovery', 'id' => $arc['id']]) ?>" aria-label="Recovery">恢复
