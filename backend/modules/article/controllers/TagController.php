@@ -1,20 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2016/3/25 0025
- * Time: 17:15
- */
+
 namespace backend\modules\article\controllers;
-use common\models\Tag;
+
 use Yii;
 use yii\data\Pagination;
+use common\constants\TagConstant;
+use common\exceptions\TagException;
+use common\models\Tag;
 
 class TagController extends ArticleBaseController
 {
-
-    const PAGESIZE = 10;
-    const MAX_SHOW_COUNT = 200;    //最多显示的标签数
 
     /**
      * 所有标签
@@ -24,7 +19,7 @@ class TagController extends ArticleBaseController
         $tags = Tag::find()
             ->where(['>', 'usecount', 0])
             ->orderBy(['usecount' => SORT_DESC, 'id' => SORT_DESC])
-            ->limit(static::MAX_SHOW_COUNT)
+            ->limit(TagConstant::MAX_SHOW_COUNT)
             ->asArray()
             ->all();
 
@@ -42,14 +37,14 @@ class TagController extends ArticleBaseController
         }
 
         $tag = Tag::findOne($id);
-        if(!$tag){
-            $this->error('无法显示该标签');
+        if(NULL === $tag){
+            throw new TagException('不存在该标签');
         }
 
-        $totalCount = $tag->articlesCount;
+        $totalCount = $tag->getArticlesCount();
 
         $pagination = new Pagination([
-            'defaultPageSize' => self::PAGESIZE,
+            'defaultPageSize' => TagConstant::PAGESIZE,
             'totalCount'      => $totalCount
         ]);
 

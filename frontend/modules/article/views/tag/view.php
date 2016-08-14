@@ -12,7 +12,7 @@ use yii\helpers\Url;
 
 <div class="cover tag-cover">
     <h3 class="tag-name">
-        标签：<?= Html::encode($tag->tagname) ?>
+        标签：<?= Html::encode($tag->name) ?>
     </h3>
     <div class="post-count">
         共 <?= $pagination->totalCount ?> 篇文章
@@ -47,9 +47,9 @@ use yii\helpers\Url;
     <footer class="post-footer clearfix">
         <div class="pull-left tag-list">
             <i class="fa fa-folder-open-o"></i>
-            <?php foreach($article->tags as $k => $tag): ?>
+            <?php foreach($article->tag as $k => $tag): ?>
                 <?php if($k > 0):?>,<?php endif ?>
-                <a href="<?= Url::to(['tag/view', 'id' => $tag['id']]) ?>"><?= Html::encode($tag['tagname']) ?></a>
+                <a href="<?= Url::to(['tag/view', 'id' => $tag['tid']]) ?>"><?= Html::encode($tag['tname']) ?></a>
             <?php endforeach ?>
         </div>
         <div class="pull-right share">

@@ -182,9 +182,9 @@ NavBar::end();
 
 <?php $this->endBody() ?>
 
-<script src="/back/js/jquery.fitvids.min.js"></script>
-<script src="/back/js/highlight.min.js"></script>
-<script src="/back/js/main.js"></script>
+<script src="<?= Yii::$app->urlManager->baseUrl ?>/js/jquery.fitvids.min.js"></script>
+<script src="<?= Yii::$app->urlManager->baseUrl ?>/js/highlight.min.js"></script>
+<script src="<?= Yii::$app->urlManager->baseUrl ?>/js/main.js"></script>
 
 </body>
 </html>

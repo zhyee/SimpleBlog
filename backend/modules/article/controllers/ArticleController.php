@@ -3,13 +3,12 @@
 namespace backend\modules\article\controllers;
 
 use Yii;
-use common\models\Article;
 use yii\base\InvalidParamException;
 use yii\data\Pagination;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
+use common\models\Article;
 use common\models\ArticleForm;
-use commmon\exceptions\ArticleException;
+use common\exceptions\ArticleException;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -39,8 +38,7 @@ class ArticleController extends ArticleBaseController
      */
     public function actionIndex()
     {
-        $article = new Article();
-        $query = $article::find();
+        $query = Article::find();
 
         $pagination = new Pagination([
             'defaultPageSize' => 10,
@@ -48,6 +46,7 @@ class ArticleController extends ArticleBaseController
         ]);
 
         $articles = $query
+            ->with('tag')
             ->where(['is_del' => 0])
             ->orderBy(['id' => SORT_DESC])
             ->offset($pagination->offset)
@@ -96,8 +95,6 @@ class ArticleController extends ArticleBaseController
 
         if($request->isPost)
         {
-
-
             if($model->add($request->post()))
             {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -106,7 +103,6 @@ class ArticleController extends ArticleBaseController
             {
                 return $this->error('添加文章失败');
             }
-
         }
         else
         {
@@ -155,25 +151,30 @@ class ArticleController extends ArticleBaseController
     /**
      * Deletes an existing Article model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $id
-     * @return mixed
+     * @return string|\yii\web\Response
+     * @throws ArticleException
      */
-    public function actionDelete($id)
+    public function actionDelete()
     {
-        $id = intval($id);
-        if(!$id){
-            return $this->error('ID参数不正确');
+        $id = (int)Yii::$app->request->get('id', 0);
+        if(!$id)
+        {
+            throw new ArticleException('ID参数不正确');
         }
 
         $article = Article::findOne(['id' => $id]);
 
-        if(!$article){
-            return $this->error('文章不存在');
+        if(NULL === $article)
+        {
+            throw new ArticleException('该文章不存在');
         }
 
-        if($article->delete()){
+        if($article->delete())
+        {
             return $this->redirect(['index']);
-        }else{
+        }
+        else
+        {
             return $this->error('删除文章失败');
         }
     }

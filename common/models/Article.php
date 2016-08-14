@@ -20,11 +20,6 @@ class Article extends BaseActiveRecord
 {
 
     /**
-     * 文章简介长度
-     */
-    const DESCRIPTION_LENGTH = 200;
-
-    /**
      * @inheritdoc
      */
     public static function tableName()
@@ -34,10 +29,9 @@ class Article extends BaseActiveRecord
 
     /**
      * 关联文章和标签
-     * @return array|\yii\db\ActiveRecord[]
      */
     public function getTag(){
-        return $this->hasMany(ArticleTag::className(), ['aid' => 'id'])->asArray()->all();
+        return $this->hasMany(ArticleTag::className(), ['aid' => 'id'])->asArray();
     }
 
 
@@ -65,7 +59,7 @@ class Article extends BaseActiveRecord
             ['type', 'in', 'range' => array_keys(Yii::$app->params['articleType'])],
             [['author'], 'string', 'max' => 16],
             [['thumbnail', 'description'], 'string', 'max' => 200],
-            [['addtime', 'del_time'], 'integer'],
+            [['id', 'addtime', 'del_time'], 'integer'],
             ['is_del', 'in', 'range' => [0,1]]
         ];
     }
@@ -118,28 +112,43 @@ class Article extends BaseActiveRecord
      */
     public function removeTags()
     {
-        $articleId = $this->getAttribute('id');
-        if(!$articleId){
+        $id = $this->id;
+        if(!$id){
             throw new InvalidParamException('文章ID参数不正确');
         }
         //删除与该篇文章相关联的标签
-        TagIndex::deleteAll(['article_id' => $articleId]);
+        ArticleTag::deleteAll(['aid' => $id]);
     }
 
     /**
      * @param int $value  1增加计数 -1减少计数
      */
-    public function updateTagCount($value = 1){
-        $articleId = $this->getAttribute('id');
-        if(!$articleId){
+    public function updateTagUsecount($value = 1)
+    {
+        if(!$this->id)
+        {
             throw new InvalidParamException('文章ID参数不正确');
         }
-
         //更新标签引用计数
-        $tags = $this->getTag();
-        $tagIds = ArrayHelper::getColumn($tags, 'id');
+        $tagIds = ArrayHelper::getColumn($this->tag, 'tid');
         $value = (int)$value;
         Tag::updateAllCounters(['usecount' => $value], ['in', 'id', $tagIds]);
+    }
+
+    /**
+     * 标签使用计数+1
+     */
+    public function increaseTagUsecount()
+    {
+        $this->updateTagUsecount(1);
+    }
+
+    /**
+     * 标签使用计数-1
+     */
+    public function decreaseTagUsecount()
+    {
+        $this->updateTagUsecount(-1);
     }
 
     /**
@@ -168,7 +177,7 @@ class Article extends BaseActiveRecord
         {
             unset($this->addtime);
             $this->removeTags();
-            $this->updateTagCount(-1);
+            $this->decreaseTagUsecount();
         }
 
         $tags = preg_replace('/ {2,}/', ' ', trim($data['inputTags']));    //多个连续空格替换成一个
@@ -237,7 +246,7 @@ class Article extends BaseActiveRecord
      * 删除文章
      */
     public function delete(){
-        $this->updateTagCount(-1);    //删除关联标签和引用计数
+        $this->decreaseTagUsecount();    //删除关联标签引用计数
         $this->is_del = 1;
         $this->del_time = time();
         return $this->save();

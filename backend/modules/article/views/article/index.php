@@ -45,15 +45,14 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <i class="fa fa-folder-open-o"></i>
                 <?php foreach($arc['tag'] as $k => $tag):?>
                     <?php if($k > 0): ?>,<?php endif ?>
-                        <a href="<?= Url::to(['tag/view', 'id' => $tag['id']])?>"><?= Html::encode($tag['tname']) ?></a>
+                        <a href="<?= Url::to(['tag/view', 'id' => $tag['tid']])?>"><?= Html::encode($tag['tname']) ?></a>
                 <?php endforeach ?>
             </div>
             <div class="pull-right edit">
-                <i class="fa fa-pencil-square-o"></i>
-                <a href="<?= Url::to(['article/update', 'id' => $arc['id']]) ?>">编辑</a>
 
-                <i class="fa fa-trash-o"></i>
-                <a href="<?= Url::to(['article/delete', 'id' => $arc['id']]) ?>">删除</a>
+                <a href="<?= Url::to(['article/update', 'id' => $arc['id']]) ?>"><i class="fa fa-pencil-square-o"></i>编辑</a>
+
+                <a class="ml-10" href="<?= Url::to(['article/delete', 'id' => $arc['id']]) ?>"><i class="fa fa-trash-o"></i>删除</a>
             </div>
         </footer>
     </article>

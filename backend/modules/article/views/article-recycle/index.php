@@ -18,27 +18,25 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
             </thead>
             <tbody>
 
-            <?php foreach($articles as $index => $arc): ?>
+            <?php foreach($articles as $index => $article): ?>
             <tr data-key="4">
                 <td><?= $pagination->offset+$index+1 ?></td>
-                <td><?= Html::encode($arc['title']) ?></td>
-                <td><?= Html::encode($arc['author']) ?></td>
-                <td><?= date('Y-m-d H:i', $arc['addtime']) ?></td>
+                <td><?= Html::encode($article['title']) ?></td>
+                <td><?= Html::encode($article['author']) ?></td>
+                <td><?= date('Y-m-d H:i', $article['addtime']) ?></td>
                 <td>
-                    <span class="separator"></span>
-                    <i class="fa fa-recycle"></i><a href="<?= Url::to(['article-recycle/recovery', 'id' => $arc['id']]) ?>" aria-label="Recovery">恢复
+                    <a href="<?= Url::to(['article-recycle/recovery', 'id' => $article['id']]) ?>" aria-label="Recovery"><i class="fa fa-recycle"></i>恢复
                     </a>
-                    <span class="separator"></span>
-                    <i class="fa fa-trash"></i><a action="delete" rel="<?= Url::to(['article-recycle/delete', 'id' => $arc['id']]) ?>" href="javascript:;" aria-label="Delete">彻底删除
+                    <a class="ml-10" data-toggle="modal" data-target="#confirm-modal" data-url="<?= Url::to(['article-recycle/delete', 'id' => $article['id']]) ?>" rel="delete" href="javascript:;" aria-label="Delete"><i class="fa fa-trash"></i>彻底删除
                     </a>
                 </td>
             </tr>
-            <?php endforeach ?>
+            <?php endforeach; ?>
 
             </tbody>
         </table>
         <?php else:?>
-            <div class="no-data">
+            <div class="no-data mb-20">
                 <p class="text-center">暂无数据</p>
             </div>
         <?php endif; ?>
@@ -47,37 +45,41 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
 
 </div>
 
-<div id="confirm" class="hidden">
-    <p>确认要删除吗，删除后无法恢复？</p>
+
+<div class="modal fade" id="confirm-modal" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="gridSystemModalLabel">确认删除</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>确认要删除吗，删除后无法恢复？</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-sm btn-success">确定</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
 
-    window.onload = function(){
-        $('a[action="delete"]').click(function(){
-            var url = $.trim($(this).attr('rel')) || '';
-            $('#confirm').dialog({
-                title : '确认',
-                closeText : '',
-                modal : true,
-                buttons : [
-                    {
-                        text : '确定',
-                        click : function(){
-                            location.href = url;
-                        }
-                    },
-                    {
-                        text : '取消',
-                        click : function(){
-                            $(this).dialog('close');
-                        }
-                    }
-                ]
-            })
+    /* 点击确认删除按钮 */
+    $(function () {
+        var deleteUrl = '';
+        $('a[rel="delete"]').click(function () {
+           deleteUrl = $(this).data('url');
         });
-    };
+        $(document).on('click', '#confirm-modal .modal-footer button:last-child', function () {
+            location.href = deleteUrl;
+        });
+    });
+
 
 </script>
-
-</div>

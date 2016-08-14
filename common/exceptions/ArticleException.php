@@ -1,5 +1,5 @@
 <?php
-namespace commmon\exceptions;
+namespace common\exceptions;
 
 use yii\base\Exception;
 

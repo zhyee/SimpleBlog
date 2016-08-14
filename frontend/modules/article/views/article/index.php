@@ -45,11 +45,10 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <i class="fa fa-folder-open-o"></i>
                 <?php foreach($arc['tag'] as $k => $tag):?>
                     <?php if($k > 0): ?>,<?php endif ?>
-                        <a href="<?= Url::to(['tag/view', 'id' => $tag['id']])?>"><?= Html::encode($tag['tname']) ?></a>
+                        <a href="<?= Url::to(['tag/view', 'id' => $tag['tid']])?>"><?= Html::encode($tag['tname']) ?></a>
                 <?php endforeach ?>
             </div>
-            <div class="pull-right share">
-            </div>
+            <div class="pull-right share"></div>
         </footer>
     </article>
 

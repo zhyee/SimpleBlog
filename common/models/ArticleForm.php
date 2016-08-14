@@ -9,7 +9,7 @@ use Yii;
 use yii\base\Exception;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
-use commmon\exceptions\ArticleException;
+use common\exceptions\ArticleException;
 use common\constants\ArticleConstant;
 
 class ArticleForm extends Model
@@ -146,7 +146,7 @@ class ArticleForm extends Model
         switch ($this->type)
         {
             case ArticleConstant::ARTICLE_TYPE_TEXT:
-                $this->description = $this->content ? mb_substr(html_entity_decode(strip_tags($this->content), ENT_QUOTES|ENT_HTML5), 0, ArticleConstant::ARTICLE_DESCRIPTION_LENGTH, Yii::$app->charset) : '';
+                $this->description = $this->content ? mb_substr(html_entity_decode(strip_tags($this->content), ENT_QUOTES|ENT_HTML5), 0, ArticleConstant::DESCRIPTION_LENGTH, Yii::$app->charset) : '';
                 break;
             case ArticleConstant::ARTICLE_TYPE_THUMB:
                 break;
@@ -233,7 +233,16 @@ class ArticleForm extends Model
                 }
                 elseif ($this->type === ArticleConstant::ARTICLE_TYPE_THUMB)
                 {
-                    // @todo
+                    if ($this->thumbUrl)
+                    {
+                        foreach ($this->thumbUrl as $index => $url)
+                        {
+                            $articleThumb = new ArticleThumb();
+                            $articleThumb->attributes = [
+
+                            ];
+                        }
+                    }
                 }
 
                 $transation->commit();

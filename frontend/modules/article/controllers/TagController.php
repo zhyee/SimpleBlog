@@ -6,14 +6,13 @@
  * Time: 17:15
  */
 namespace frontend\modules\article\controllers;
-use common\models\Tag;
+
 use Yii;
 use yii\data\Pagination;
+use common\models\Tag;
+use common\constants\TagConstant;
 
 class TagController extends ArticleBaseController{
-
-    const PAGESIZE = 10;
-    const MAX_SHOW_COUNT = 200;    //最多显示的标签数
 
     /**
      * 所有标签
@@ -23,7 +22,7 @@ class TagController extends ArticleBaseController{
         $tags = Tag::find()
             ->where(['>', 'usecount', 0])
             ->orderBy(['usecount' => SORT_DESC, 'id' => SORT_DESC])
-            ->limit(static::MAX_SHOW_COUNT)
+            ->limit(TagConstant::MAX_SHOW_COUNT)
             ->asArray()
             ->all();
 
@@ -41,14 +40,15 @@ class TagController extends ArticleBaseController{
         }
 
         $tag = Tag::findOne($id);
-        if(!$tag){
+        if(NULL === $tag)
+        {
             $this->error('无法显示该标签');
         }
 
-        $totalCount = $tag->articlesCount;
+        $totalCount = $tag->getArticlesCount();
 
         $pagination = new Pagination([
-            'defaultPageSize' => self::PAGESIZE,
+            'defaultPageSize' => TagConstant::PAGESIZE,
             'totalCount'      => $totalCount
         ]);
 

@@ -9,9 +9,13 @@
 
 namespace backend\modules\article\controllers;
 
-use common\models\Article;
-use common\models\TagIndex;
+use Yii;
 use yii\data\Pagination;
+use common\models\ArticleContent;
+use common\models\ArticleTag;
+use common\models\ArticleThumb;
+use common\models\Article;
+use common\exceptions\ArticleException;
 
 class ArticleRecycleController extends ArticleBaseController
 {
@@ -50,7 +54,7 @@ class ArticleRecycleController extends ArticleBaseController
      */
     public function actionRecovery()
     {
-        $id = (int)\Yii::$app->request->get('id');
+        $id = (int)Yii::$app->request->get('id');
         if(!$id){
             $this->error('文章ID参数不正确');
         }
@@ -62,11 +66,14 @@ class ArticleRecycleController extends ArticleBaseController
         }
 
         //更新标签引用计数
-        $article->updateTagCount(1);
+        $article->increaseTagUsecount();
 
-        if(Article::updateAll(['is_del' => 0, 'del_time' => 0], ['id' => $id])){
+        if(Article::updateAll(['is_del' => 0, 'del_time' => 0], ['id' => $id]))
+        {
             $this->redirect(['article/index']);
-        }else{
+        }
+        else
+        {
             $this->error('恢复文章失败');
         }
     }
@@ -76,14 +83,19 @@ class ArticleRecycleController extends ArticleBaseController
      */
     public function actionDelete()
     {
-        $id = (int)\Yii::$app->request->get('id');
+        $id = (int)Yii::$app->request->get('id');
         if(!$id){
-            $this->error('文章ID参数不正确');
+            throw new ArticleException('该文章不存在');
         }
-        if(Article::deleteAll(['id' => $id])){
-            TagIndex::deleteAll(['article_id' => $id]);//删除标签对应关系
+        if(Article::deleteAll(['id' => $id]))
+        {
+            ArticleTag::deleteAll(['aid' => $id]); //  删除对应的标签
+            ArticleContent::deleteAll(['aid' => $id]); //  删除对应的文章内容
+            ArticleThumb::deleteAll(['aid' => $id]); //  删除对应的图集
             $this->redirect(['article/index']);
-        }else{
+        }
+        else
+        {
             $this->error('删除文章失败');
         }
     }

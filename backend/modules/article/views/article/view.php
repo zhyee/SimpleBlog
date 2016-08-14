@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
         <header class="post-head">
             <h1 class="post-title"><?= Html::encode($article->title) ?></h1>
             <section class="post-meta">
-                <span class="author">作者：<a><?= Html::encode($article->author) ?></a></span>&bull;
+                <span class="author">作者：<a><?= Html::encode($article->author) ?></a></span> &bull;
                 <time class="post-date" datetime="<?= date('Y年m月d日H点i分', $article->addtime) ?>" title="<?= date('Y年m月d日H点i分', $article->addtime) ?>">
                     <?= date('Y年m月d日', $article->addtime) ?>
                 </time>
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                 <i class="fa fa-folder-open-o"></i>
                 <?php foreach($article->tag as $k => $tag): ?>
                     <?php if($k > 0):?>,<?php endif ?>
-                        <a href="<?= Url::to(['/tag/view', 'id' => $tag['aid']]) ?>"><?= Html::encode($tag['tname']) ?></a>
+                        <a href="<?= Url::to(['tag/view', 'id' => $tag['tid']]) ?>"><?= Html::encode($tag['tname']) ?></a>
                 <?php endforeach ?>
             </div>
             <div class="pull-right edit">

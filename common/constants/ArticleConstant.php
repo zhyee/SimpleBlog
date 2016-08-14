@@ -20,7 +20,12 @@ class ArticleConstant
     /**
      * 文正简介最大长度
      */
-    const ARTICLE_DESCRIPTION_LENGTH = 200;
+    const DESCRIPTION_LENGTH = 200;
+
+    /**
+     * 每页显示的文章数
+     */
+    const ARTICLE_PAGESIZE = 10;
 
 }
 

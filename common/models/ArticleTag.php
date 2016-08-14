@@ -21,4 +21,9 @@ class ArticleTag extends BaseActiveRecord
             ['tname', 'string', 'max' => 16]
         ];
     }
+
+    public function getArticle()
+    {
+        return $this->hasOne(Article::className(), ['id' => 'aid']);
+    }
 }

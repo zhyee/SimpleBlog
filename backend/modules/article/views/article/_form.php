@@ -154,13 +154,13 @@ $formName = $model->formName();
                     html += '<div class="col-md-1 col-xs-2">';
                     html += '<img src="' + data.url + '" height="38">';
                     html += '</div>';
-                    html += '<label class="control-label col-md-2 col-xs-3 text-center">图片描述</label>';
+                    html += '<label class="control-label col-md-2 col-xs-3">图片描述</label>';
                     html += '<div class="col-md-8 col-xs-6">';
-                    html += '<input class="form-control" type="text" name="Article[thumb-description][]">';
+                    html += '<input class="form-control" type="text" name="<?= $formName ?>[thumbDescription][]">';
                     html += '</div>';
-                    html += '<div class="col-md-1 col-xs-1">';
-                    html += '<i class="fa fa-trash-o fa-2x delete text-success" title="删除"></i>';
-                    html += '<input type="hidden" name="Article[thumb-url][]" value="' + data.url + '">';
+                    html += '<div class="col-md-1 col-xs-1" style="padding-top: 6px">';
+                    html += '<i class="fa fa-trash-o fa-lg delete text-success" title="删除"></i>';
+                    html += '<input type="hidden" name="<?= $formName ?>[thumbUrl][]" value="' + data.url + '">';
                     html += '</div>';
 
                     $(html).appendTo('#thumbs');

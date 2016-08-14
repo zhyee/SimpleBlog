@@ -25,20 +25,31 @@ class Tag extends BaseActiveRecord
     }
 
     /**
-     * 获取标签下的文章
+     * 关联标签和文章标签表
+     * @return \yii\db\ActiveQuery
+     */
+    public function getArticleTag(){
+        return $this->hasMany(ArticleTag::className(), ['tid' => 'id']);
+    }
+
+    /**
+     *  获取标签下的文章
+     * @param Pagination|NULL $pagination
+     * @return array|\yii\db\ActiveRecord[]
      */
     public function getArticles(pagination $pagination = NULL){
+        $articleTable = Article::tableName();
         if($pagination){
-            return $this->hasMany(Article::className(), ['id' => 'article_id'])
-                ->viaTable(TagIndex::tableName(), ['tag_id' => 'id'])
-                ->where(['is_del' => 0])
+            return $this->hasMany(Article::className(), ['id' => 'aid'])
+                ->via('articleTag')
+                ->where(["{$articleTable}.is_del" => 0])
                 ->offset($pagination->offset)
                 ->limit($pagination->limit)
                 ->all();
         }else{
-            return $this->hasMany(Article::className(), ['id' => 'article_id'])
-                ->viaTable(TagIndex::tableName(), ['tag_id' => 'id'])
-                ->where(['is_del' => 0])
+            return $this->hasMany(Article::className(), ['id' => 'aid'])
+                ->via('articleTag')
+                ->where(["{$articleTable}.is_del" => 0])
                 ->all();
         }
     }
@@ -47,9 +58,10 @@ class Tag extends BaseActiveRecord
      * 获取标签下的文章数目
      */
     public function getArticlesCount(){
-        return $this->hasMany(Article::className(), ['id' => 'article_id'])
-            ->viaTable(TagIndex::tableName(), ['tag_id' => 'id'])
-            ->where(['is_del' => 0])
+        $articleTable = Article::tableName();
+        return $this->hasMany(Article::className(), ['id' => 'aid'])
+            ->via('articleTag')
+            ->where(["{$articleTable}.is_del" => 0])
             ->count();
     }
 

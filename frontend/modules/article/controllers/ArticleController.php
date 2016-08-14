@@ -3,9 +3,12 @@
 namespace frontend\modules\article\controllers;
 
 use Yii;
-use common\models\Article;
+use yii\base\InvalidParamException;
 use yii\data\Pagination;
 use yii\filters\VerbFilter;
+use common\models\Article;
+use common\exceptions\ArticleException;
+use common\constants\ArticleConstant;
 
 
 /**
@@ -13,7 +16,6 @@ use yii\filters\VerbFilter;
  */
 class ArticleController extends ArticleBaseController
 {
-    const ARTICLE_PAGESIZE = 10;
 
     public function actions()
     {
@@ -40,11 +42,12 @@ class ArticleController extends ArticleBaseController
         $query = Article::find();
 
         $pagination = new Pagination([
-            'defaultPageSize' => static::ARTICLE_PAGESIZE,
+            'defaultPageSize' => ArticleConstant::ARTICLE_PAGESIZE,
             'totalCount' => $query->where(['is_del'=>0])->count()
         ]);
 
         $articles = $query
+            ->with('tag')
             ->where(['is_del' => 0])
             ->orderBy(['id' => SORT_DESC])
             ->offset($pagination->offset)
@@ -58,21 +61,24 @@ class ArticleController extends ArticleBaseController
     }
 
     /**
-     * Displays a single Article model.
-     * @param string $id
-     * @return mixed
+     *  Displays a single Article model.
+     * @return string
+     * @throws ArticleException
      */
-    public function actionView($id)
+    public function actionView()
     {
-        $id = (int)$id;
-        if(!$id){
-            return $this->error('ID参数错误');
+        $id = (int)Yii::$app->request->get('id', 0);
+        if(!$id)
+        {
+            throw new InvalidParamException('ID参数不正确');
         }
-        $article = Article::findOne(['id' => $id, 'is_del' => 0]);
+        $article = Article::getDetail(['id' => $id, 'is_del' => 0]);
 
-        if(!$article){
-            return $this->error('文章不存在');
+        if(NULL === $article)
+        {
+            throw new ArticleException('该文章不存在');
         }
+
         return $this->render('view', [
             'article' => $article
         ]);
